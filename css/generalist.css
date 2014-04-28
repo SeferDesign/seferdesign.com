@@ -1,0 +1,48 @@
+/* GeneraList */
+
+header {
+	padding: 2em 0px;
+	margin-bottom: 2em;
+	color: #ffffff;
+	background: #333333;
+}
+
+#generalist-logo {
+	display: block;
+	max-width: 80%;
+	margin: 0px auto 2em;
+}
+
+header p.lead {
+	margin-bottom: 0px;
+}
+
+.title-generalist {
+	/*color: #333333;
+	font-family: Arial, sans-serif;
+	font-weight: bold;*/
+}
+
+#generalist-header h1 {
+	font-size: 4em;
+}
+
+#generalist-signup {
+	margin: 2em 0px;
+}
+
+@media screen and (max-width: 991px) {
+	
+	#label-filler {
+		display: none;
+	}
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+	#generalist-header h1 {
+		font-size: 3em;
+	}
+	
+}
