@@ -31,12 +31,16 @@ if($_POST) {
     die($output);
   }
 
+  $message = 'Name: ' . $user_Name
+  . '\r\nEmail Address: ' . $user_Email
+  . '\r\nPhone: ' . $user_Phone;
+
   $headers =
   'From: '.$user_Email.'' . "\r\n" .
   'Reply-To: '.$user_Email.'' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
-  $sentMail = @mail($to_Email, $subject, ' - ' . $user_Name, $headers);
+  $sentMail = @mail($to_Email, $subject, $message, $headers);
 
   if(!$sentMail) {
     $output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
