@@ -36,8 +36,8 @@ if($_POST) {
   . "\r\nPhone: " . $user_Phone;
 
   $headers =
-  'From: '.$user_Email.'' . "\r\n" .
-  'Reply-To: '.$user_Email.'' . "\r\n" .
+  'From: '. $to_Email . '' . "\r\n" .
+  'Reply-To: '. $user_Email . '' . "\r\n" .
   'X-Mailer: PHP/' . phpversion();
 
   $sentMail = @mail($to_Email, $subject, $message, $headers);
