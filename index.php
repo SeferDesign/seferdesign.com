@@ -68,7 +68,7 @@
 <section id="sites" class="pad">
 	<div class="container">
 		<div class="row site-list-row">
-			<div class="col-lg-4 col-md-12">
+			<div id="site-list-products" class="col-lg-4 col-md-12">
 				<div class="row">
 					<div class="col-sm-12">
 						<h3 class="title">Our Products</h3>
@@ -81,7 +81,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8 col-md-12">
+			<div id="site-list-clients" class="col-lg-8 col-md-12">
 				<div class="row">
 					<div class="col-sm-12">
 						<h3 class="title">Recent Client Work</h3>
@@ -107,7 +107,10 @@
 <section id="contact">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+			<div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3">
+				<h2>Interested? Get in touch.</h2>
+				<p class="lead">Email us at <a href="mailto:hello@seferdesign.com?subject=Web Design Services" target="_blank">hello@seferdesign.com</a>, call <a href="tel:16302040013">(630) 204-0013</a>, or fill out the form below</p>
+				<p class="lead">We're on <a href="https://twitter.com/seferdesign">Twitter @seferdesign</a> and <a href="https://www.facebook.com/seferdesign">Facebook</a>, too.</p>
 				<form id="form-contact" class="form" action="/mail.php" method="POST">
 					<div class="form-group">
 						<label for="contact-name">Name:</label>
@@ -122,7 +125,7 @@
 						<input id="contact-phone" class="form-control" type="text" name="phone" placeholder="Phone Number">
 					</div>
 					<div class="form-group">
-						<button class="btn btn-block btn-success" type="submit" class="form-control">Send</button>
+						<button class="btn btn-block btn-success" type="submit" class="form-control"><span>Send</span></button>
 					</div>
 				</form>
 			</div>

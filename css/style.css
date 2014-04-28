@@ -157,12 +157,13 @@ body, h1, h2, h3, h4, h5, h5 {
   text-align: center;
   text-shadow: 0px 0px 4px black; }
 
-#form-contact label {
-  display: none; }
-#form-contact #form-result {
+#contact {
   text-align: center; }
+  #contact label {
+    display: none;
+    text-align: left; }
 
-html.ltie10 #form-contact label {
+html.ltie10 #contact label {
   display: block; }
 
 #generalist-main form {
@@ -198,6 +199,9 @@ footer {
 
   .square-site.small {
     margin-bottom: 0px; } }
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  #site-list-products {
+    margin-bottom: 20px; } }
 @media all and (min-width: 1200px) {
   .square-site.big, .square-site.small {
     margin-bottom: 0px; } }

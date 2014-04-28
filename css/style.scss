@@ -125,21 +125,20 @@ $working-radius: 0px;
   text-shadow: 0px 0px 4px $black;
 }
 
-#form-contact {
+#contact {
+
+  text-align: center;
 
   label {
     display: none;
-  }
-
-  #form-result {
-    text-align: center;
+    text-align: left;
   }
 
 }
 
 html.ltie10 {
 
-  #form-contact {
+  #contact {
 
     label {
       display: block;
@@ -243,6 +242,14 @@ footer {
       margin-bottom: 0px;
     }
 
+  }
+
+}
+
+@include between($width-md, $width-lg - 1) {
+
+  #site-list-products {
+    margin-bottom: 20px;
   }
 
 }

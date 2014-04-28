@@ -8,42 +8,36 @@ jQuery(document).ready(function($) {
     }, 500);
   });
 
-  /*$("#form-contact").submit(function() {
-    $.ajax({
-      type: 'POST',
-      url: $(this).attr('action'),
-      data: $(this).serialize(),
-      success: function(data) {
-        alert(data);
-      }
-    });
-
-    return false;
-  });*/
-
   $('#form-contact').submit(function(e) {
 
     e.preventDefault();
 
-    post_data = {
-      'userName': $(this).find('#contact-name').val(),
-      'userEmail': $(this).find('#contact-email').val(),
-      'userPhone': $(this).find('#contact-phone').val()
-    };
+    var thisButton = $('#form-contact').find('button');
+    var thisDelay = 1500;
 
-    $.post('mail.php', post_data, function(response) {
-
-      if(response.type == 'error') {
-        output = '<div class="error">'+response.text+'</div>';
-      } else {
+    $.ajax({
+      url: $(this).attr('action'),
+      type: $(this).attr('method'),
+      data: {
+        'userName': $(this).find('#contact-name').val(),
+        'userEmail': $(this).find('#contact-email').val(),
+        'userPhone': $(this).find('#contact-phone').val()
+      },
+      beforeSend: function() {
+        thisButton.attr('disabled', 'disabled');
+        thisButton.prepend('<i class="fa fa-refresh left fa-spin"></i>');
+        thisButton.find('span').html('Sending...');
+      },
+      success: function(response) {
         output = '<div class="success">'+response.text+'</div>';
+        setTimeout(function() {
+          thisButton.find('i.fa').remove();
+          thisButton.find('span').html('Sent!');
+          $('#form-contact').append('<div id="form-result"></div>');
+          $('#form-result').hide().html(output).slideDown();
+        }, thisDelay);
       }
-
-      $('#form-contact').append('<div id="form-result"></div>');
-
-      $('#form-result').hide().html(output).slideDown();
-
-    }, 'json');
+    });
 
     return false;
 
