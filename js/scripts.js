@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
     }, 500);
   });
 
-  $("#form-contact").submit(function() {
+  /*$("#form-contact").submit(function() {
     $.ajax({
       type: 'POST',
       url: $(this).attr('action'),
@@ -19,6 +19,34 @@ jQuery(document).ready(function($) {
     });
 
     return false;
+  });*/
+
+  $('#form-contact').submit(function(e) {
+
+    e.preventDefault();
+
+    post_data = {
+      'userName': $(this).find('#contact-name').val(),
+      'userEmail': $(this).find('#contact-email').val(),
+      'userPhone': $(this).find('#contact-phone').val()
+    };
+
+    $.post('mail.php', post_data, function(response) {
+
+      if(response.type == 'error') {
+        output = '<div class="error">'+response.text+'</div>';
+      } else {
+        output = '<div class="success">'+response.text+'</div>';
+      }
+
+      $('#form-contact').append('<div id="form-result"></div>');
+
+      $('#form-result').hide().html(output).slideDown();
+
+    }, 'json');
+
+    return false;
+
   });
 
 });

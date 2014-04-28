@@ -108,7 +108,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
-				<form id="form-contact" class="form" action="//forms.brace.io/hello@seferdesign.com" method="POST">
+				<form id="form-contact" class="form" action="/mail.php" method="POST">
 					<div class="form-group">
 						<label for="contact-name">Name:</label>
 						<input id="contact-name" class="form-control" type="text" name="name" required placeholder="Name">
