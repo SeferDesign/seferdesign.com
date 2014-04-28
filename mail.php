@@ -31,9 +31,9 @@ if($_POST) {
     die($output);
   }
 
-  $message = 'Name: ' . $user_Name
-  . '\r\nEmail Address: ' . $user_Email
-  . '\r\nPhone: ' . $user_Phone;
+  $message = "Name: " . $user_Name
+  . "\r\nEmail Address: " . $user_Email
+  . "\r\nPhone: " . $user_Phone;
 
   $headers =
   'From: '.$user_Email.'' . "\r\n" .
