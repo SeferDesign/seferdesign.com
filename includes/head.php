@@ -21,14 +21,14 @@
 <meta name="twitter:image" content="<?php echo $siteDomain; ?>/images/favicons/favicon_800.png" />
 
 <!-- Fav and touch icons -->
-<link rel="apple-touch-icon-precomposed" href="/images/favicons/favicon_144.png">
+<link rel="apple-touch-icon-precomposed" href="/images/favicons/favicon_800.png">
 <link rel="shortcut icon" href="/images/favicons/favicon_144.png">
 
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
-<!--[if lt IE 9]>
+<!--[if lte IE 8]>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="/js/respond.min.js"></script>
 <![endif]-->

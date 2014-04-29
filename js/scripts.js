@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     e.preventDefault();
 
     $('html, body').animate({
-      scrollTop: $($(this).attr('href')).offset().top - 50
+      scrollTop: $($(this).attr('href')).offset().top - 20
     }, 500);
   });
 
@@ -18,6 +18,7 @@ jQuery(document).ready(function($) {
     $.ajax({
       url: $(this).attr('action'),
       type: $(this).attr('method'),
+      dataType: 'json',
       data: {
         'userName': $(this).find('#contact-name').val(),
         'userEmail': $(this).find('#contact-email').val(),
@@ -29,12 +30,20 @@ jQuery(document).ready(function($) {
         thisButton.find('span').html('Sending...');
       },
       success: function(response) {
-        output = '<div class="success">'+response.text+'</div>';
         setTimeout(function() {
+          if (response.type == 'error') {
+            output = '<div class="error">'+response.text+'</div>';
+            thisButton.removeAttr('disabled');
+            thisButton.find('span').html('Send');
+          } else {
+            output = '<div class="success">'+response.text+'</div>';
+            thisButton.find('span').html('Sent!');
+          }
+
           thisButton.find('i.fa').remove();
-          thisButton.find('span').html('Sent!');
           $('#form-contact').append('<div id="form-result"></div>');
           $('#form-result').hide().html(output).slideDown();
+
         }, thisDelay);
       }
     });
