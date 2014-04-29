@@ -9,24 +9,15 @@
 
 <div class="intro" id="intro-generalist">
 
-	<header id="header-generalist">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<nav class="navbar navbar-default" role="navigation">
-						<div class="navbar-header">
-							<a class="navbar-brand" href="/generalist/"><img id="logo-generalist" src="/images/generalist/generalist_white.png" alt="GeneraList"></a>
-						</div>
-						<div class="collapse navbar-collapse hidden-xs" id="main-navbar-collapse">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="/">Back to Sefer Design Co.<i class="fa fa-arrow-right right"></i></a></li>
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+	<?php
+		$headerLink = '/';
+		$headerImgURL = '/images/generalist/generalist_white.png';
+		$headerImgAlt = 'GeneraList';
+	?>
+
+	<?php include('includes/header.php'); ?>
+
+	<a id="generalist-back-link" href="/">Back to Sefer Design Co.<i class="fa fa-arrow-right right"></i></a>
 
 	<section id="generalist-main" class="pad">
 		<div class="container">
