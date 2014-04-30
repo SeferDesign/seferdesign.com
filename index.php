@@ -101,8 +101,8 @@
 			<div class="col-sm-12">
 				<h2 class="title">Interested?<br>Get in touch.</h2>
 			</div>
-			<div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3">
-				<p class="lead">Email us at <a href="mailto:hello@seferdesign.com?subject=Web Design Services" target="_blank">hello@seferdesign.com</a>, call <a href="tel:16302040013">(630) 204-0013</a>, or fill out the form below.</p>
+			<div class="col-md-8 col-md-offset-2">
+				<p class="lead">Email us at <a href="mailto:hello@seferdesign.com?subject=Web Design Services" target="_blank">hello@seferdesign.com</a>, call <a href="tel:16302040013">(630) 204-0013</a>,<span class="hidden-xs hidden-lg"><br></span> or fill out the form below.</p>
 				<p class="lead">We're on <a href="https://twitter.com/seferdesign">Twitter @seferdesign</a> and <a href="https://www.facebook.com/seferdesign">Facebook</a>, too.</p>
 				<form id="form-contact" class="form" action="/mail.php" method="POST">
 					<div class="form-group">
