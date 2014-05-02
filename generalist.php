@@ -17,7 +17,7 @@
 
 	<?php include('includes/header.php'); ?>
 
-	<a id="generalist-back-link" href="/">Back to Sefer Design Co.<i class="fa fa-arrow-right right"></i></a>
+	<a id="generalist-back-link" href="/"><i class="fa fa-arrow-left left"></i>Back to Sefer Design Co.</a>
 
 	<section id="generalist-main" class="pad">
 		<div class="container">
