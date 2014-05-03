@@ -27,6 +27,10 @@
 <link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/vendor/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" href="/css/ie/lteie9.css" />
+<![endif]-->
+
 
 <!--[if lte IE 8]>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>

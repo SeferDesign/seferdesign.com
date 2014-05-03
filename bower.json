@@ -9,7 +9,7 @@
     }
   ],
   "dependencies": {
-    "jquery": "latest",
+    "jquery": "~1.11.1",
     "respond": "latest",
     "bootstrap": "latest",
     "fontawesome": "latest"

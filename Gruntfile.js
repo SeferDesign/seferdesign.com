@@ -32,7 +32,7 @@ module.exports = function(grunt) {
               'bower_components/bootstrap/dist/fonts/*',
               'bower_components/fontawesome/fonts/*'
             ],
-            dest: 'fonts/'
+            dest: 'css/fonts/'
           },
         ]
       }
