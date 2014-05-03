@@ -1,0 +1,16 @@
+{
+  "name": "seferDesignCo",
+  "version": "1.0.0",
+  "description": "Chicago Web Design & Web Products",
+  "authors": [
+    {
+      "name": "Robert Sefer",
+      "email": "rsefer@gmail.com",
+      "homepage": "http://rsefer.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-copy": "latest"
+  }
+}
