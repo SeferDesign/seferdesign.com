@@ -24,8 +24,8 @@
 <link rel="apple-touch-icon-precomposed" href="/images/favicons/favicon_800.png">
 <link rel="shortcut icon" href="/images/favicons/favicon_144.png">
 
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/vendor/font-awesome.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
 <!--[if lte IE 8]>
