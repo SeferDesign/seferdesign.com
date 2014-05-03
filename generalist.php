@@ -1,6 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
 <?php include('includes/framework.php'); ?>
-<html class="<?php echo css_browser_selector(); ?>">
 <head>
 	<title>GeneraList | Sefer Design Co. | Chicago Web Design &amp; Web Products</title>
 	<?php include('includes/head.php'); ?>
