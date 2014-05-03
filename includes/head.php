@@ -30,7 +30,7 @@
 
 <!--[if lte IE 8]>
 <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<script type="text/javascript" src="/js/respond.min.js"></script>
+<script type="text/javascript" src="/js/vendor/respond.min.js"></script>
 <![endif]-->
 
 <!-- Typekit -->
