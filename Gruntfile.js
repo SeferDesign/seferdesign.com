@@ -36,12 +36,23 @@ module.exports = function(grunt) {
           },
         ]
       }
+    },
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/'
+        }]
+      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['copy']);
+  grunt.registerTask('default', ['copy', 'imagemin']);
 
 };
