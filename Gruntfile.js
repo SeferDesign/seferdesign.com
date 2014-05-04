@@ -19,9 +19,10 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'bower_components/bootstrap/dist/js/bootstrap.min.js',
               'bower_components/jquery/dist/jquery.min.js',
-              'bower_components/respond/dest/respond.min.js'
+              'bower_components/respond/dest/respond.min.js',
+              'bower_components/html5shiv/dist/html5shiv.min.js',
+              'bower_components/bootstrap/dist/js/bootstrap.min.js'
             ],
             dest: 'js/vendor/'
           },
@@ -36,12 +37,23 @@ module.exports = function(grunt) {
           },
         ]
       }
+    },
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'images/',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'images/'
+        }]
+      }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-  grunt.registerTask('default', ['copy']);
+  grunt.registerTask('default', ['copy', 'imagemin']);
 
 };
