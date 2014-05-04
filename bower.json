@@ -11,6 +11,7 @@
   "dependencies": {
     "jquery": "~1.11.1",
     "respond": "latest",
+    "html5shiv": "latest",
     "bootstrap": "latest",
     "fontawesome": "latest"
   }
