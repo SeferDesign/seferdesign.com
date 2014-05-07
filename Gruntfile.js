@@ -57,6 +57,7 @@ module.exports = function(grunt) {
 
   });
 
+  require('time-grunt')(grunt);
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
