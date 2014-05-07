@@ -11,7 +11,10 @@
   ],
   "devDependencies": {
     "grunt": "latest",
+    "time-grunt": "latest",
+    "grunt-newer": "latest",
     "grunt-contrib-copy": "latest",
-    "grunt-contrib-imagemin": "latest"
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest"
   }
 }

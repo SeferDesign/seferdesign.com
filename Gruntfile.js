@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     copy: {
-      main: {
+      vendor: {
         files: [
           {
             expand: true,
@@ -47,13 +47,22 @@ module.exports = function(grunt) {
           dest: 'images/'
         }]
       }
+    },
+    jshint: {
+      all: [
+        'Gruntfile.js',
+        'js/*.js'
+      ]
     }
 
   });
 
+  require('time-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
-  grunt.registerTask('default', ['copy', 'imagemin']);
+  grunt.registerTask('default', ['newer:copy', 'newer:imagemin', 'jshint']);
 
 };
