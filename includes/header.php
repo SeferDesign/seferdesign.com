@@ -8,7 +8,7 @@
             <li><a class="scroll" href="#services">What We Do</a></li>
             <li><a class="scroll" href="#sites">Our Work</a></li>
             <li><a class="scroll" href="#contact">Contact</a></li>
-          </ul
+          </ul>
         </nav>
       </div>
     </div>

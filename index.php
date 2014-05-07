@@ -118,7 +118,7 @@
 						<input id="contact-phone" class="form-control input-lg" type="text" name="phone" placeholder="Phone Number">
 					</div>
 					<div class="form-group">
-						<button class="btn btn-block btn-lg btn-primary" type="submit" class="form-control"><span>Send</span></button>
+						<button class="btn btn-block btn-lg btn-primary" type="submit"><span>Send</span></button>
 					</div>
 				</form>
 			</div>
