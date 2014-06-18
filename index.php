@@ -63,7 +63,7 @@
 								<a class="square-site small" href="http://danceforlifechicago.org" title="Dance for Life Chicago"><img src="/images/sites/d4lc.jpg" alt="Dance for Life Chicago"></a>
 							</div>
 							<div class="col-xs-6">
-								<a class="square-site small" href="http://eatdrink2020.com" title="2020 Foot + Wine Bar"><img src="/images/sites/eatdrink2020.jpg" alt="2020 Foot + Wine Bar"></a>
+								<a class="square-site small" href="http://eatdrink2020.com" title="2020 Food + Wine Bar"><img src="/images/sites/eatdrink2020.jpg" alt="2020 Food + Wine Bar"></a>
 							</div>
 						</div>
 					</div>
