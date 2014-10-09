@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
 
-  @include transition(all, 0.3s);
+  transition: all, 0.3s;
 
   &,
   &:visited {
@@ -80,7 +80,7 @@ $working-radius: 0px;
 .btn,
 .form-control,
 .input-lg {
-  @include border-radius($working-radius);
+  border-radius: $working-radius;
 }
 
 .intro {
@@ -185,7 +185,7 @@ section.dark {
 
   img {
     display: block;
-    @include border-radius($working-radius);
+    border-radius: $working-radius;
   }
 
   &::before,
@@ -197,8 +197,8 @@ section.dark {
     left: 0px;
     right: 0px;
     content: ' ';
-    @include transition(background, 0.5s);
-    @include border-radius($working-radius);
+    transition: background, 0.5s;
+    border-radius: $working-radius;
   }
 
   &:hover::before {
