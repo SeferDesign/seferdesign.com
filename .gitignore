@@ -1,5 +1,6 @@
-bower_components
-node_modules
+bower_components*
+node_modules*
 .sass-cache*
+.coffeescript-cache*
 
-/includes/variables.php
+_site
