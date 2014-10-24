@@ -1,6 +1,6 @@
 {
   "name": "seferDesignCo",
-  "version": "1.0.0",
+  "version": "1.5.0",
   "authors": [
     {
       "name": "Robert Sefer",
@@ -10,9 +10,9 @@
   ],
   "dependencies": {
     "jquery": "~1.11.1",
-    "respond": "latest",
-    "html5shiv": "latest",
-    "bootstrap": "latest",
-    "fontawesome": "latest"
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "bootstrap": "~3.2.0",
+    "fontawesome": "~4.1.0"
   }
 }
