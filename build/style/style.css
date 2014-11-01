@@ -69,7 +69,7 @@ h1.title, h2.title {
   border-radius: 0px; }
 
 .intro {
-  color: white;
+  color: #ffffff;
   background: #333333; }
   .intro h1 {
     text-shadow: none;
@@ -89,10 +89,10 @@ header {
       display: block; }
       header #nav-main ul li a,
       header #nav-main ul li a:hover {
-        color: white; }
+        color: #ffffff; }
 
 section.dark {
-  color: white; }
+  color: #ffffff; }
   section.dark h1, section.dark h2 {
     text-shadow: 0 0.005em #fc8c8c, -0.005em 0 #7cd0f5, -0.005em 0.01em #fc8c8c, -0.01em 0.005em #7cd0f5, -0.01em 0.015em #fc8c8c, -0.015em 0.01em #7cd0f5, -0.015em 0.02em #fc8c8c, -0.02em 0.015em #7cd0f5, -0.02em 0.025em #fc8c8c, -0.025em 0.02em #7cd0f5, -0.025em 0.03em #fc8c8c, -0.03em 0.025em #7cd0f5, -0.03em 0.035em #fc8c8c, -0.035em 0.03em #7cd0f5, -0.035em 0.04em #fc8c8c, -0.04em 0.035em #7cd0f5, -0.04em 0.045em #fc8c8c, -0.045em 0.04em #7cd0f5, -0.045em 0.05em #fc8c8c, -0.05em 0.045em #7cd0f5; }
 
@@ -130,12 +130,12 @@ section.dark {
     top: 45%;
     bottom: auto;
     content: "\f0c1";
-    color: white;
+    color: #ffffff;
     font-size: 30px;
     font-family: 'FontAwesome';
     line-height: 30px;
     text-align: center;
-    text-shadow: 0px 0px 4px black; }
+    text-shadow: 0px 0px 4px #000000; }
 
 .site-list-row {
   margin-top: 20px; }
@@ -158,7 +158,7 @@ html.ltie10 #contact label {
   display: none; }
 #intro-generalist #generalist-back-link {
   display: block;
-  color: white;
+  color: #ffffff;
   text-align: center;
   font-size: 20px; }
 
@@ -200,3 +200,5 @@ footer {
 @media all and (min-width: 1200px) {
   .square-site.big, .square-site.small {
     margin-bottom: 0px; } }
+
+/*# sourceMappingURL=style.css.map */
