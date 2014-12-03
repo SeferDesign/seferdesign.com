@@ -230,6 +230,11 @@ section.dark {
   &:last-child {
     margin-top: $margin;
   }
+
+  h4 {
+    text-align: right;
+  }
+  
 }
 
 #contact {

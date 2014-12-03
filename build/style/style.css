@@ -142,6 +142,8 @@ section.dark {
 
 .quote-block:last-child {
   margin-top: 20px; }
+.quote-block h4 {
+  text-align: right; }
 
 #contact {
   text-align: center; }
