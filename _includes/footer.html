@@ -1,15 +1,16 @@
-<footer class="pad">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div id="address" itemscope itemtype="http://schema.org/Organization">&copy; {{ site.time | date: '%Y' }} <a href="/" title="Sefer Design Company" itemprop="name">Sefer Design Company</a><br><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">1 E. Scott Street #2006</span> <span itemprop="addressLocality">Chicago, Illinois</span> <span itemprop="postalCode">60610</span></span></div>
-      </div>
-      <div class="col-sm-12">
-        <a href="{{ "/" | prepend: site.baseurl }}"><img id="footer-logo" src="/images/sdc_block_light.png" alt="Sefer Design Company"></a>
-      </div>
-    </div>
-  </div>
+{% if page.url != "/generalist/" %}<section class="contact">
+	<div class="grid-wrapper">
+		<h2>Interested?<br>Get in touch.</h2>
+		<p>Email us at <a href="mailto:hello@seferdesign.com?subject=Web%20Design%20Services" target="_blank">hello@seferdesign.com</a> or call <a href="tel:16302040013">(630) 204-0013</a>.</p>
+		<p>We're on Twitter <a href="https://twitter.com/seferdesign">@seferdesign</a> and <a href="https://www.facebook.com/seferdesign">Facebook</a>, too.</p>
+	</div>
+</section>{% endif %}
+<footer>
+	<nav>
+		<ul>
+			<li><a href="{{ "/" | prepend: site.baseurl }}" title="Home">Home</a></li><li><a href="{{ "/generalist/" | prepend: site.baseurl }}" title="GeneraList">GeneraList</a></li>
+		</ul>
+	</nav>
+	<p>&copy; {{ site.company_name }}</p>
+  <a class="logo" href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><img src="{{ site.distbase }}/images/sdc_acronym_white.svg" alt="{{ site.title }}"></a>
 </footer>
-
-<script type="text/javascript" src="{{ "/build/scripts/vendor.min.js" | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="{{ "/build/scripts/scripts.min.js" | prepend: site.baseurl }}"></script>

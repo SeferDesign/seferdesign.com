@@ -1,0 +1,433 @@
+// Colors
+$black: #000;
+$white: #fff;
+$gray: #e4e4e4;
+$blue-lite: #68a5ec;
+
+$font-main: 'Open Sans', sans-serif;
+
+%transition {
+  transition: all 500ms;
+}
+
+.svg-dump {
+  display: none;
+}
+
+body {
+  color: $white;
+  background: $blue-lite;
+  font-size: 16px;
+  font-family: $font-main;
+  font-weight: 400;
+}
+
+.pure-g {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+svg {
+
+  &.icon {
+
+    display: inline-block;
+    vertical-align: top;
+    fill: $white;
+
+    &.icon-arrow {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.left {
+      margin-right: 0.5em;
+    }
+
+  }
+
+}
+
+a {
+  color: $white;
+  font-weight: 700;
+}
+
+img,
+.logo {
+  max-width: 100%;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 1rem 0px;
+  line-height: 1.2;
+}
+
+p {
+
+  line-height: 1.5;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+}
+
+.grid-wrapper {
+  @extend %transition;
+  margin: 0px auto;
+  padding: 0px 1rem;
+}
+
+header,
+footer,
+section {
+  padding: 1rem 0px;
+}
+
+header,
+footer {
+  text-align: center;
+}
+
+header {
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    margin: 1rem 0px 2rem;
+    font-weight: 400;
+  }
+
+  .devices {
+    @extend %transition;
+    margin: 2rem auto 1rem;
+    height: 146px;
+    background: {
+      image: url('../images/devices.png');
+      position: center top;
+      size: 288px auto;
+      repeat: no-repeat;
+    }
+  }
+
+  .back-home-link {
+    display: block;
+    line-height: 1.5;
+  }
+
+}
+
+footer {
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.logo {
+
+  @extend %transition;
+  display: inline-block;
+  width: 16em;
+
+  header & {
+    margin: 1em auto;
+  }
+
+  footer & {
+    width: 3em;
+  }
+
+}
+
+nav {
+
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+}
+
+section {
+
+  color: $black;
+  background: $white;
+
+  a {
+    color: $black;
+  }
+
+  ul {
+
+    padding-left: 2em;
+
+    li {
+
+      line-height: 1.5;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75em;
+      }
+
+    }
+
+  }
+
+}
+
+.what-how {
+
+  h2 {
+    font-weight: 400;
+  }
+
+}
+
+.work {
+
+  h2 {
+    text-align: center;
+  }
+
+  .work-item {
+
+    @extend %transition;
+    box-sizing: border-box;
+    padding: 1em;
+
+    &:hover {
+      background: $gray;
+    }
+
+    .work-image-wrap,
+    .work-meta {
+      float: left;
+      box-sizing: border-box;
+    }
+
+    .work-image-wrap {
+
+      width: 30%;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: 100px;
+      }
+
+    }
+
+    .work-meta {
+      margin-left: 7%;
+      width: 63%;
+
+      .work-description {
+        font-weight: 400;
+      }
+
+    }
+
+  }
+
+}
+
+.contact {
+  text-align: center;
+}
+
+form {
+
+  label {
+    display: block;
+    margin-bottom: 0.25em;
+  }
+
+  input,
+  button {
+    display: block;
+    box-sizing: border-box;
+    padding: 0.375em 0.5em;
+    width: 100%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    font-size: 1rem;
+    border-width: 1px;
+  }
+
+  input {
+    border-color: $black;
+  }
+
+  button {
+    border-color: $black;
+  }
+
+}
+
+@media all and (min-width: 32em) {
+
+  .grid-wrapper {
+    width: 30em;
+  }
+
+  .logo {
+
+    header & {
+      width: 28em;
+    }
+
+    footer & {
+      width: 4em;
+    }
+
+  }
+
+  header,
+  footer,
+  section {
+    padding: 2rem 0px;
+  }
+
+  header {
+
+    h1 {
+      margin: 2rem 0px 3rem;
+    }
+
+    .devices {
+      width: 450px;
+      height: 228px;
+      background: {
+        size: 100% auto;
+      }
+    }
+
+    .back-home-link {
+      margin-top: 1rem;
+    }
+
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  form {
+
+    text-align: center;
+
+    .form-group {
+      display: inline-block;
+    }
+
+    label {
+      text-align: left;
+    }
+
+    input,
+    button {
+      padding: 0.25em 0.5em;
+      font-size: 1.5rem;
+    }
+
+    input {
+      width: 300px;
+    }
+
+    button {
+      width: auto;
+    }
+
+  }
+
+}
+
+@media all and (min-width: 48em) {
+
+  .grid-wrapper {
+    padding: 0px 2em;
+    width: 44em;
+  }
+
+  .logo {
+
+    header & {
+      width: 38em;
+    }
+
+    footer & {
+      width: 6em;
+    }
+
+  }
+
+  nav {
+
+    ul {
+
+      li {
+        display: inline-block;
+        margin: 0px 0.25em;
+      }
+
+    }
+
+  }
+
+  form {
+
+    button {
+      margin-left: 1em;
+    }
+
+  }
+
+}
+
+@media all and (min-width: 56em) {
+
+  .grid-wrapper {
+    width: 52em;
+  }
+
+}
+
+@media all and (min-width: 64em) {
+
+  .grid-wrapper {
+    width: 60em;
+  }
+
+}

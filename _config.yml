@@ -1,15 +1,17 @@
 # Site settings
-title: Sefer Design Co.
-description: Chicago Web Design &amp; Web Products
+title: 'Sefer Design Co.'
+company_name: 'Sefer Design Company LLC'
+description: 'Chicago Web Design and Web Development'
+baseurl: ''
+distbase: '/dist'
 
 # Build settings
-markdown: kramdown
 permalink: pretty
-
 exclude: [
   'node_modules',
   'package.json',
-  'bower_components',
-  'bower.json',
-  'Gruntfile.js'
+  'gulpfile.js',
+  'README.md',
+  'SOURCE'
 ]
+languages: ['en']
