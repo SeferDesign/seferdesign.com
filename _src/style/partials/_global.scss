@@ -1,6 +1,7 @@
 // Colors
 $black: #000;
 $white: #fff;
+$dark: #333;
 $gray: #e4e4e4;
 $blue-lite: #68a5ec;
 
@@ -15,11 +16,17 @@ $font-main: 'Open Sans', sans-serif;
 }
 
 body {
+
   color: $white;
   background: $blue-lite;
   font-size: 16px;
   font-family: $font-main;
   font-weight: 400;
+
+  &.generalist {
+    background: $dark;
+  }
+
 }
 
 .pure-g {
@@ -268,7 +275,21 @@ section {
   text-align: center;
 }
 
+.generalist {
+
+  h1 {
+    margin: 0px 0px 1rem;
+  }
+
+  h4 {
+    margin: 0px;
+  }
+
+}
+
 form {
+
+  width: 100%;
 
   label {
     display: block;
@@ -281,10 +302,10 @@ form {
     box-sizing: border-box;
     padding: 0.375em 0.5em;
     width: 100%;
-    border-radius: 0px;
     -webkit-appearance: none;
     font-size: 1rem;
     border-width: 1px;
+    border-radius: 0.125em;
   }
 
   input {
@@ -292,7 +313,8 @@ form {
   }
 
   button {
-    border-color: $black;
+    background: $blue-lite;
+    border-color: $blue-lite;
   }
 
 }
