@@ -289,11 +289,18 @@ section {
 
 form {
 
+  margin: 2em 0px;
   width: 100%;
 
   label {
+
     display: block;
     margin-bottom: 0.25em;
+
+    &.label-filler {
+      font-size: 0.5em;
+    }
+
   }
 
   input,
@@ -313,6 +320,7 @@ form {
   }
 
   button {
+    color: $white;
     background: $blue-lite;
     border-color: $blue-lite;
   }
@@ -346,7 +354,7 @@ form {
   header {
 
     h1 {
-      margin: 2rem 0px 3rem;
+      margin: 1rem 0px 3rem;
     }
 
     .devices {
@@ -376,7 +384,13 @@ form {
     }
 
     label {
+
       text-align: left;
+
+      &.label-filler {
+        font-size: 1em;
+      }
+
     }
 
     input,
