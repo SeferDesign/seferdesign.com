@@ -1,16 +1,11 @@
-<header class="pad">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <a href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><img id="logo" src="/images/sdc_logo_wire.png" alt="{{ site.title }}"></a>
-        <nav id="nav-main" role="navigation">
-          <ul>
-            <li><a class="scroll" href="#services">What We Do</a></li>
-            <li><a class="scroll" href="#sites">Our Work</a></li>
-            <li><a class="scroll" href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<header>
+  <div class="grid-wrapper">
+    {% if page.url == "/generalist/" %}<a class="logo" href="{{ "/generalist/" | prepend: site.baseurl }}" title="GeneraList"><img src="{{ site.distbase }}/images/generalist_white.svg" alt="GeneraList"></a>{% else %}<a class="logo" href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><img src="{{ site.distbase }}/images/sdc_white.svg" alt="{{ site.title }}"></a>{% endif %}
+    {% if page.url == "/" %}
+    <h1>We build sites and tools for the modern web.</h1>
+    <div class="devices"></div>
+    {% else %}
+    <a class="back-home-link" href="{{ "/" | prepend: site.baseurl }}"><svg class="icon icon-arrow left"><use xlink:href="#icon-arrow-left" /></svg>Back to {{ site.title }}</a>
+    {% endif %}
   </div>
 </header>

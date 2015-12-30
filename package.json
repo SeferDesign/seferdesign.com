@@ -1,7 +1,12 @@
 {
   "name": "seferDesignCo",
-  "version": "1.5.0",
-  "description": "",
+  "version": "2.0.0",
+  "description": "Site for Sefer Design Company LLC.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:SeferDesign/seferdesign.com.git"
+  },
   "authors": [
     {
       "name": "Robert Sefer",
@@ -10,17 +15,17 @@
     }
   ],
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "time-grunt": "^0.4.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-imagemin": "^0.7.2",
-    "grunt-contrib-compass": "^0.9.1",
-    "grunt-autoprefixer": "^0.8.2",
-    "grunt-contrib-cssmin": "v0.10.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-sass": "^0.7.4"
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-scss-lint": "^0.3.8",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "imagemin-pngquant": "^4.2.0"
   }
 }
