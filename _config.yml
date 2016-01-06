@@ -4,6 +4,7 @@ company_name: 'Sefer Design Company LLC'
 description: 'Chicago Web Design and Web Development'
 baseurl: ''
 distbase: '/dist'
+production_url_base: 'https://seferdesign.com'
 
 # Build settings
 permalink: pretty
