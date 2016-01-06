@@ -176,7 +176,13 @@ h1 {
     margin: 1em auto;
 
     img {
+
       height: 27px;
+
+      .generalist & {
+        height: 41px;
+      }
+
     }
 
   }
@@ -367,7 +373,13 @@ form {
       width: 28em;
 
       img {
+
         height: 47px;
+
+        .generalist & {
+          height: 72px;
+        }
+
       }
 
     }
@@ -468,7 +480,13 @@ form {
       width: 38em;
 
       img {
+
         height: 64px;
+
+        .generalist & {
+          height: 98px;
+        }
+
       }
 
     }
