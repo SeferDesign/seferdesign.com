@@ -166,12 +166,29 @@ h1 {
   display: inline-block;
   width: 16em;
 
+  img {
+    display: block;
+    margin: 0px auto;
+  }
+
   header & {
+
     margin: 1em auto;
+
+    img {
+      height: 27px;
+    }
+
   }
 
   footer & {
+
     width: 3em;
+
+    img {
+      height: 21px;
+    }
+
   }
 
 }
@@ -346,11 +363,23 @@ form {
   .logo {
 
     header & {
+
       width: 28em;
+
+      img {
+        height: 47px;
+      }
+
     }
 
     footer & {
+
       width: 4em;
+
+      img {
+        height: 28px;
+      }
+
     }
 
   }
@@ -435,11 +464,23 @@ form {
   .logo {
 
     header & {
+
       width: 38em;
+
+      img {
+        height: 64px;
+      }
+
     }
 
     footer & {
+
       width: 6em;
+
+      img {
+        height: 41px;
+      }
+
     }
 
   }
