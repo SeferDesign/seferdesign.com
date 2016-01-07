@@ -150,6 +150,10 @@ header {
 
 footer {
 
+  li {
+    margin: 0.5rem 0px;
+  }
+
   a {
     text-decoration: none;
   }
@@ -249,7 +253,6 @@ section {
 
   ul {
     margin-bottom: 0px;
-    font-size: 1.25rem;
   }
 
 }
@@ -468,6 +471,15 @@ form {
 }
 
 @media all and (min-width: 48em) {
+
+  section {
+
+    p,
+    li {
+      font-size: 1.25rem;
+    }
+
+  }
 
   .grid-wrapper {
     padding: 0px 2em;
