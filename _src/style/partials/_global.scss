@@ -4,6 +4,7 @@ $white: #fff;
 $dark: #333;
 $gray: #e4e4e4;
 $blue-lite: #68a5ec;
+$green: #0c8211;
 
 $font-main: 'Open Sans', sans-serif;
 
@@ -243,6 +244,52 @@ section {
     font-weight: 400;
   }
 
+  blockquote {
+
+    margin: 1rem 0px;
+
+    &:before,
+    &:after {
+      content: ' ';
+      display: block;
+      margin: 2rem auto;
+      width: 60%;
+      height: 1px;
+      background: $gray;
+    }
+
+    &:before {
+      margin-bottom: 1rem;
+    }
+
+    &:after {
+      margin-top: 1rem;
+    }
+
+    p {
+
+      font-size: 2rem;
+      line-height: 1.2;
+      font-weight: bold;
+
+      &:before {
+        content: '\201C';
+      }
+
+      &:after {
+        content: '\201D';
+      }
+
+    }
+
+    .attribution {
+      font-size: 1rem;
+      font-style: italic;
+      text-align: right;
+    }
+
+  }
+
 }
 
 .what-how {
@@ -363,6 +410,52 @@ form {
 
 }
 
+figure {
+
+  margin: 1rem 0px;
+
+  figcaption {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 0.75em;
+  }
+
+}
+
+.stat {
+
+  margin: 1rem;
+  text-align: center;
+
+  .stat-number {
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+  .stat-description {
+    font-size: 0.75rem;
+    font-weight: bold;
+  }
+
+  svg {
+
+    margin-bottom: 0.125em;
+    vertical-align: middle;
+
+    &.icon-arrow {
+      width: 3rem;
+      height: 3rem;
+      fill: $green;
+    }
+
+    &.left {
+      margin-right: 1rem;
+    }
+
+  }
+
+}
+
 @media all and (min-width: 32em) {
 
   .grid-wrapper {
@@ -468,6 +561,36 @@ form {
 
   }
 
+  .stat {
+
+    .stat-number {
+      font-size: 6em;
+    }
+
+    .stat-description {
+      font-size: 1rem;
+    }
+
+    svg {
+
+      &.icon-arrow {
+        width: 5rem;
+        height: 5rem;
+        fill: $green;
+      }
+
+    }
+
+  }
+
+  .casestudy {
+
+    section h1 {
+      text-align: center;
+    }
+
+  }
+
 }
 
 @media all and (min-width: 48em) {
@@ -477,6 +600,16 @@ form {
     p,
     li {
       font-size: 1.25rem;
+    }
+
+    blockquote {
+
+      margin: 1rem 3rem;
+
+      .attribution {
+        margin-right: 2rem;
+      }
+
     }
 
   }
@@ -535,6 +668,10 @@ form {
       margin-left: 1em;
     }
 
+  }
+
+  figure {
+    margin: 1rem 6rem;
   }
 
   footer {
