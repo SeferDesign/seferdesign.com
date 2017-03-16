@@ -102,6 +102,17 @@ p {
 
 }
 
+%button {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.375em 0.5em;
+  width: 100%;
+  -webkit-appearance: none;
+  font-size: 1rem;
+  border-width: 1px;
+  border-radius: 0.125em;
+}
+
 .grid-wrapper {
   @extend %transition;
   margin: 0px auto;
@@ -320,6 +331,14 @@ section {
       background: $gray;
     }
 
+    button {
+      @extend %button;
+      margin-top: 1rem;
+      width: auto;
+      color: $white;
+      background: $green;
+    }
+
     .work-image-wrap,
     .work-meta {
       float: left;
@@ -388,14 +407,7 @@ form {
 
   input,
   button {
-    display: block;
-    box-sizing: border-box;
-    padding: 0.375em 0.5em;
-    width: 100%;
-    -webkit-appearance: none;
-    font-size: 1rem;
-    border-width: 1px;
-    border-radius: 0.125em;
+    @extend %button;
   }
 
   input {
@@ -679,6 +691,18 @@ figure {
     nav li:not(:first-child):before {
       content: '\2022';
       margin-right: 0.35em;
+    }
+
+  }
+
+  .work-item {
+
+    &-featured {
+
+      .work-meta {
+        font-size: 1.2em;
+      }
+
     }
 
   }
