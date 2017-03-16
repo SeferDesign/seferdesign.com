@@ -258,6 +258,7 @@ section {
   blockquote {
 
     margin: 1rem 0px;
+    text-align: center;
 
     &:before,
     &:after {
@@ -283,11 +284,11 @@ section {
       line-height: 1.2;
       font-weight: bold;
 
-      &:before {
+      &:first-of-type:before {
         content: '\201C';
       }
 
-      &:after {
+      &:last-of-type:after {
         content: '\201D';
       }
 
@@ -296,7 +297,6 @@ section {
     .attribution {
       font-size: 1rem;
       font-style: italic;
-      text-align: right;
     }
 
   }
@@ -422,6 +422,14 @@ form {
 
 }
 
+.casestudy {
+
+  h1 {
+    text-align: center;
+  }
+
+}
+
 figure {
 
   margin: 1rem 0px;
@@ -465,6 +473,15 @@ figure {
       margin-right: 1rem;
     }
 
+  }
+
+}
+
+@media all and (max-width: 400px) {
+
+  .work .work-item .work-image-wrap img {
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -616,13 +633,7 @@ figure {
     }
 
     blockquote {
-
       margin: 1rem 3rem;
-
-      .attribution {
-        margin-right: 2rem;
-      }
-
     }
 
   }
@@ -696,12 +707,16 @@ figure {
 
   }
 
-  .work-item {
+  .work .work-item {
 
     &-featured {
 
       .work-meta {
         font-size: 1.2em;
+      }
+
+      .work-image-wrap img {
+        height: 135px;
       }
 
     }
