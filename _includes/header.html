@@ -1,6 +1,6 @@
 <header>
   <div class="grid-wrapper">
-    {% if page.url == "/generalist/" %}<a class="logo" href="{{ "/generalist/" | prepend: site.baseurl }}" title="GeneraList"><img src="{{ site.distbase }}/images/generalist_white.svg" alt="GeneraList"></a>{% else %}<a class="logo" href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><img src="{{ site.distbase }}/images/sdc_white.svg" alt="{{ site.title }}"></a>{% endif %}
+    {% if page.url == "/generalist/" %}<a class="logo" href="{{ "/generalist/" | prepend: site.baseurl }}" title="GeneraList"><img src="{{ site.distbase }}/images/generalist_white.svg" alt="GeneraList"></a>{% elsif page.url == "/blogging-for-keeps/" %}<img class="sdc-b4k" src="{{ site.distbase }}/images/sdc-b4k-white.svg" alt="SDC + B4K">{% else %}<a class="logo" href="{{ "/" | prepend: site.baseurl }}" title="{{ site.title }}"><img src="{{ site.distbase }}/images/sdc_white.svg" alt="{{ site.title }}"></a>{% endif %}
     {% if page.url == "/" %}
     <h1>We build sites and tools for the modern web.</h1>
     <div class="devices"></div>
