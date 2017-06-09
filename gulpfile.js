@@ -41,7 +41,6 @@ gulp.task('sass', function() {
   gulp.src(paths.src + 'style/*/**.scss')
     .pipe(scsslint());
   return gulp.src(paths.src + 'style/*.scss')
-    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }))
     .pipe(autoprefixer({
       browsers: ['last 10 versions', 'ie 9'],
@@ -49,12 +48,8 @@ gulp.task('sass', function() {
       sync: true
     }))
     .on('error', function(error) { console.log(error.message); })
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.build + 'style'))
-    .pipe(filter('**/*.css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+    .pipe(gulp.dest('_includes/'))
+    .pipe(browserSync.stream({ match: ['**/*.css'] }));
 });
 
 gulp.task('copy-css', ['sass'], function() {
