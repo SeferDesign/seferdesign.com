@@ -33,7 +33,8 @@ gulp.task('browser-sync', function() {
   browserSync({
     server: {
       baseDir: paths.site
-    }
+    },
+    open: false
   });
 });
 
