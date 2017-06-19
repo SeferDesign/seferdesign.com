@@ -87,5 +87,5 @@ gulp.task('default', ['sass', 'js', 'images', 'jekyll-build', 'browser-sync'], f
   gulp.watch(paths.src + 'style/**/*.scss', ['copy-css']);
   gulp.watch(paths.src + 'scripts/*.js', ['js', 'jekyll-rebuild']);
   gulp.watch(paths.src + 'images/**/*', ['images']);
-  gulp.watch(['*.html', '_includes/*.html', '_layouts/*.html', paths.src + 'images/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['*', '_includes/*.html', '_layouts/*.html', paths.src + 'images/**/*'], ['jekyll-rebuild']);
 });
