@@ -199,11 +199,11 @@ header {
   .devices {
     @extend %transition;
     margin: 2rem auto 1rem;
-    height: 146px;
+    height: 160px;
     background: {
-      image: url('/dist/images/devices.png');
-      position: center top;
-      size: 288px auto;
+      image: url('/dist/images/devices.svg');
+      position: center center;
+      size: contain;
       repeat: no-repeat;
     }
   }
@@ -715,10 +715,7 @@ figure {
 
     .devices {
       width: 450px;
-      height: 228px;
-      background: {
-        size: 100% auto;
-      }
+      height: 252px;
     }
 
     .back-home-link {
