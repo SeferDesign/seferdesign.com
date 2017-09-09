@@ -4,7 +4,10 @@
 <body{% if page.bodyClasses %} class="{{ page.bodyClasses }}"{% endif %}>
 {% include svgs.html %}
 {% include header.html %}
-{{ content }}
+<main>
+  {{ content }}
+  {% include pre-footer.html %}
+</main>
 {% include footer.html %}
 </body>
 </html>

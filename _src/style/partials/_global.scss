@@ -25,6 +25,26 @@ body {
   font-weight: 400;
   line-height: 1.4;
 
+  &.home {
+
+    header,
+    main,
+    footer {
+      animation-duration: 500ms;
+      will-change: transform, opacity;
+    }
+
+    header {
+      animation-name: fadeInDown;
+    }
+
+    main,
+    footer {
+      animation-name: fadeInUp;
+    }
+
+  }
+
   &.generalist {
     background: $dark;
   }
