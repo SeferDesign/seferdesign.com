@@ -490,6 +490,10 @@ form {
   }
 
   input {
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 100%;
     color: $black;
     background: $white;
     border-color: $black;
