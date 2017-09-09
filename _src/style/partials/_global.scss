@@ -64,13 +64,19 @@ svg {
     vertical-align: top;
     fill: $white;
 
-    &.icon-arrow {
+    &.icon-arrow,
+    &.icon-arrow-long-left,
+    &.icon-arrow-long-right {
       width: 20px;
       height: 20px;
     }
 
     &.left {
       margin-right: 0.5em;
+    }
+
+    &.right {
+      margin-left: 0.5em;
     }
 
   }
@@ -203,8 +209,17 @@ header {
   }
 
   .back-home-link {
+
     display: block;
     line-height: 1.5;
+
+    .icon-arrow-long-left {
+      vertical-align: middle;
+      padding-bottom: 0.125em;
+      width: 1.25em;
+      height: 1.25em;
+    }
+
   }
 
 }
@@ -411,6 +426,24 @@ section {
 
       .work-description {
         font-weight: 400;
+      }
+
+    }
+
+    svg {
+
+      &.icon-arrow-long-right {
+
+        vertical-align: middle;
+        padding-bottom: 0.125em;
+        width: 1em;
+        height: 1em;
+        fill: $black;
+
+        &.right {
+          margin-left: 0.25em;
+        }
+
       }
 
     }
@@ -741,7 +774,7 @@ figure {
 
     svg {
 
-      &.icon-arrow {
+      &.icon-arrow-up {
         width: 5rem;
         height: 5rem;
         fill: $green;
