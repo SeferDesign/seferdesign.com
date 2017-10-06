@@ -406,6 +406,10 @@ section {
 
       width: 30%;
 
+      &.not-now img {
+        height: 90px;
+      }
+
       img {
         display: block;
         margin: 0px auto;
