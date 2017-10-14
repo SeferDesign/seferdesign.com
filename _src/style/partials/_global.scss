@@ -6,6 +6,11 @@ $gray: #e4e4e4;
 $blue-lite: #68a5ec;
 $green: #389e3d;
 
+$chrome-grey: $gray;
+$chrome-red: #e74c3c;
+$chrome-yellow: #f1c40f;
+$chrome-green: #2ecc71;
+
 $font-main: 'Open Sans', sans-serif;
 
 %transition {
@@ -618,6 +623,48 @@ form {
 figure {
 
   margin: 1rem 0px;
+
+  &.browser {
+
+    position: relative;
+
+    &:before,
+    .browser-chrome:before,
+    .browser-chrome:after {
+      content: ' ';
+      z-index: 2;
+      position: absolute;
+      top: 0.3725rem;
+      left: 0.5rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: $chrome-red;
+      border-radius: 0.5rem;
+    }
+
+    .browser-chrome:before {
+      left: 1.5rem;
+      background: $chrome-yellow;
+    }
+
+    .browser-chrome:after {
+      left: 2.5rem;
+      background: $chrome-green;
+    }
+
+  }
+
+  .browser-chrome {
+    position: relative;
+    padding: 1.25rem 1px 1px;
+    background: $chrome-grey;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+  }
+
+  img {
+    display: block;
+  }
 
   figcaption {
     margin-top: 0.5rem;
