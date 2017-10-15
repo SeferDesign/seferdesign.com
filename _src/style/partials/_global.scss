@@ -662,8 +662,10 @@ figure {
     border-top-right-radius: 0.375rem;
   }
 
-  img {
+  img,
+  video {
     display: block;
+    max-width: 100%;
   }
 
   figcaption {
@@ -943,10 +945,6 @@ figure {
 
       .work-meta {
         font-size: 1.2em;
-      }
-
-      .work-image-wrap img {
-        height: 135px;
       }
 
     }
