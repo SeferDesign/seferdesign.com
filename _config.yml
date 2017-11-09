@@ -6,6 +6,8 @@ baseurl: ''
 distbase: '/dist'
 production_url_base: 'https://seferdesign.com'
 
+source: _src
+
 # Build settings
 permalink: pretty
 exclude: [
@@ -14,6 +16,7 @@ exclude: [
   'package-lock.json',
   'gulpfile.js',
   'README.md',
-  'SOURCE'
+  'SOURCE',
+  'assets/'
 ]
 languages: ['en']

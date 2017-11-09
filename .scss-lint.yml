@@ -1,6 +1,6 @@
 exclude: [
   'node_modules/**',
-  '_src/style/vendor/**'
+  '_src/assets/style/vendor/**'
 ]
 
 linters:

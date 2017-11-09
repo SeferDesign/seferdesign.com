@@ -14,8 +14,8 @@ var gulp          = require('gulp'),
     cp            = require('child_process');
 
 var paths = {
-  src: '_src/',
-  build: 'dist/',
+  src: '_src/assets/',
+  build: '_src/dist/',
   site: '_site/',
   jekyllDestinationPrefix: ''
 };
@@ -49,7 +49,7 @@ gulp.task('sass', function() {
       sync: true
     }))
     .on('error', function(error) { console.log(error.message); })
-    .pipe(gulp.dest('_includes/'))
+    .pipe(gulp.dest('_src/_includes/'))
     .pipe(browserSync.stream({ match: ['**/*.css'] }));
 });
 
@@ -87,5 +87,5 @@ gulp.task('default', ['sass', 'js', 'images', 'jekyll-build', 'browser-sync'], f
   gulp.watch(paths.src + 'style/**/*.scss', ['copy-css']);
   gulp.watch(paths.src + 'scripts/*.js', ['js', 'jekyll-rebuild']);
   gulp.watch(paths.src + 'images/**/*', ['images']);
-  gulp.watch(['*', '_includes/*.html', '_layouts/*.html', paths.src + 'images/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['*', '_src/_includes/*.html', '_src/_layouts/*.html', paths.src + 'images/**/*'], ['jekyll-rebuild']);
 });
