@@ -1,5 +1,4 @@
 node_modules*
 .map*
 _site
-_src/dist
 #_src/_includes/style.css
