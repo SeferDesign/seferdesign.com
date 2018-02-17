@@ -11,6 +11,10 @@ source: _src
 
 # Build settings
 permalink: pretty
+include: [
+  '.htaccess',
+  '_src/_pages'
+]
 exclude: [
   'node_modules',
   'package.json',
