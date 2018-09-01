@@ -72,29 +72,31 @@ article {
 			transform: translate(-50%, -50%);
 			margin: 0px auto;
 			max-width: 40rem;
+			opacity: 0;
+			animation: {
+				name: fadeInUpIntro;
+				delay: 600ms;
+				duration: $animation-fade-in-up-speed;
+				timing-function: ease-out;
+				fill-mode: forwards;
+			}
 		}
 
-		.logo,
-		.tagline,
-		.letter,
 		.more-arrow {
 			opacity: 0;
 		}
 
 		.logo {
-			@include fadeInUp(200ms);
 			@include sdcLogoDimensions(30rem);
 		}
 
 		.tagline {
-			@include fadeInUp(500ms);
 			font-size: 1.625rem;
 		}
 
 		.letter {
 
 			margin-top: 6rem;
-			@include fadeInUp(1000ms);
 
 			p {
 				text-align: justify;
@@ -117,7 +119,7 @@ article {
 
 			&:hover {
 				cursor: pointer;
-				padding-bottom: 0.25rem;
+				padding-bottom: 0.125rem;
 				color: $grey;
 			}
 

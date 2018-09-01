@@ -26,6 +26,20 @@
 
 }
 
+@keyframes fadeInUpIntro {
+
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -45%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+}
+
 @keyframes fadeInUpMoreArrow {
 
   from {
