@@ -1,4 +1,6 @@
-@import "vendor/normalize";
-@import "vendor/pure_grid";
-@import "partials/animations";
-@import "partials/global";
+@import 'vendor/normalize';
+@import 'partials/variables';
+@import 'partials/animations';
+@import 'partials/mixins';
+@import 'partials/typography';
+@import 'partials/global';

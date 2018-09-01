@@ -1,0 +1,9 @@
+@mixin fadeInUp($delay: 0ms) {
+	animation: {
+		name: fadeInUp;
+		delay: $delay;
+		duration: $animation-fade-in-up-speed;
+		timing-function: ease-out;
+		fill-mode: forwards;
+	}
+}

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
-<body{% if page.bodyClasses %} class="{{ page.bodyClasses }}"{% endif %}>
+<body{% if page.bodyClasses %} class="page-{{ page.bodyClasses }}"{% endif %}>
 {% include svgs.html %}
 {% include header.html %}
 <main>
   {{ content }}
-  {% include pre-footer.html %}
 </main>
 {% include footer.html %}
 </body>
