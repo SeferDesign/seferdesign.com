@@ -1,7 +1,3 @@
-.svg-dump {
-	display: none;
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -17,6 +13,22 @@
 
 }
 
+article {
+
+	a {
+
+		transition: color $transition-speed;
+
+		&:hover {
+			color: $grey;
+		}
+
+	}
+
+}
+
+
+
 .intro {
 
 	position: relative;
@@ -25,7 +37,7 @@
 	.logo {
 		display: block;
 		margin: 0px auto;
-		width: 16rem;
+		@include sdcLogoDimensions(16rem);
 	}
 
 	.tagline {
@@ -45,6 +57,10 @@
 
 	}
 
+	.more-arrow {
+		display: none;
+	}
+
 	@media screen and (min-width: $mobile-breakpoint) {
 
 		height: 100vh;
@@ -60,28 +76,49 @@
 
 		.logo,
 		.tagline,
-		.letter {
+		.letter,
+		.more-arrow {
 			opacity: 0;
 		}
 
 		.logo {
 			@include fadeInUp(200ms);
-			width: 30rem;
+			@include sdcLogoDimensions(30rem);
 		}
 
 		.tagline {
-			@include fadeInUp(800ms);
+			@include fadeInUp(500ms);
 			font-size: 1.625rem;
 		}
 
 		.letter {
 
 			margin-top: 6rem;
-			@include fadeInUp(1400ms);
+			@include fadeInUp(1000ms);
 
 			p {
 				text-align: justify;
 				font-size: 1.25rem;
+			}
+
+		}
+
+		.more-arrow  {
+
+			display: block;
+			animation: {
+				name: fadeInUpMoreArrow;
+				delay: 2000ms;
+				duration: $animation-fade-in-up-speed;
+				timing-function: ease-out;
+				fill-mode: forwards;
+			}
+			transition: all $transition-speed;
+
+			&:hover {
+				cursor: pointer;
+				padding-bottom: 0.25rem;
+				color: $grey;
 			}
 
 		}

@@ -16,6 +16,7 @@ var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     concat        = require('gulp-concat'),
     jshint        = require('gulp-jshint'),
+		svgSymbols		= require('gulp-svg-symbols'),
 		stylish				= require('jshint-stylish-notifier'),
     uglify        = require('gulp-uglify-es').default, // gulp-uglify
     filter        = require('gulp-filter'),
@@ -110,6 +111,17 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.build + 'images'));
 });
 
+gulp.task('svgs', function() {
+	return gulp.src(paths.build + 'images/svgs/**/*.svg')
+		.pipe(svgSymbols({
+      svgAttrs: {
+        class: 'svg-dump',
+        title: '%f icon'
+      }
+    }))
+		.pipe(gulp.dest(paths.includes));
+});
+
 gulp.task('fonts', function() {
 	return gulp.src(paths.assets + 'fonts/**/*')
     .pipe(gulp.dest(paths.build + 'fonts'));
@@ -125,14 +137,14 @@ function watches() {
 	gulp.watch(paths.src + '**/*.html', gulp.series('jekyll-build', 'reload'));
   gulp.watch(paths.assets + 'style/**/*', gulp.series('sass', 'jekyll-build', 'reload'));
   gulp.watch(paths.assets + 'scripts/**/*', gulp.series('js', 'jekyll-build', 'reload'));
-  gulp.watch(paths.assets + 'images/**/*', gulp.series('images', 'jekyll-build', 'reload'));
+  gulp.watch(paths.assets + 'images/**/*', gulp.series('images', 'svgs', 'jekyll-build', 'reload'));
   // gulp.watch(paths.assets + 'fonts/**/*', gulp.series('fonts', function(done) {
 	// 	browserSync.reload();
 	// 	done();
 	// }));
 }
 
-gulp.task('build', gulp.series(gulp.parallel('sass', 'js', 'images', 'fonts'), 'jekyll-build'));
+gulp.task('build', gulp.series(gulp.parallel('sass', 'js', 'images', 'fonts'), 'svgs', 'jekyll-build'));
 gulp.task('watch', function() {
 	browserSync.init({
 		server: {

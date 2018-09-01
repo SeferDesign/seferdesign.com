@@ -2,11 +2,8 @@
 <html lang="en">
 {% include head.html %}
 <body{% if page.bodyClasses %} class="page-{{ page.bodyClasses }}"{% endif %}>
-{% include svgs.html %}
-{% include header.html %}
-<main>
-  {{ content }}
-</main>
+{% include svg-symbols.svg %}
+{{ content }}
 {% include footer.html %}
 </body>
 </html>

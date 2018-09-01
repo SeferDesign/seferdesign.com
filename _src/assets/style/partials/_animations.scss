@@ -25,3 +25,17 @@
   }
 
 }
+
+@keyframes fadeInUpMoreArrow {
+
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, 200%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, 0px, 0);
+  }
+
+}
