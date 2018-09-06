@@ -95,7 +95,7 @@ gulp.task('js', function() {
       paths.assets + 'scripts/vendor/**/*.js',
       paths.assets + 'scripts/main.js'
     ],
-    paths.build + 'scripts',
+    paths.includes,
     'scripts.min.js'
   );
 
@@ -115,8 +115,7 @@ gulp.task('svgs', function() {
 	return gulp.src(paths.build + 'images/svgs/**/*.svg')
 		.pipe(svgSymbols({
       svgAttrs: {
-        class: 'svg-dump',
-        title: '%f icon'
+        class: 'svg-dump'
       }
     }))
 		.pipe(gulp.dest(paths.includes));
