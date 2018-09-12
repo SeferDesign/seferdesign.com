@@ -1,6 +1,10 @@
 var workTitles = document.querySelectorAll('.work-titles li');
 var workContent = document.querySelectorAll('.work-content li');
 
+function index(item, collection) {
+	return [].slice.call(document.querySelectorAll(collection)).indexOf(item);
+}
+
 [].forEach.call(workTitles, function(el) {
   el.addEventListener('click', function(e) {
     e.preventDefault();
@@ -15,7 +19,3 @@ var workContent = document.querySelectorAll('.work-content li');
 		workContent[newIndex].classList += 'active';
   });
 });
-
-function index(item, collection) {
-	return [].slice.call(document.querySelectorAll(collection)).indexOf(item);
-}
