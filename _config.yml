@@ -7,8 +7,6 @@ baseurl: ''
 distbase: '/dist'
 production_url_base: 'https://seferdesign.com'
 
-source: _src
-
 # Build settings
 permalink: pretty
 include: [
