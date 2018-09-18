@@ -27,10 +27,10 @@ var gulp          = require('gulp'),
 
 var paths = {
 	node_modules: 'node_modules/',
-  src: '_src/',
-  assets: '_src/assets/',
-  build: '_src/dist/',
-	includes: '_src/_includes/',
+  src: '',
+  assets: 'assets/',
+  build: 'dist/',
+	includes: '_includes/',
 	site: '_site/'
 };
 
@@ -133,7 +133,11 @@ gulp.task('reload', function(done) {
 });
 
 function watches() {
-	gulp.watch(paths.src + '**/*.html', gulp.series('jekyll-build', 'reload'));
+	gulp.watch([
+		paths.src + '*.html',
+		paths.src + '_includes/*.html',
+		paths.src + '_layouts/*.html'
+	], gulp.series('jekyll-build', 'reload'));
   gulp.watch(paths.assets + 'style/**/*', gulp.series('sass', 'jekyll-build', 'reload'));
   gulp.watch(paths.assets + 'scripts/**/*', gulp.series('js', 'jekyll-build', 'reload'));
   gulp.watch(paths.assets + 'images/**/*', gulp.series('images', 'svgs', 'jekyll-build', 'reload'));
