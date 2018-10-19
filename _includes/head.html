@@ -1,4 +1,5 @@
 <head>
+	{% if page.redirect == true %}<meta http-equiv="refresh" content="0; URL='{{ page.redirect_url }}'" />{% endif %}
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }} | {{ site.description }}</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
