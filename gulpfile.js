@@ -105,7 +105,10 @@ gulp.task('images', function() {
   return gulp.src(paths.assets + 'images/**/*')
     .pipe(imagemin({
       progressive: true,
-      svgoPlugins: [{ removeViewBox: false }],
+      svgoPlugins: [{
+				mergePaths: false,
+				removeViewBox: false
+			}],
       use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.build + 'images'));

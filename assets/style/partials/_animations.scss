@@ -1,3 +1,27 @@
+@keyframes introBG {
+
+	from {
+		transform: translate(-50%, -50%) rotate(15deg);
+	}
+
+	to {
+		transform: translate(-50%, -50%) rotate(-15deg);
+	}
+
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
 @keyframes fadeInUp {
 
   from {

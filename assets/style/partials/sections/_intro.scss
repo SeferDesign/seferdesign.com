@@ -2,11 +2,47 @@
 
 	position: relative;
 	padding: 4rem 0px;
+	overflow: hidden;
+	color: $white;
+	text-shadow: 0.5px 0.5px 0px $black;
+
+	.intro-bg-wrap {
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(15deg);
+		animation: {
+			name: introBG;
+			delay: 500ms;
+			duration: $animation-fade-in-up-speed;
+			timing-function: ease-out;
+			fill-mode: forwards;
+		}
+		will-change: transform;
+
+		.intro-bg {
+
+			width: 200vw;
+			height: 200vh;
+
+			&-1 {
+				background: $pink; //linear-gradient(to right, $pink, darken($pink, 10%));
+			}
+
+			&-2 {
+				background: $blue;
+			}
+
+		}
+
+	}
 
 	.logo {
 		display: block;
 		margin: 0px auto;
 		@include sdcLogoDimensions(16rem);
+		filter: drop-shadow(1px 1px 0px transparentize($black, 0.5));
 	}
 
 	.tagline {
@@ -43,8 +79,8 @@
 			max-width: 40rem;
 			opacity: 0;
 			animation: {
-				name: fadeInUpIntro;
-				delay: 600ms;
+				name: fadeIn;
+				delay: 1000ms;
 				duration: $animation-fade-in-up-speed;
 				timing-function: ease-out;
 				fill-mode: forwards;
@@ -56,7 +92,7 @@
 		}
 
 		.logo {
-			@include sdcLogoDimensions(30rem);
+			@include sdcLogoDimensions(40rem);
 		}
 
 		.tagline {
