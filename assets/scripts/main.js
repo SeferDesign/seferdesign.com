@@ -1,9 +1,16 @@
 var workTitles = document.querySelectorAll('.work-titles li');
 var workContent = document.querySelectorAll('.work-content li');
 
+function setVH() {
+	var vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', vh + 'px');
+}
+
 function index(item, collection) {
 	return [].slice.call(document.querySelectorAll(collection)).indexOf(item);
 }
+
+setVH();
 
 [].forEach.call(workTitles, function(el) {
   el.addEventListener('click', function(e) {
@@ -18,4 +25,8 @@ function index(item, collection) {
 		el.classList += 'active';
 		workContent[newIndex].classList += 'active';
   });
+});
+
+window.addEventListener('resize', function() {
+	setVH();
 });

@@ -50,6 +50,7 @@
 	@media screen and (min-width: $mobile-breakpoint) {
 
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 
 		.content {
 			position: absolute;
