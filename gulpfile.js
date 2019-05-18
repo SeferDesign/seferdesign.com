@@ -21,7 +21,6 @@ var gulp          = require('gulp'),
     uglify        = require('gulp-uglify-es').default, // gulp-uglify
     filter        = require('gulp-filter'),
     imagemin      = require('gulp-imagemin'),
-    pngquant      = require('imagemin-pngquant'),
     del           = require('del'),
     cp            = require('child_process');
 
@@ -103,14 +102,17 @@ gulp.task('js', function() {
 
 gulp.task('images', function() {
   return gulp.src(paths.assets + 'images/**/*')
-    .pipe(imagemin({
-      progressive: true,
-      svgoPlugins: [{
-				mergePaths: false,
-				removeViewBox: false
-			}],
-      use: [pngquant()]
-    }))
+		.pipe(imagemin([
+			imagemin.jpegtran({ progressive: true }),
+			imagemin.optipng({ optimizationLevel: 5 }),
+			imagemin.svgo({
+				plugins: [
+					{ removeTitle: false },
+					{ mergePaths: false },
+					{ removeViewBox: false }
+				]
+			})
+		]))
     .pipe(gulp.dest(paths.build + 'images'));
 });
 
