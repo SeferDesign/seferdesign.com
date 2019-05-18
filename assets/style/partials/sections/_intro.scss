@@ -6,46 +6,20 @@
 	color: $black;
 
 	a {
-		color: $black;
-	}
 
-	// .intro-bg-wrap {
-	//
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%) rotate(15deg);
-	// 	animation: {
-	// 		name: introBG;
-	// 		delay: 500ms;
-	// 		duration: $animation-fade-in-up-speed;
-	// 		timing-function: ease-out;
-	// 		fill-mode: forwards;
-	// 	}
-	// 	will-change: transform;
-	//
-	// 	.intro-bg {
-	//
-	// 		width: 200vw;
-	// 		height: 200vh;
-	//
-	// 		&-1 {
-	// 			background: $pink; //linear-gradient(to right, $pink, darken($pink, 10%));
-	// 		}
-	//
-	// 		&-2 {
-	// 			background: $blue;
-	// 		}
-	//
-	// 	}
-	//
-	// }
+		color: $black;
+		transition: all $transition-speed;
+
+		&:hover {
+			color: $grey;
+		}
+
+	}
 
 	.logo {
 		display: block;
 		margin: 0px auto;
 		@include sdcLogoDimensions(16rem);
-		// filter: drop-shadow(1px 1px 0px transparentize($black, 0.5));
 	}
 
 	.tagline {
@@ -57,6 +31,10 @@
 	.letter {
 
 		margin-top: 2rem;
+
+		p {
+			font-size: 1.125rem;
+		}
 
 		.signature {
 			text-align: right;
