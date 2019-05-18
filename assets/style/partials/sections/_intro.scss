@@ -1,14 +1,14 @@
 .intro {
 
 	position: relative;
-	padding: 4rem 0px;
+	padding: 3rem 0px;
 	overflow: hidden;
 	color: $black;
 
 	a {
 
 		color: $black;
-		transition: all $transition-speed;
+		transition: color $transition-speed;
 
 		&:hover {
 			color: $grey;
@@ -30,7 +30,7 @@
 
 	.letter {
 
-		margin-top: 2rem;
+		margin-top: 3rem;
 
 		p {
 			font-size: 1.125rem;
@@ -101,7 +101,7 @@
 				timing-function: ease-out;
 				fill-mode: forwards;
 			}
-			transition: all $transition-speed;
+			transition: color $transition-speed;
 
 			&:hover {
 				cursor: pointer;
