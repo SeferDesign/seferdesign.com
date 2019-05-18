@@ -12,6 +12,13 @@ function index(item, collection) {
 
 setVH();
 
+document.getElementById('nav-toggle').addEventListener('click', function(e) {
+	if (!document.body.classList.contains('nav-has-toggled')) {
+		document.body.classList.add('nav-has-toggled');
+	}
+	document.body.classList.toggle('nav-active');
+});
+
 [].forEach.call(workTitles, function(el) {
   el.addEventListener('click', function(e) {
     e.preventDefault();

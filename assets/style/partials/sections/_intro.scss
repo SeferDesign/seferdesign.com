@@ -97,7 +97,7 @@
 			display: block;
 			animation: {
 				name: fadeInUpMoreArrow;
-				delay: 2000ms;
+				delay: $animation-intro-extra-delay;
 				duration: $animation-fade-in-up-speed;
 				timing-function: ease-out;
 				fill-mode: forwards;

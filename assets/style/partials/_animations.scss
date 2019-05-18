@@ -10,6 +10,18 @@
 
 }
 
+@keyframes slideInRight {
+
+	from {
+		transform: translate(100%, 0px);
+	}
+
+	to {
+		transform: translate(0px, 0px);
+	}
+
+}
+
 @keyframes fadeIn {
 
   from {

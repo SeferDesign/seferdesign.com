@@ -16,6 +16,7 @@
   ],
   "devDependencies": {
     "browser-sync": "^2.24.5",
+    "classlist.js": "^1.1.20150312",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
