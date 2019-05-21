@@ -79,8 +79,18 @@
 				height: 100%;
 
 				li {
+
+					position: relative;
 					flex-basis: 100%;
 					font-size: 1.5rem;
+
+					a {
+						position: absolute;
+						top: 50%;
+						left: 2rem;
+						transform: translate(0px, -50%);
+					}
+
 				}
 
 			}
