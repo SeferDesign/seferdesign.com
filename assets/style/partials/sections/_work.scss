@@ -15,7 +15,7 @@
 			transition: width $transition-speed / 2;
 			font-weight: 500;
 			letter-spacing: 0.05em;
-			text-transform: uppercase;
+			// text-transform: uppercase;
 
 			&:hover {
 				cursor: pointer;
@@ -35,9 +35,26 @@
 				background: $green;
 			}
 
+			&:nth-child(3n+2).active {
+				background: $blue;
+			}
+
+			&:nth-child(3n+3).active {
+				background: $red;
+			}
+
 			a {
+
 				color: $white;
 				text-decoration: none;
+
+				span {
+					display: block;
+					margin-bottom: 0.5rem;
+					font-size: 0.75em;
+					text-transform: uppercase;
+				}
+
 			}
 
 		}
@@ -61,15 +78,17 @@
 
 	@media screen and (min-width: $mobile-breakpoint) {
 
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		height: 80vh;
-		height: calc(var(--vh, 1vh) * 80);
+		&-inner {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			height: 80vh;
+			height: calc(var(--vh, 1vh) * 80);
+		}
 
 		.work-titles {
 
-			width: 20%;
+			width: 35%;
 
 			ul {
 
@@ -87,8 +106,9 @@
 					a {
 						position: absolute;
 						top: 50%;
-						left: 2rem;
+						left: 0px;
 						transform: translate(0px, -50%);
+						padding: 2rem;
 					}
 
 				}
@@ -98,7 +118,7 @@
 		}
 
 		.work-content {
-			width: 75%;
+			width: 60%;
 		}
 
 	}

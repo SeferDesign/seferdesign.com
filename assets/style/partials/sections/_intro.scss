@@ -8,10 +8,28 @@
 	a {
 
 		color: $black;
-		transition: color $transition-speed;
+		transition: color $transition-speed / 2;
 
 		&:hover {
+
 			color: $grey;
+
+			&.blue {
+				color: $blue;
+			}
+
+			&.green {
+				color: $green;
+			}
+
+			&.red {
+				color: $red;
+			}
+
+			&.grey {
+				color: $grey-light;
+			}
+
 		}
 
 	}

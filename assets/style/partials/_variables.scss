@@ -4,12 +4,17 @@ $grey: #505050;
 $grey-light: #b3b2b2;
 $grey-lighter: #c8c8c8;
 $green: #3fcc68;
+$blue: #3795f6;
+$red: #ff5964;
 
 $font-family: 'futura-pt', sans-serif;
 $font-size-base: 16px;
 
 $screen-md: 64rem;
+$screen-lg: 75rem;
+$screen-xl: 90rem;
 $mobile-breakpoint: $screen-md;
+$wide-breakpoint: $screen-xl;
 
 $animation-speed: 400ms;
 $animation-fade-in-up-speed: $animation-speed;

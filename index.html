@@ -12,32 +12,59 @@ sitemap:
 			<svg class="logo" role="img"><use xlink:href="#logo"></use></svg>
 			<h1 class="tagline">We make sites and tools for the modern web.</h1>
 			<div class="letter">
-				<p>For the better part of a decade, we've been creating digital products of all shapes and sizes. From comprehensive <a href="#">subscription services</a> to interactive animations, <a href="#">magazine-like style publications</a> to productivity utilities &mdash; we touch it all.</p>
-				<p>As the list of web technologies grows longer and longer, it's easier than ever to fall behind or wander off track. Our work aims to strip away all the &lsquo;other&rsquo; by focusing on simplicity and clarity. We start by asking, &ldquo;What's the primary objective?&rdquo; and drive all decision-making to achieve that. <a href="#">But don't take our word for it.</a></p>
-				<p>Do you have a project in mind? <a href="#">Get in touch.</a> We're excited to hear what challenge you'll throw at us next.</p>
+				<p>For the better part of a decade, we've been creating digital products of all shapes and sizes. From comprehensive <a class="green" href="#">subscription services</a> to interactive animations, <a class="blue" href="#">magazine-like style publications</a> to productivity utilities &mdash; we touch it all.</p>
+				<p>As the list of web technologies grows longer and longer, it's easier than ever to fall behind or wander off track. Our work aims to strip away all the &lsquo;other&rsquo; by focusing on simplicity and clarity. We start by asking, &ldquo;What's the primary objective?&rdquo; and drive all decision-making to achieve that. <a class="red" href="#">But don't take our word for it.</a></p>
+				<p>Do you have a project in mind? <a class="grey" href="#">Get in touch.</a> We're excited to hear what challenge you'll throw at us next.</p>
 			</div>
 		</div>
 	</div>
 	<svg class="more-arrow chevron-down-solid" role="img"><use xlink:href="#chevron-down-solid"></use></svg>
 </section>
 
-<section class="work">
-	<div class="work-titles">
-		<ul>
-			<li class="active"><a href="#">Work Item 1</a></li>
-			<li><a href="#">Work Item 2</a></li>
-			<li><a href="#">Work Item 3</a></li>
-			<li><a href="#">Work Item 4</a></li>
-			<li><a href="#">Work Item 5</a></li>
-		</ul>
+<section class="endorsements">
+	<div class="wrapper">
 	</div>
-	<div class="work-content">
-		<ul>
-			<li class="active">Work Content 1</li>
-			<li>Work Content 2</li>
-			<li>Work Content 3</li>
-			<li>Work Content 4</li>
-			<li>Work Content 5</li>
-		</ul>
+</section>
+
+<section class="work">
+	<div class="wrapper-wide">
+		<div class="work-inner">
+			<div class="work-titles">
+				<ul>
+					<li class="active"><a href="{{ "/meal-plans-college-nutritionist/" | prepend: site.baseurl }}"><span>Case Study</span>Meal Plans by The College Nutritionist</a></li>
+					<li><a href="{{ "/kelly-in-the-city/" | prepend: site.baseurl }}"><span>Case Study</span>Kelly in the City</a></li>
+					<li><a href="{{ "/civilian-agency/" | prepend: site.baseurl }}"><span>Case Study</span>Civilian Agency</a></li>
+					<li><a href="#">Work Item 4</a></li>
+					<li><a href="#">Work Item 5</a></li>
+				</ul>
+			</div>
+			<div class="work-content">
+				<ul>
+					<li class="active">
+						<h3 class="case-preview-title">Meal Plans by The College Nutritionist</h3>
+						<div class="case-preview-description">
+							<p>#</p>
+							<a class="btn" href="{{ "/meal-plans-college-nutritionist/" | prepend: site.baseurl }}">Read More</a>
+						</div>
+					</li>
+					<li>
+						<h3 class="case-preview-title">Kelly in the City</h3>
+						<div class="case-preview-description">
+							<p>We dramatically improved user experience by fixing ifrastructure and page load time.</p>
+							<a class="btn" href="{{ "/kelly-in-the-city/" | prepend: site.baseurl }}">Read More</a>
+						</div>
+					</li>
+					<li>
+						<h3 class="case-preview-title">Civilian Agency</h3>
+						<div class="case-preview-description">
+							<p>#</p>
+							<a class="btn" href="{{ "/civilian-agency/" | prepend: site.baseurl }}">Read More</a>
+						</div>
+					</li>
+					<li>Work Content 4</li>
+					<li>Work Content 5</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </section>
