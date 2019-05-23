@@ -18,8 +18,14 @@
 			font-weight: 500;
 
 			&:hover {
+
 				cursor: pointer;
 				width: calc(100% + 0.5rem);
+
+				a {
+					padding-right: 2.5rem;
+				}
+
 			}
 
 			&:nth-child(odd) {
@@ -31,8 +37,14 @@
 			}
 
 			&.active {
+
 				width: calc(100% + 1rem);
 				background: $green;
+
+				a {
+					padding-right: 3rem;
+				}
+
 			}
 
 			&:nth-child(3n+2).active {
@@ -47,6 +59,7 @@
 
 				color: $white;
 				text-decoration: none;
+				transition: padding $transition-speed / 2;
 
 				span {
 					display: block;
