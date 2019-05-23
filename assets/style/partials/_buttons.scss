@@ -1,0 +1,38 @@
+.btn {
+
+	display: inline-block;
+	padding: 0.75em 1em 0.5625em;
+	color: $white;
+	background: $black;
+	text-decoration: none;
+	border-radius: 0.375em;
+	@include caps();
+	font-weight: 700;
+	line-height: 1;
+	transition: background-color $transition-speed / 2;
+
+	.chevron-right-solid {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 0.5em;
+		margin-bottom: 0.1875em;
+		width: 0.625em;
+		height: 1em;
+		transition: margin $transition-speed / 2;
+	}
+
+	&:hover {
+
+		background-color: $grey-dark;
+
+		.chevron-right-solid {
+			margin-left: 0.625em;
+		}
+
+	}
+
+	&:active {
+		background-color: $grey;
+	}
+
+}
