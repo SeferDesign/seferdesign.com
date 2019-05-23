@@ -12,11 +12,17 @@ function index(item, collection) {
 
 setVH();
 
-document.getElementById('nav-toggle').addEventListener('click', function(e) {
+document.querySelector('#nav-toggle').addEventListener('click', function(e) {
 	if (!document.body.classList.contains('nav-has-toggled')) {
 		document.body.classList.add('nav-has-toggled');
 	}
 	document.body.classList.toggle('nav-active');
+});
+
+document.querySelectorAll('#main-nav a').forEach(function(link) {
+	link.addEventListener('click', function(e) {
+		document.body.classList.remove('nav-active');
+	});
 });
 
 [].forEach.call(workTitles, function(el) {
