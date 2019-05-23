@@ -12,3 +12,8 @@
 	width: $width;
 	height: $width * 0.149;
 }
+
+@mixin caps() {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}

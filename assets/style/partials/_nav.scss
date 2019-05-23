@@ -61,13 +61,24 @@ body.nav-active {
 			height: 0.1875rem;
 			background: $black;
 			// border-radius: 0.25rem;
-			transform: translate(100%, 0px);
-			will-change: transform;
-			animation: {
-				name: slideInRight;
-				duration: $animation-slide-in-right-speed;
-				timing-function: ease-out;
-				fill-mode: forwards;
+
+			.page-home & {
+
+				transform: translate(100%, 0px);
+				will-change: transform;
+				animation: {
+					name: slideInRight;
+					duration: $animation-slide-in-right-speed;
+					timing-function: ease-out;
+					fill-mode: forwards;
+				}
+
+				@for $i from 1 through 3 {
+					&:nth-child(#{$i}) {
+						animation-delay: #{$animation-intro-extra-delay + (50 * ($i - 1))};
+					}
+				}
+
 			}
 
 			.nav-has-toggled & {
@@ -77,12 +88,6 @@ body.nav-active {
 
 			+ span {
 				margin-top: 0.5rem;
-			}
-
-			@for $i from 1 through 3 {
-				&:nth-child(#{$i}) {
-					animation-delay: #{$animation-intro-extra-delay + (50 * ($i - 1))};
-				}
 			}
 
 		}
@@ -105,11 +110,10 @@ nav {
 	bottom: 0px;
 	left: 0px;
 	background: $black;
-	text-transform: uppercase;
 	text-align: center;
 	font-size: 4vh;
 	font-size: calc(var(--vh, 1vh) * 4);
-	letter-spacing: 0.05em;
+	@include caps();
 
 	.nav-active & {
 		display: block;

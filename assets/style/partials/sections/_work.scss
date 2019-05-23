@@ -1,5 +1,7 @@
 .work {
 
+	margin: 4rem 0px;
+
 	ul {
 		list-style-type: none;
 		margin: 0px;
@@ -14,8 +16,6 @@
 			width: 100%;
 			transition: width $transition-speed / 2;
 			font-weight: 500;
-			letter-spacing: 0.05em;
-			// text-transform: uppercase;
 
 			&:hover {
 				cursor: pointer;
@@ -52,7 +52,7 @@
 					display: block;
 					margin-bottom: 0.5rem;
 					font-size: 0.75em;
-					text-transform: uppercase;
+					@include caps();
 				}
 
 			}
