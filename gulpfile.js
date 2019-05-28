@@ -173,7 +173,14 @@ gulp.task('watch', function() {
 			cert: '/Users/rsefer/.localhost-ssl/server.crt'
 		},
 		open: false,
-		injectChanges: true
+		injectChanges: true,
+		notify: {
+			styles: {
+				top: 'auto',
+				bottom: '0',
+				borderRadius: '5px 0px 0px'
+			}
+		}
 	});
 	watches();
 });
