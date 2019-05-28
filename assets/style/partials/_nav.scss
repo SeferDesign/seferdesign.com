@@ -7,14 +7,17 @@ body.nav-active {
 
 .nav-toggle {
 
-	display: none;
+	// display: none;
 	z-index: 199999;
 	position: fixed;
-	top: 1.25rem;
-	right: 1.25rem;
-	width: 2.5rem;
-	height: 1.5625rem;
+	top: 1rem;
+	right: 1rem;
+	padding: 0.5rem;
+	width: 3.5rem;
+	height: 2.5625rem;
 	overflow: hidden;
+	// background: $white;
+	border-radius: 0.25rem;
 
 	&:hover {
 
@@ -29,6 +32,7 @@ body.nav-active {
 	.nav-active & {
 
 		overflow: visible;
+		background: none;
 
 		.closed {
 			display: none;
@@ -54,6 +58,20 @@ body.nav-active {
 
 	.closed {
 
+		position: relative;
+
+		// &:before {
+		// 	content: ' ';
+		// 	z-index: -1;
+		// 	position: absolute;
+		// 	$unit: -0.125rem;
+		// 	top: $unit;
+		// 	right: $unit;
+		// 	bottom: $unit;
+		// 	left: $unit;
+		// 	background: $white;
+		// }
+
 		span {
 
 			display: block;
@@ -64,10 +82,10 @@ body.nav-active {
 
 			.page-home & {
 
-				transform: translate(100%, 0px);
+				transform: translate(calc(100% + 0.5rem), 0px);
 				will-change: transform;
 				animation: {
-					name: slideInRight;
+					name: navToggleSlideIn;
 					duration: $animation-slide-in-right-speed;
 					timing-function: ease-out;
 					fill-mode: forwards;
