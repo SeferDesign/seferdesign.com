@@ -12,7 +12,7 @@ sitemap:
 			<svg class="logo" role="img"><use xlink:href="#logo"></use></svg>
 			<h1 class="tagline">We make sites and tools for the modern web.</h1>
 			<div class="letter">
-				<p>For the better part of a decade, we've been creating digital products of all shapes and sizes. From comprehensive <a class="green" href="#">subscription services</a> to interactive animations, <a class="blue" href="#">magazine-like style publications</a> to productivity utilities &mdash; we touch it all.</p>
+				<p>For the better part of a decade, we've been creating digital products of all shapes and sizes. From comprehensive <a class="green" href="#case-study-meal-plans">subscription services</a> to interactive animations, <a class="blue" href="#case-study-kelly-in-the-city">magazine-like style publications</a> to productivity utilities &mdash; we touch it all.</p>
 				<p>As the list of web technologies grows longer and longer, it's easier than ever to fall behind or wander off track. Our work aims to strip away all the &lsquo;other&rsquo; by focusing on simplicity and clarity. We start by asking, &ldquo;What's the primary objective?&rdquo; and drive all decision-making to achieve that. <a class="red" href="#endorsements">But don't take our word for it.</a></p>
 				<p>Do you have a project in mind? <a class="grey" href="#">Get in touch.</a> We're excited to hear what challenge you'll throw at us next.</p>
 			</div>
@@ -24,17 +24,24 @@ sitemap:
 <section id="case-studies" class="case-studies">
 	<div class="wrapper-wide">
 		<div class="case-studies-preview-wrap">
-			<div class="case-study-preview">
+			<div id="case-study-meal-plans" class="case-study-preview">
 				<div class="case-study-preview-content">
 					<div class="case-study-preview-title">
 						<div class="case-study-preview-title-label">Case Study</div>
 						<div class="case-study-preview-title-name">Meal Plans by The College Nutritionist</div>
 					</div>
+					<div class="case-study-preview-description">
+						<p>An A-to-Z subscription service creation, from logo ideation to a highly-customized content management and function build-out.</p>
+						<a class="btn" href="{{ "/meal-plans/" | prepend: site.baseurl }}">Read More<svg class="chevron-right-solid" role="img"><use xlink:href="#chevron-right-solid"></use></svg></a>
+					</div>
 				</div>
 				<div class="case-study-preview-images-wrap">
+					<figure>
+						<img src="{{ site.distbase }}/images/case-studies/meal-plans-home.jpg" alt="Meal Plans">
+					</figure>
 				</div>
 			</div>
-			<div class="case-study-preview">
+			<div id="case-study-kelly-in-the-city" class="case-study-preview">
 				<div class="case-study-preview-content">
 					<div class="case-study-preview-title">
 						<div class="case-study-preview-title-label">Case Study</div>
@@ -46,22 +53,29 @@ sitemap:
 					</div>
 				</div>
 				<div class="case-study-preview-images-wrap">
-					<figure class="browser">
-						<div class="browser-chrome"><img src="{{ site.distbase }}/images/case-studies/kellyinthecity-new.jpg" alt="New Kelly In The City"></div>
+					<figure>
+						<img src="{{ site.distbase }}/images/case-studies/kellyinthecity-new.jpg" alt="New Kelly In The City">
 					</figure>
 				</div>
 			</div>
-			<div class="case-study-preview">
+			<div id="case-study-civilian-agency" class="case-study-preview">
 				<div class="case-study-preview-content">
 					<div class="case-study-preview-title">
 						<div class="case-study-preview-title-label">Case Study</div>
 						<div class="case-study-preview-title-name">Civilian Agency</div>
 					</div>
+					<div class="case-study-preview-description">
+						<p>With a bit of animation, we injected the firm's personality into their online presence.</p>
+						<a class="btn" href="{{ "/civilian-agency/" | prepend: site.baseurl }}">Read More<svg class="chevron-right-solid" role="img"><use xlink:href="#chevron-right-solid"></use></svg></a>
+					</div>
 				</div>
 				<div class="case-study-preview-images-wrap">
+					<figure>
+						<img src="{{ site.distbase }}/images/case-studies/civilian.svg" alt="Civilian">
+					</figure>
 				</div>
 			</div>
-			<div class="case-study-preview">
+			<div id="case-study-sefer-design-co" class="case-study-preview">
 				<div class="case-study-preview-content">
 					<div class="case-study-preview-title">
 						<div class="case-study-preview-title-label">Case Study</div>
@@ -75,55 +89,12 @@ sitemap:
 	</div>
 </section>
 
-<section class="work">
-	<div class="wrapper-wide">
-		<div class="work-inner">
-			<div class="work-titles">
-				<ul>
-					<li class="active"><a href="{{ "/meal-plans-college-nutritionist/" | prepend: site.baseurl }}"><span>Case Study</span>Meal Plans by The College Nutritionist</a></li>
-					<li><a href="{{ "/kelly-in-the-city/" | prepend: site.baseurl }}"><span>Case Study</span>Kelly in the City</a></li>
-					<li><a href="{{ "/civilian-agency/" | prepend: site.baseurl }}"><span>Case Study</span>Civilian Agency</a></li>
-					<!-- <li><a href="#">Work Item 4</a></li>
-					<li><a href="#">Work Item 5</a></li> -->
-				</ul>
-			</div>
-			<div class="work-content">
-				<ul>
-					<li class="active">
-						<h3 class="case-preview-title">Meal Plans by The College Nutritionist</h3>
-						<div class="case-preview-description">
-							<p>#</p>
-							<a class="btn" href="{{ "/meal-plans-college-nutritionist/" | prepend: site.baseurl }}">Read More<svg class="chevron-right-solid" role="img"><use xlink:href="#chevron-right-solid"></use></svg></a>
-						</div>
-					</li>
-					<li>
-						<h3 class="case-preview-title">Kelly in the City</h3>
-						<div class="case-preview-description">
-							<p>We dramatically improved user experience by fixing infrastructure and page load time.</p>
-							<a class="btn" href="{{ "/kelly-in-the-city/" | prepend: site.baseurl }}">Read More<svg class="chevron-right-solid" role="img"><use xlink:href="#chevron-right-solid"></use></svg></a>
-						</div>
-					</li>
-					<li>
-						<h3 class="case-preview-title">Civilian Agency</h3>
-						<div class="case-preview-description">
-							<p>#</p>
-							<a class="btn" href="{{ "/civilian-agency/" | prepend: site.baseurl }}">Read More<svg class="chevron-right-solid" role="img"><use xlink:href="#chevron-right-solid"></use></svg></a>
-						</div>
-					</li>
-					<!-- <li>Work Content 4</li>
-					<li>Work Content 5</li> -->
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section id="endorsements" class="endorsements">
 	<div class="wrapper">
 		<ul class="endorsements-list">
 			<li>
-				<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac orci sed lacus varius luctus. Praesent in lorem quis turpis vehicula faucibus. Maecenas vestibulum sollicitudin elit nec ornare.</q>
-				<div class="attribution">Jane Smith</div>
+				<q>Rob was incredibly responsive and helpful with any question I had, and <span>I could rely on him to think outside the box</span> to help me create a product that didn't yet exist. Exceeded my expectations &mdash; I can't recommend him enough!</q>
+				<div class="attribution">Rachel Paul, The College Nutritionist</div>
 			</li>
 		</ul>
 	</div>
