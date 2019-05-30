@@ -15,7 +15,7 @@ body.nav-active {
 	padding: 0.5rem;
 	width: 3.5rem;
 	height: 2.5625rem;
-	overflow: hidden;
+	// overflow: hidden;
 	// background: $white;
 	border-radius: 0.25rem;
 
@@ -27,6 +27,15 @@ body.nav-active {
 			background: $grey;
 		}
 
+	}
+
+	&:after {
+		content: attr(data-menu-title);
+		position: absolute;
+		top: 50%;
+		right: 100%;
+		transform: translate(0px, -50%);
+		white-space: nowrap;
 	}
 
 	.nav-active & {
@@ -56,9 +65,17 @@ body.nav-active {
 		display: none;
 	}
 
+	.menu-title-wrap,
+	.closed {
+		// display: inline-block;
+		// vertical-align: middle;
+		// float: right;
+	}
+
 	.closed {
 
 		position: relative;
+		width: 100%;
 
 		// &:before {
 		// 	content: ' ';
@@ -110,6 +127,13 @@ body.nav-active {
 
 		}
 
+	}
+
+	.menu-title-wrap {
+		// position: absolute;
+		// top: 50%;
+		// right: 100%;
+		// transform: translate(0px, -50%);
 	}
 
 	@media screen and (min-width: $mobile-breakpoint) {

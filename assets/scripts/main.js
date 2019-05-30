@@ -1,6 +1,3 @@
-var workTitles = document.querySelectorAll('.work-titles li');
-var workContent = document.querySelectorAll('.work-content li');
-
 function setVH() {
 	var vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty('--vh', vh + 'px');
@@ -25,20 +22,24 @@ document.querySelectorAll('#main-nav a').forEach(function(link) {
 	});
 });
 
-[].forEach.call(workTitles, function(el) {
-  el.addEventListener('click', function(e) {
-    e.preventDefault();
-		var newIndex = index(el, '.work-titles li');
-		[].forEach.call(workTitles, function(workTitleItem) {
-			workTitleItem.classList.remove('active');
+if (document.body.classList.contains('page-home')) {
+	document.querySelectorAll('.home-section').forEach(function(section) {
+		new Waypoint.Inview({
+			element: section,
+			enter: function(direction) {
+				var title = this.element.dataset.menuTitle;
+				if (!title || document.body.classList.contains('intro')) {
+					title = '';
+				}
+				document.querySelector('#nav-toggle').setAttribute('data-menu-title', title);
+			},
+			offset: {
+				top: 100,
+				bottom: 100
+			}
 		});
-		[].forEach.call(workContent, function(workContentItem) {
-			workContentItem.classList.remove('active');
-		});
-		el.classList += 'active';
-		workContent[newIndex].classList += 'active';
-  });
-});
+	});
+}
 
 window.addEventListener('resize', function() {
 	setVH();

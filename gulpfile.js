@@ -92,6 +92,8 @@ gulp.task('js', function() {
   return jsOpps([
       paths.node_modules + 'vanilla-lazyload/dist/lazyload.js',
       paths.node_modules + 'classlist.js/classList.js',
+			paths.node_modules + 'waypoints/lib/noframework.waypoints.js',
+			paths.node_modules + 'waypoints/lib/shortcuts/inview.js',
       paths.assets + 'scripts/vendor/**/*.js',
       paths.assets + 'scripts/main.js'
     ],
