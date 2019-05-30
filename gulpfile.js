@@ -94,6 +94,8 @@ gulp.task('js', function() {
       paths.node_modules + 'classlist.js/classList.js',
 			paths.node_modules + 'waypoints/lib/noframework.waypoints.js',
 			paths.node_modules + 'waypoints/lib/shortcuts/inview.js',
+			paths.node_modules + 'smooth-scroll/dist/smooth-scroll.js',
+			paths.node_modules + 'smooth-scroll/dist/smooth-scroll.polyfills.js',
       paths.assets + 'scripts/vendor/**/*.js',
       paths.assets + 'scripts/main.js'
     ],

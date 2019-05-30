@@ -9,6 +9,10 @@ function index(item, collection) {
 
 setVH();
 
+var scroll = new SmoothScroll('a[href*="#"]', {
+	speed: 400
+});
+
 document.querySelector('#nav-toggle').addEventListener('click', function(e) {
 	if (!document.body.classList.contains('nav-has-toggled')) {
 		document.body.classList.add('nav-has-toggled');
