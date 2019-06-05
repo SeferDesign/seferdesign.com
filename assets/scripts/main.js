@@ -26,24 +26,24 @@ document.querySelectorAll('#main-nav a').forEach(function(link) {
 	});
 });
 
-if (document.body.classList.contains('page-home')) {
-	document.querySelectorAll('.home-section').forEach(function(section) {
-		new Waypoint.Inview({
-			element: section,
-			enter: function(direction) {
-				var title = this.element.dataset.menuTitle;
-				if (!title || document.body.classList.contains('intro')) {
-					title = '';
-				}
-				document.querySelector('#nav-toggle').setAttribute('data-menu-title', title);
-			},
-			offset: {
-				top: 100,
-				bottom: 100
-			}
-		});
-	});
-}
+// if (document.body.classList.contains('page-home')) {
+// 	document.querySelectorAll('.home-section').forEach(function(section) {
+// 		new Waypoint.Inview({
+// 			element: section,
+// 			enter: function(direction) {
+// 				var title = this.element.dataset.menuTitle;
+// 				if (!title || document.body.classList.contains('intro')) {
+// 					title = '';
+// 				}
+// 				document.querySelector('#nav-toggle').setAttribute('data-menu-title', title);
+// 			},
+// 			offset: {
+// 				top: 100,
+// 				bottom: 100
+// 			}
+// 		});
+// 	});
+// }
 
 window.addEventListener('resize', function() {
 	setVH();
