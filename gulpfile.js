@@ -40,7 +40,7 @@ function logthis(message) {
 }
 
 gulp.task('jekyll-build', function() {
-	return cp.spawn('jekyll', ['build'], {
+	return cp.spawn('jekyll', ['build'], ['--incremental'], {
 		stdio: 'inherit'
 	});
 });
