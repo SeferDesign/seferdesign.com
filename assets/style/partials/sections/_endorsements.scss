@@ -65,6 +65,10 @@
 
 	}
 
+	&-alt .attribution span {
+		color: $green;
+	}
+
 	@media screen and (min-width: $mobile-breakpoint) {
 
 		ul {
