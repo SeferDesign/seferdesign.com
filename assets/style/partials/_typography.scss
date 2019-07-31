@@ -16,6 +16,18 @@ h6 {
 	font-weight: 500;
 }
 
+h2 {
+	font-size: 2rem;
+}
+
+@media screen and (min-width: $mobile-breakpoint) {
+
+	h2 {
+		font-size: 3rem;
+	}
+
+}
+
 p {
 
 	margin: 0px 0px 1.5rem;

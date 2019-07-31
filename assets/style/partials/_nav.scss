@@ -170,8 +170,7 @@ nav {
 	.logo {
 		display: block;
 		margin: 0px auto;
-		width: 6.7em;
-		height: 1em;
+		@include sdcLogoDimensions(7em);
 	}
 
 	ul {

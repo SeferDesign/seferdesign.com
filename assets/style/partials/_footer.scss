@@ -1,0 +1,34 @@
+footer {
+
+	padding: 6rem 0px;
+	text-align: center;
+
+	.back-home {
+		margin-bottom: 2rem;
+	}
+
+	.copy {
+
+		display: inline-block;
+		color: $grey-light;
+		font-size: 4vw;
+		opacity: 0.5;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		@media screen and (min-width: $mobile-breakpoint) {
+			font-size: 2rem;
+		}
+
+		.logo {
+			display: inline-block;
+			vertical-align: middle;
+			@include sdcLogoDimensions(10em);
+		}
+
+	}
+
+}
