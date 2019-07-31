@@ -4,7 +4,15 @@
 <body{% if page.bodyClasses %} class="page-{{ page.bodyClasses }}"{% endif %}>
 {% include svg-symbols.svg %}
 {% include nav.html %}
+
+{% if page.case-study or page.product %}
+<article>
+	{{ content }}
+</article>
+{% else %}
 {{ content }}
+{% endif %}
+
 {% include footer.html %}
 </body>
 </html>
