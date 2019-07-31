@@ -20,6 +20,39 @@
 
 	}
 
+	&-grid {
+
+		article & {
+			margin-top: 1.5rem;
+		}
+
+		@media screen and (min-width: $mobile-breakpoint) {
+
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+
+			article & {
+				margin: 2rem auto;
+			}
+
+			.grid-item {
+				flex-basis: 45%;
+			}
+
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: $screen-lg - 2rem;
+		}
+
+		// @media screen and (min-width: $screen-xl) {
+		// 	width: $screen-xl - 2rem;
+		// }
+
+	}
+
 }
 
 article {

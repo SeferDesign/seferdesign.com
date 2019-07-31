@@ -10,4 +10,13 @@ article {
 		color: $black;
 	}
 
+	@media screen and (min-width: $mobile-breakpoint) {
+
+		h1,
+		h2 {
+			text-align: center;
+		}
+
+	}
+
 }
