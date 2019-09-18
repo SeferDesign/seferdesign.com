@@ -2,6 +2,69 @@
 	box-sizing: border-box;
 }
 
+body {
+
+	position: relative;
+
+	&:before,
+	&:after {
+		content: ' ';
+		z-index: 999999;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 0.25rem;
+		background: $black;
+	}
+
+	&:before {
+		animation: {
+			name: topBorderLeftToRight;
+			duration: $animation-speed * 1.5;
+			timing-function: linear;
+			fill-mode: forwards;
+		}
+		will-change: right;
+	}
+
+	&:after {
+		position: absolute;
+		top: auto;
+		bottom: 0px;
+	}
+
+	&.case-study-meal-plans:before {
+		background: $green;
+	}
+
+	&.case-study-sdc:before {
+		background: $blue;
+	}
+
+	&.case-study-kellyinthecity:before {
+		background: $red;
+	}
+
+	&.case-study-civilian:before {
+		background: $grey-light;
+	}
+
+	&.nav-active {
+
+		&:before,
+		&:after {
+			background: $white;
+		}
+
+		&:after {
+			position: fixed;
+		}
+
+	}
+
+}
+
 .wrapper {
 
 	margin: 0px 1.5rem;

@@ -159,6 +159,8 @@ nav {
 
 	.nav-active & {
 		display: block;
+		border-left: 0.25rem solid $white;
+		border-right: 0.25rem solid $white;
 	}
 
 	a {
