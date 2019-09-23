@@ -205,14 +205,14 @@
 
 	.logo-final-display {
 
-		margin: 2rem 0px;
+		margin: 4rem 0px;
 		text-align: center;
 
 		.logo {
 			@include sdcLogoDimensions(16rem);
 		}
 
-		@media screen and (min-width: $screen-md) {
+		@media screen and (min-width: $screen-sm) {
 
 			margin: 4rem 0px;
 
