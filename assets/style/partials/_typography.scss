@@ -49,6 +49,11 @@ p {
 		margin-bottom: 0px;
 	}
 
+	&.question {
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+	}
+
 	@media screen and (min-width: $mobile-breakpoint) {
 
 		margin-bottom: 2rem;

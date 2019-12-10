@@ -134,11 +134,15 @@ article {
 
 figure {
 
-	margin: 1rem 0px;
-
 	&.browser {
 
 		position: relative;
+		margin: 1rem auto;
+		max-width: 30rem;
+
+		@media screen and (min-width: $mobile-breakpoint) {
+			max-width: none;
+		}
 
 		&:before,
 		.browser-chrome:before,
