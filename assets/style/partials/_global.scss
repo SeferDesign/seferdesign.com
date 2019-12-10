@@ -1,982 +1,205 @@
-// Colors
-$black: #000;
-$white: #fff;
-$dark: #333;
-$gray: #e4e4e4;
-$blue-lite: #68a5ec;
-$green: #389e3d;
-
-$chrome-grey: $gray;
-$chrome-red: #e74c3c;
-$chrome-yellow: #f1c40f;
-$chrome-green: #2ecc71;
-
-$font-main: 'Open Sans', sans-serif;
-
-%transition {
-  transition: all 500ms;
-}
-
-.svg-dump {
-  display: none;
+* {
+	box-sizing: border-box;
 }
 
 body {
 
-  color: $white;
-  background: $blue-lite;
-  font-size: 16px;
-  font-family: $font-main;
-  font-weight: 400;
-  line-height: 1.4;
+	position: relative;
 
-  &.home {
+	&:before,
+	&:after {
+		content: ' ';
+		z-index: 999999;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		height: 0.25rem;
+		background: $black;
+	}
 
-    header,
-    main,
-    footer {
-      animation-duration: 500ms;
-      will-change: transform, opacity;
-    }
+	&:before {
+		animation: {
+			name: topBorderLeftToRight;
+			duration: $animation-speed * 1.5;
+			timing-function: linear;
+			fill-mode: forwards;
+		}
+		will-change: right;
+	}
 
-    header {
-      animation-name: fadeInDown;
-    }
+	&:after {
+		position: absolute;
+		top: auto;
+		bottom: 0px;
+	}
 
-    main,
-    footer {
-      animation-name: fadeInUp;
-    }
+	&.case-study-meal-plans:before {
+		background: $green;
+	}
 
-  }
+	&.case-study-sdc:before {
+		background: $blue;
+	}
 
-  &.generalist {
-    background: $dark;
-  }
+	&.case-study-kellyinthecity:before {
+		background: $red;
+	}
 
-}
+	&.case-study-civilian:before {
+		background: $grey-light;
+	}
 
-.pure-g {
-  display: flex;
-  flex-flow: row wrap;
-}
+	&.nav-active {
 
-svg {
+		&:before,
+		&:after {
+			background: $white;
+		}
 
-  &.icon {
+		&:after {
+			position: fixed;
+		}
 
-    display: inline-block;
-    vertical-align: top;
-    fill: $white;
-
-    &.icon-arrow,
-    &.icon-arrow-long-left,
-    &.icon-arrow-long-right {
-      width: 20px;
-      height: 20px;
-    }
-
-    &.left {
-      margin-right: 0.5em;
-    }
-
-    &.right {
-      margin-left: 0.5em;
-    }
-
-  }
+	}
 
 }
 
-a {
-  color: $white;
-  font-weight: 600;
-}
+.wrapper {
 
-img,
-.logo {
-  max-width: 100%;
-}
+	margin: 0px 1.5rem;
 
-strong,
-b,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
+	@media screen and (min-width: $mobile-breakpoint) {
+		margin: 0px auto;
+		width: $mobile-breakpoint - 2rem;
+	}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 1rem 0px;
-  line-height: 1.2;
-}
+	&-wide {
 
-p {
+		@media screen and (min-width: $wide-breakpoint) {
+			margin: 0px auto;
+			width: $wide-breakpoint - 2rem;
+		}
 
-  line-height: 1.5;
+	}
 
-  &:first-child {
-    margin-top: 0px;
-  }
+	&-grid {
 
-  &:last-child {
-    margin-bottom: 0px;
-  }
+		article & {
+			margin-top: 1.5rem;
+		}
 
-  &.question {
-    margin-top: 2rem;
-    margin-bottom: 0px;
-    font-weight: 700;
-  }
+		@media screen and (min-width: $mobile-breakpoint) {
 
-  &.answer {
-    margin-top: 0px;
-  }
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+
+			article & {
+				margin: 2rem auto;
+			}
+
+			.grid-item {
+				flex-basis: 45%;
+			}
+
+		}
+
+		@media screen and (min-width: $screen-lg) {
+			width: $screen-lg - 2rem;
+		}
+
+		// @media screen and (min-width: $screen-xl) {
+		// 	width: $screen-xl - 2rem;
+		// }
+
+	}
 
 }
 
-%button {
+article {
 
-  display: block;
-  box-sizing: border-box;
-  padding: 0.375em 0.5em;
-  width: 100%;
-  -webkit-appearance: none;
-  color: $white;
-  background: $green;
-  border: 1px solid $green;
-  border-radius: 0.25em;
-  font-size: 1rem;
-  font-weight: 700;
-  box-shadow: none;
-  outline: 0px;
-  transition: all 300ms;
+	a {
 
-  &:hover {
-    background: darken($green, 4%);
-    border-color: darken($green, 4%);
-  }
+		transition: color $transition-speed;
 
-  &:active {
-    background: darken($green, 8%);
-    border-color: darken($green, 8%);
-  }
+		&:hover {
+			color: $grey;
+		}
 
-}
-
-.grid-wrapper {
-  @extend %transition;
-  margin: 0px auto;
-  padding: 0px 1rem;
-}
-
-header,
-footer,
-section {
-  padding: 1rem 0px;
-}
-
-header,
-footer {
-  text-align: center;
-}
-
-header {
-
-  a {
-    text-decoration: none;
-  }
-
-  h1 {
-    margin: 1rem 0px 2rem;
-    font-weight: 400;
-  }
-
-  .devices {
-    @extend %transition;
-    margin: 2rem auto 1rem;
-    height: 160px;
-    background: {
-      image: url('/dist/images/devices.svg'); // pulled from https://github.com/ephread/PommePlate.git
-      position: center center;
-      size: contain;
-      repeat: no-repeat;
-    }
-  }
-
-  .back-home-link {
-
-    display: block;
-    line-height: 1.5;
-
-    .icon-arrow-long-left {
-      vertical-align: middle;
-      padding-bottom: 0.125em;
-      width: 1.25em;
-      height: 1.25em;
-    }
-
-  }
-
-}
-
-footer {
-
-  li {
-    margin: 0.5rem 0px;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-}
-
-h1 {
-  font-size: 24px;
-}
-
-.logo {
-
-  @extend %transition;
-  display: inline-block;
-  width: 16em;
-
-  img {
-    display: block;
-    margin: 0px auto;
-  }
-
-  header & {
-
-    margin: 1em auto;
-
-    img {
-
-      height: 27px;
-
-      .generalist & {
-        height: 41px;
-      }
-
-    }
-
-  }
-
-  footer & {
-
-    width: 3em;
-
-    img {
-      height: 21px;
-    }
-
-  }
-
-}
-
-nav {
-
-  ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-  }
-
-}
-
-section {
-
-  color: $black;
-  background: $white;
-
-  a {
-    color: $black;
-  }
-
-  ul {
-
-    padding-left: 2em;
-
-    li {
-
-      line-height: 1.5;
-
-      &:not(:last-child) {
-        margin-bottom: 1em;
-      }
-
-    }
-
-  }
-
-  h2 {
-    font-weight: 400;
-  }
-
-  blockquote {
-
-    margin: 1rem 0px;
-    text-align: center;
-
-    &:before,
-    &:after {
-      content: ' ';
-      display: block;
-      margin: 2rem auto;
-      width: 60%;
-      height: 1px;
-      background: $gray;
-    }
-
-    &:before {
-      margin-bottom: 1rem;
-    }
-
-    &:after {
-      margin-top: 1rem;
-    }
-
-    p {
-
-      font-size: 2rem;
-      line-height: 1.2;
-      font-weight: 700;
-
-      &:first-of-type:before {
-        content: '\201C';
-      }
-
-      &:last-of-type:after {
-        content: '\201D';
-      }
-
-    }
-
-    .attribution {
-      font-size: 1rem;
-      font-style: italic;
-    }
-
-  }
-
-}
-
-.what-how {
-
-  h2 {
-    text-align: center;
-  }
-
-  ul {
-    margin-bottom: 0px;
-  }
-
-}
-
-.work {
-
-  h2 {
-    text-align: center;
-  }
-
-  .work-item {
-
-    @extend %transition;
-    box-sizing: border-box;
-    padding: 1em;
-
-    &:hover {
-      background: $gray;
-      border-radius: 3px;
-    }
-
-    .work-image-wrap,
-    .work-meta {
-      float: left;
-      box-sizing: border-box;
-    }
-
-    .work-image-wrap {
-
-      width: 30%;
-
-      &.not-now img {
-        height: 90px;
-      }
-
-      img {
-        display: block;
-        margin: 0px auto;
-        width: auto;
-        height: 100px;
-      }
-
-    }
-
-    .work-meta {
-
-      margin-left: 7%;
-      width: 63%;
-
-      .work-title {
-        font-weight: 700;
-      }
-
-      .work-description {
-        font-weight: 400;
-      }
-
-    }
-
-    svg {
-
-      &.icon-arrow-long-right {
-
-        vertical-align: middle;
-        padding-bottom: 0.125em;
-        width: 1em;
-        height: 1em;
-        fill: $black;
-
-        &.right {
-          margin-left: 0.25em;
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-.contact {
-  padding-bottom: 2rem;
-  text-align: center;
-}
-
-.generalist {
-
-  h1 {
-    margin: 0px 0px 1rem;
-  }
-
-  h4 {
-    margin: 0px;
-  }
-
-}
-
-.b4k-faq {
-  padding-top: 2rem;
-}
-
-form {
-
-  margin: 2em 0px;
-  width: 100%;
-
-  label {
-
-    display: block;
-    margin-bottom: 0.25em;
-
-    &.label-filler {
-      font-size: 0.5em;
-    }
-
-  }
-
-  button {
-    @extend %button;
-  }
-
-  input {
-    display: block;
-    box-sizing: border-box;
-    padding: 0.5rem;
-    width: 100%;
-    color: $black;
-    background: $white;
-    border-color: $black;
-    border-width: 1px;
-    border-radius: 0.25em;
-    outline: 0px;
-  }
-
-}
-
-.casestudy,
-.product {
-
-  h1,
-  h2 {
-    text-align: center;
-  }
-
-}
-
-.product {
-
-  &-b4k {
-
-    .sdc-b4k {
-
-      display: block;
-      margin: 0px auto 1rem;
-      max-width: 400px;
-
-      @media screen and (min-width: 32rem) {
-        margin-bottom: 2rem;
-      }
-
-    }
-
-  }
-
-  .sub-product-grid {
-
-    text-align: center;
-
-    @media screen and (min-width: 48rem) {
-
-      .pure-u-md-1-3 {
-
-        margin-right: 4%;
-        width: 30%;
-        box-sizing: border-box;
-
-        &:nth-child(3n) {
-          margin-right: 0px;
-        }
-
-      }
-
-    }
-
-    .sub-product {
-
-      margin-bottom: 1rem;
-
-      img {
-
-        display: block;
-        margin: 0px auto;
-        max-width: 200px;
-
-        @media screen and (min-width: 48rem) {
-          max-width: 100%;
-        }
-
-      }
-
-      h3 {
-        font-size: 1rem;
-      }
-
-    }
-
-  }
-
-  .btn {
-
-    @extend %button;
-    color: $white;
-    text-decoration: none;
-
-    &-lg {
-      font-size: 1.375rem;
-    }
-
-    svg {
-
-      margin-bottom: 0.25em;
-      vertical-align: middle;
-      width: 0.875em;
-      height: 0.875em;
-
-      &.icon-shopping-cart {
-        fill: $white;
-      }
-
-      &.left {
-        margin-right: 0.5em;
-      }
-
-    }
-
-  }
-
-  &-not-now .btn {
-    margin: 1rem 0px 2rem;
-  }
+	}
 
 }
 
 figure {
 
-  margin: 1rem 0px;
+	&.browser {
 
-  &.browser {
+		position: relative;
+		margin: 1rem auto;
+		max-width: 30rem;
 
-    position: relative;
+		@media screen and (min-width: $mobile-breakpoint) {
+			max-width: none;
+		}
 
-    &:before,
-    .browser-chrome:before,
-    .browser-chrome:after {
-      content: ' ';
-      z-index: 2;
-      position: absolute;
-      top: 0.3725rem;
-      left: 0.5rem;
-      width: 0.5rem;
-      height: 0.5rem;
-      background: $chrome-red;
-      border-radius: 0.5rem;
-    }
+		&:before,
+		.browser-chrome:before,
+		.browser-chrome:after {
+			content: ' ';
+			z-index: 2;
+			position: absolute;
+			top: 0.3725rem;
+			left: 0.5rem;
+			width: 0.5rem;
+			height: 0.5rem;
+			background: $chrome-red;
+			border-radius: 0.5rem;
+		}
 
-    .browser-chrome:before {
-      left: 1.5rem;
-      background: $chrome-yellow;
-    }
+		.browser-chrome:before {
+			left: 1.5rem;
+			background: $chrome-yellow;
+		}
 
-    .browser-chrome:after {
-      left: 2.5rem;
-      background: $chrome-green;
-    }
+		.browser-chrome:after {
+			left: 2.5rem;
+			background: $chrome-green;
+		}
 
-  }
-
-  .browser-chrome {
-    position: relative;
-    padding: 1.25rem 1px 1px;
-    background: $chrome-grey;
-    border-top-left-radius: 0.375rem;
-    border-top-right-radius: 0.375rem;
-  }
-
-  img,
-  video {
-    display: block;
-    max-width: 100%;
-  }
-
-  video {
-    width: 100%;
-  }
-
-  figcaption {
-    margin-top: 0.5rem;
-    text-align: center;
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-
-}
-
-.stat {
-
-  margin: 1rem;
-  text-align: center;
-
-  .stat-number {
-    font-weight: 700;
-    font-size: 4em;
-    line-height: 1;
-  }
-
-  .stat-description {
-    font-size: 0.75rem;
-    font-weight: 700;
-  }
-
-  svg {
-
-    margin-bottom: 0.125em;
-    vertical-align: middle;
-
-    &.icon-arrow {
-      width: 3rem;
-      height: 3rem;
-      fill: $green;
-    }
-
-    &.left {
-      margin-right: 1rem;
-    }
-
-  }
-
-}
-
-@media all and (max-width: 400px) {
-
-  .work .work-item .work-image-wrap img {
-    width: 100%;
-    height: auto;
-  }
-
-}
-
-@media all and (min-width: 32em) {
-
-  .grid-wrapper {
-    width: 30em;
-  }
-
-  .logo {
-
-    header & {
-
-      width: 28em;
-
-      img {
-
-        height: 47px;
-
-        .generalist & {
-          height: 72px;
-        }
-
-      }
-
-    }
-
-    footer & {
-
-      width: 4em;
-
-      img {
-        height: 28px;
-      }
-
-    }
-
-  }
-
-  header,
-  footer,
-  section {
-    padding: 2rem 0px;
-  }
-
-  .b4k-faq {
-    padding-top: 4rem;
 	}
 
-  .contact {
-    padding-bottom: 4rem;
-  }
+	.browser-chrome {
+		position: relative;
+		padding: 1.25rem 1px 1px;
+		background: $chrome-grey;
+		border-top-left-radius: 0.375rem;
+		border-top-right-radius: 0.375rem;
+	}
 
-  header {
+	img,
+	video {
+		display: block;
+		max-width: 100%;
+	}
 
-    h1 {
-      margin: 1rem 0px 3rem;
-    }
+	video {
+		width: 100%;
+	}
 
-    .devices {
-      width: 450px;
-      height: 252px;
-    }
-
-    .back-home-link {
-      margin-top: 1rem;
-    }
-
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  form {
-
-    text-align: center;
-
-    .form-group {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    label {
-
-      text-align: left;
-
-      &.label-filler {
-        font-size: 1em;
-      }
-
-    }
-
-    input,
-    button {
-      padding: 0.25em 0.5em;
-      font-size: 1.5rem;
-    }
-
-    input {
-      width: 300px;
-    }
-
-    button {
-      width: auto;
-    }
-
-  }
-
-  .stat {
-
-    .stat-number {
-      font-size: 6em;
-    }
-
-    .stat-description {
-      font-size: 1rem;
-    }
-
-    svg {
-
-      &.icon-arrow-up {
-        width: 5rem;
-        height: 5rem;
-        fill: $green;
-      }
-
-    }
-
-  }
-
-  .casestudy {
-
-    section h1 {
-      text-align: center;
-    }
-
-  }
+	figcaption {
+		margin-top: 0.5rem;
+		text-align: center;
+		font-size: 0.75em;
+	}
 
 }
 
-@media all and (min-width: 48em) {
-
-  section {
-
-    p,
-    li {
-      font-size: 1.25rem;
-    }
-
-    blockquote {
-      margin: 1rem 3rem;
-    }
-
-  }
-
-  .grid-wrapper {
-    padding: 0px 2em;
-    width: 44em;
-  }
-
-  .logo {
-
-    header & {
-
-      width: 38em;
-
-      img {
-
-        height: 64px;
-
-        .generalist & {
-          height: 98px;
-        }
-
-      }
-
-    }
-
-    footer & {
-
-      width: 6em;
-
-      img {
-        height: 41px;
-      }
-
-    }
-
-  }
-
-  nav {
-
-    ul {
-
-      li {
-        display: inline-block;
-        margin: 0px 0.25em;
-      }
-
-    }
-
-  }
-
-  form {
-
-    button {
-      margin-left: 1em;
-    }
-
-  }
-
-  figure {
-    margin: 1rem 6rem;
-  }
-
-  footer {
-
-    nav li:not(:first-child):before {
-      content: '\2022';
-      margin-right: 0.35em;
-    }
-
-  }
-
-  .work .work-item {
-
-    &-featured {
-
-      .work-meta {
-        font-size: 1.2em;
-      }
-
-    }
-
-  }
-
-}
-
-@media all and (min-width: 56em) {
-
-  .grid-wrapper {
-    width: 52em;
-  }
-
-}
-
-@media all and (min-width: 64em) {
-
-  .grid-wrapper {
-    width: 60em;
-  }
-
+hr {
+	margin: 3rem auto;
+	width: 40%;
+	height: 0.0675rem;
+	background: $black;
+	border: 0px;
 }

@@ -1,0 +1,19 @@
+@mixin fadeInUp($delay: 0ms) {
+	animation: {
+		name: fadeInUp;
+		delay: $delay;
+		duration: $animation-fade-in-up-speed;
+		timing-function: ease-out;
+		fill-mode: forwards;
+	}
+}
+
+@mixin sdcLogoDimensions($width: 100px) {
+	width: $width;
+	height: $width * 0.149;
+}
+
+@mixin caps() {
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}

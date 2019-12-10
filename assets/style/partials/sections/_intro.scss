@@ -1,0 +1,136 @@
+.intro {
+
+	position: relative;
+	padding: 3rem 0px;
+	overflow: hidden;
+	color: $black;
+
+	a {
+
+		color: $black;
+		transition: color $transition-speed / 2;
+		// text-decoration: none;
+
+		&:hover {
+
+			color: $grey;
+
+			&.blue {
+				color: $blue;
+			}
+
+			&.green {
+				color: $green;
+			}
+
+			&.red {
+				color: $red;
+			}
+
+			&.grey {
+				color: $grey-light;
+			}
+
+		}
+
+	}
+
+	.logo {
+		display: block;
+		margin: 0px auto;
+		@include sdcLogoDimensions(16rem);
+	}
+
+	.tagline {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.letter {
+
+		margin-top: 3rem;
+
+		p {
+			font-size: 1.125rem;
+		}
+
+		.signature {
+			text-align: right;
+			font-weight: bold;
+		}
+
+	}
+
+	.more-arrow {
+		display: none;
+	}
+
+	@media screen and (min-width: $mobile-breakpoint) {
+
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+
+		.content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			margin: 0px auto;
+			width: 50rem;
+			max-width: 50rem;
+			opacity: 0;
+			animation: {
+				name: fadeIn;
+				delay: 500ms;
+				duration: $animation-fade-in-up-speed;
+				timing-function: ease-out;
+				fill-mode: forwards;
+			}
+		}
+
+		.more-arrow {
+			opacity: 0;
+		}
+
+		.logo {
+			@include sdcLogoDimensions(30rem);
+		}
+
+		.tagline {
+			font-size: 2rem;
+		}
+
+		.letter {
+
+			margin-top: 4rem;
+
+			p {
+				font-size: 1.5rem;
+			}
+
+		}
+
+		.more-arrow  {
+
+			display: block;
+			animation: {
+				name: fadeInUpMoreArrow;
+				delay: $animation-intro-extra-delay;
+				duration: $animation-fade-in-up-speed;
+				timing-function: ease-out;
+				fill-mode: forwards;
+			}
+			transition: color $transition-speed;
+
+			&:hover {
+				cursor: pointer;
+				padding-bottom: 0.125rem;
+				color: $grey;
+			}
+
+		}
+
+	}
+
+}

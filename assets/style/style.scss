@@ -1,4 +1,19 @@
-@import "vendor/normalize";
-@import "vendor/pure_grid";
-@import "partials/animations";
-@import "partials/global";
+@import 'vendor/normalize';
+
+/*! site */
+@import 'partials/variables';
+@import 'partials/animations';
+@import 'partials/mixins';
+@import 'partials/typography';
+@import 'partials/svgs';
+@import 'partials/global';
+@import 'partials/nav';
+@import 'partials/buttons';
+@import 'partials/footer';
+
+@import 'partials/sections/intro';
+@import 'partials/sections/endorsements';
+@import 'partials/sections/case-studies';
+@import 'partials/sections/work';
+@import 'partials/sections/contact';
+@import 'partials/sections/article';

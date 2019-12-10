@@ -1,0 +1,94 @@
+.endorsements {
+
+	text-align: center;
+
+	ul {
+
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+
+		li {
+
+			padding: 2rem 0px;
+			color: $white;
+			background: $black;
+
+			&:nth-child(even) {
+
+				color: $black;
+				background: $white;
+
+				.attribution {
+
+					span {
+						color: $green;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	q {
+
+		font-size: 1.5rem;
+		line-height: 1.3;
+
+		&:before {
+			content: open-quote;
+		}
+
+		&:after {
+			content: close-quote;
+		}
+
+	}
+
+	.attribution {
+
+		margin-top: 2rem;
+		font-size: 1.25rem;
+		font-weight: 700;
+		@include caps();
+
+		&:before {
+			content: '\2015';
+			margin-right: 0.25em;
+		}
+
+		span {
+			color: $red;
+		}
+
+	}
+
+	&-alt .attribution span {
+		color: $green;
+	}
+
+	@media screen and (min-width: $mobile-breakpoint) {
+
+		ul {
+
+			li {
+				padding: 6rem 0px;
+			}
+
+		}
+
+		q {
+			font-size: 3rem;
+		}
+
+		.attribution {
+			margin-top: 3rem;
+			font-size: 1.75rem;
+		}
+
+	}
+
+}

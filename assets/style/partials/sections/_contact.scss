@@ -1,0 +1,28 @@
+.contact {
+
+	padding: 6rem 0px;
+	background: $grey-lightest;
+	text-align: center;
+
+	p {
+		font-size: 1.5rem;
+		line-height: 1.7;
+	}
+
+	a {
+		color: $black;
+	}
+
+	@media screen and (min-width: $mobile-breakpoint) {
+
+		h2 {
+			font-size: 4rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+
+	}
+
+}

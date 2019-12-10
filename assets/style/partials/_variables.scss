@@ -1,0 +1,35 @@
+$black: #000;
+$white: #fff;
+$grey: #505050;
+$grey-dark: #302f2f;
+$grey-light: #b2b2b2;
+$grey-lighter: #c8c8c8;
+$grey-lightest: #eaeaea;
+$green: #3fcc68;
+$blue: #3795f6;
+$red: #ff5959;
+
+$green-highlight: #b7f3c9;
+$blue-highlight: #a5cefa;
+$red-highlight: #ffc7c7;
+
+$chrome-grey: $grey-lightest;
+$chrome-red: #e74c3c;
+$chrome-yellow: #f1c40f;
+$chrome-green: #2ecc71;
+
+$font-family: 'futura-pt', sans-serif;
+$font-size-base: 16px;
+
+$screen-sm: 48rem;
+$screen-md: 64rem;
+$screen-lg: 75rem;
+$screen-xl: 95rem;
+$mobile-breakpoint: $screen-md;
+$wide-breakpoint: $screen-xl;
+
+$animation-speed: 400ms;
+$animation-fade-in-up-speed: $animation-speed;
+$animation-slide-in-right-speed: $animation-speed;
+$animation-intro-extra-delay: 4000ms;
+$transition-speed: $animation-speed;
