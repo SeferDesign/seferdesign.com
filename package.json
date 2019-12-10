@@ -2,7 +2,6 @@
   "name": "seferDesignCo",
   "version": "2.0.0",
   "description": "Site for Sefer Design Company LLC.",
-  "license": "UNLICENSED",
   "repository": {
     "type": "git",
     "url": "git@github.com:SeferDesign/seferdesign.com.git"
@@ -11,7 +10,7 @@
     {
       "name": "Robert Sefer",
       "email": "rsefer@gmail.com",
-      "homepage": "http://rsefer.com"
+      "homepage": "https://rsefer.com"
     }
   ],
   "devDependencies": {
