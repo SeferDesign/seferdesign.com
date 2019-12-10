@@ -13,4 +13,16 @@
 		color: $black;
 	}
 
+	@media screen and (min-width: $mobile-breakpoint) {
+
+		h2 {
+			font-size: 4rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+
+	}
+
 }
