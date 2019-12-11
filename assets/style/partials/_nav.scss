@@ -79,6 +79,7 @@ body.nav-active {
 		}
 
 		.open {
+
 			display: block;
 			position: absolute;
 			top: 50%;
@@ -88,6 +89,12 @@ body.nav-active {
 			font-size: 5rem;
 			line-height: 0.5;
 			font-weight: 500;
+			transition: color $transition-speed;
+
+			&:hover {
+				color: $grey;
+			}
+
 		}
 
 	}
@@ -204,14 +211,10 @@ nav {
 		color: $white;
 		font-weight: 700;
 		text-decoration: none;
+		transition: color $transition-speed;
 
 		&:hover {
-			color: $blue;
-
-			.logo {
-				color: $grey;
-			}
-
+			color: $grey;
 		}
 
 	}
