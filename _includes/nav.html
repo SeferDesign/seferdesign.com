@@ -1,3 +1,5 @@
+{% if page.name != 'index.html' %}<a class="back" href="{{ "/" | prepend: site.baseurl }}"><svg class="left-arrow" role="img"><use xlink:href="#left-arrow"></use></svg></a>{% endif %}
+
 <nav id="main-nav">
 	<ul>
 		<li><a href="{{ "/" | prepend: site.baseurl }}"><svg class="logo" role="img"><use xlink:href="#logo"></use></svg></a></li>

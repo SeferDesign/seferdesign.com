@@ -10,37 +10,11 @@
 
 		}
 
-		&:nth-child(4n-3) .case-study-preview-title {
-
-			background: $green;
-
-			// &-label {
-			// 	color: $green-highlight;
-			// }
-
+		&:nth-child(odd) .case-study-preview-title {
+			background: $orange;
 		}
 
-		&:nth-child(4n-2) .case-study-preview-title {
-
-			background: $blue;
-
-			// &-label {
-			// 	color: $blue-highlight;
-			// }
-
-		}
-
-		&:nth-child(4n-1) .case-study-preview-title {
-
-			background: $red;
-
-			// &-label {
-			// 	color: $red-highlight;
-			// }
-
-		}
-
-		&:nth-child(4n) .case-study-preview-title {
+		&:nth-child(even) .case-study-preview-title {
 			background: $grey-light;
 		}
 

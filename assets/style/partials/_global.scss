@@ -34,21 +34,25 @@ body {
 		bottom: 0px;
 	}
 
-	&.case-study-meal-plans:before {
-		background: $green;
+	&.page-case-study:before {
+		background: $orange;
 	}
 
-	&.case-study-sdc:before {
-		background: $blue;
-	}
+	// &.case-study-meal-plans:before {
+	// 	background: $green;
+	// }
 
-	&.case-study-kellyinthecity:before {
-		background: $red;
-	}
+	// &.case-study-sdc:before {
+	// 	background: $blue;
+	// }
 
-	&.case-study-civilian:before {
-		background: $grey-light;
-	}
+	// &.case-study-kellyinthecity:before {
+	// 	background: $red;
+	// }
+
+	// &.case-study-civilian:before {
+	// 	background: $grey-light;
+	// }
 
 	&.nav-active {
 

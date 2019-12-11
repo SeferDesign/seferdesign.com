@@ -5,6 +5,27 @@ body.nav-active {
 	height: 100%;
 }
 
+.back {
+
+	display: none;
+	z-index: 2;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+
+	@media screen and (min-width: $mobile-breakpoint) {
+		display: block;
+	}
+
+	svg {
+		display: block;
+		width: 1.36em;
+		height: 1em;
+		font-size: 2.5rem;
+	}
+
+}
+
 .nav-toggle {
 
 	// display: none;

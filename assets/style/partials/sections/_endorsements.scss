@@ -12,20 +12,20 @@
 
 			padding: 2rem 0px;
 			color: $white;
-			background: $black;
+			background: $grey-darker;
 
 			&:nth-child(even) {
 
 				color: $black;
 				background: $white;
 
-				.attribution {
+				// .attribution {
 
-					span {
-						color: $green;
-					}
+				// 	span {
+				// 		color: $green;
+				// 	}
 
-				}
+				// }
 
 			}
 
@@ -61,14 +61,14 @@
 		}
 
 		span {
-			color: $red;
+			color: $orange;
 		}
 
 	}
 
-	&-alt .attribution span {
-		color: $green;
-	}
+	// &-alt .attribution span {
+	// 	color: $green;
+	// }
 
 	@media screen and (min-width: $mobile-breakpoint) {
 
