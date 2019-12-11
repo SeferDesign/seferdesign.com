@@ -9,16 +9,9 @@
 
 		color: $black;
 		transition: color $transition-speed;
-		// text-decoration: none;
 
 		&:hover {
-
 			color: $grey;
-
-			&.grey {
-				color: $grey-light;
-			}
-
 		}
 
 	}

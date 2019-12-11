@@ -15,18 +15,8 @@
 			background: $grey-darker;
 
 			&:nth-child(even) {
-
 				color: $black;
 				background: $white;
-
-				// .attribution {
-
-				// 	span {
-				// 		color: $green;
-				// 	}
-
-				// }
-
 			}
 
 		}
@@ -67,10 +57,6 @@
 		}
 
 	}
-
-	// &-alt .attribution span {
-	// 	color: $green;
-	// }
 
 	@media screen and (min-width: $mobile-breakpoint) {
 
