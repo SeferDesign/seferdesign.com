@@ -1,7 +1,11 @@
 footer {
 
-	padding: 6rem 0px;
+	padding: 4rem 0px;
 	text-align: center;
+
+	@media screen and (min-width: $mobile-breakpoint) {
+		oadding: 6rem 0px;
+	}
 
 	.back-home {
 		margin-bottom: 2rem;

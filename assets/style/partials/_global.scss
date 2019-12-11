@@ -90,7 +90,14 @@ body {
 	&-grid {
 
 		article & {
+
 			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+
 		}
 
 		@media screen and (min-width: $mobile-breakpoint) {

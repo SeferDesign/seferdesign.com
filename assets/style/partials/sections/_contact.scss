@@ -1,8 +1,12 @@
 .contact {
 
-	padding: 6rem 0px;
+	padding: 4rem 0px;
 	background: $grey-lightest;
 	text-align: center;
+
+	@media screen and (min-width: $mobile-breakpoint) {
+		padding: 6rem 0px;
+	}
 
 	p {
 		font-size: 1.5rem;
