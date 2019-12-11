@@ -7,21 +7,19 @@ body.nav-active {
 
 .back {
 
-	display: none;
+	display: block;
 	z-index: 2;
 	position: absolute;
-	top: 1rem;
-	left: 1rem;
-
-	@media screen and (min-width: $mobile-breakpoint) {
-		display: block;
-	}
+	top: 1.5rem;
+	left: 1.5rem;
+	color: $grey-lighter;
 
 	svg {
 		display: block;
-		width: 1.36em;
-		height: 1em;
-		font-size: 2.5rem;
+		width: 1em;
+		height: 1.6em;
+		font-size: 1rem;
+		fill: $grey-lighter;
 	}
 
 }
