@@ -9,7 +9,7 @@
 	@include caps();
 	font-weight: 700;
 	line-height: 1;
-	transition: background-color $transition-speed / 2;
+	transition: background-color $transition-speed;
 
 	.chevron-right-solid,
 	.chevron-left-solid {
@@ -19,7 +19,7 @@
 		margin-bottom: 0.1875em;
 		width: 0.625em;
 		height: 1em;
-		transition: margin $transition-speed / 2;
+		transition: margin $transition-speed;
 	}
 
 	.chevron-left-solid {

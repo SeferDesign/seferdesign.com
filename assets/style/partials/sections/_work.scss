@@ -14,7 +14,7 @@
 
 			padding: 2rem;
 			width: 100%;
-			transition: width $transition-speed / 2;
+			transition: width $transition-speed;
 			font-weight: 500;
 
 			&:hover {
@@ -45,7 +45,7 @@
 
 				color: $white;
 				text-decoration: none;
-				transition: padding $transition-speed / 2;
+				transition: padding $transition-speed;
 
 				span {
 					display: block;

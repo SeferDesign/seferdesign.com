@@ -14,7 +14,14 @@
 	}
 
 	a {
+
 		color: $black;
+		transition: color $transition-speed;
+
+		&:hover {
+			color: $grey;
+		}
+
 	}
 
 	@media screen and (min-width: $mobile-breakpoint) {
