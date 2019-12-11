@@ -11,12 +11,28 @@
 		}
 
 		&:nth-child(odd) .case-study-preview-title {
-			background: $orange;
+			background: $blue;
 		}
 
 		&:nth-child(even) .case-study-preview-title {
 			background: $grey-light;
 		}
+
+		// &:nth-child(4n) .case-study-preview-title {
+		// 	background: $grey-light;
+		// }
+
+		// &:nth-child(3n-2) .case-study-preview-title {
+		// 	background: $grey-light;
+		// }
+
+		// &:nth-child(3n-1) .case-study-preview-title {
+		// 	background: $blue;
+		// }
+
+		// &:nth-child(3n) .case-study-preview-title {
+		// 	background: $orange;
+		// }
 
 		&-title {
 
