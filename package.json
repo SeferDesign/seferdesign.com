@@ -43,7 +43,6 @@
     "jshint-stylish-notifier": "^0.1.0",
     "normalize.css": "^8.0.0",
     "smooth-scroll": "^16.0.3",
-    "vanilla-lazyload": "^12.4.0",
-    "waypoints": "^4.0.1"
+    "vanilla-lazyload": "^12.4.0"
   }
 }

@@ -17,7 +17,7 @@ bodyClasses: 'case-study case-study-meal-plans'
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/case-studies/meal-plans-home.jpg" alt="Meal Plans - Home">
+				{% include img-lazy.html no-lazy="true" src="case-studies/meal-plans-home.jpg" alt="Meal Plans - Home" %}
 			</div>
 			<figcaption>Modular homepage.</figcaption>
 		</figure>
@@ -30,7 +30,7 @@ bodyClasses: 'case-study case-study-meal-plans'
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/case-studies/meal-plans-search.jpg" alt="Meal Plans - Search">
+				{% include img-lazy.html src="case-studies/meal-plans-search.jpg" alt="Meal Plans - Search" %}
 			</div>
 			<figcaption>Custom search search filters.</figcaption>
 		</figure>

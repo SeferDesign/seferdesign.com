@@ -13,7 +13,7 @@ bodyClasses: 'case-study case-study-sdc'
 <div class="wrapper wrapper-grid">
 	<div class="grid-item">
 		<figure>
-			<img src="{{ site.distbase }}/images/case-studies/sdc-logo-1.jpg" alt="Logo Progress">
+			{% include img-lazy.html no-lazy="true" src="case-studies/sdc-logo-1.jpg" alt="Logo Progress" %}
 			<figcaption>Initial logo ideation</figcaption>
 		</figure>
 	</div>
@@ -38,7 +38,7 @@ bodyClasses: 'case-study case-study-sdc'
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/case-studies/sdc-letter.jpg" alt="SDC Letter">
+				{% include img-lazy.html src="case-studies/sdc-letter.jpg" alt="SDC Letter" %}
 			</div>
 			<figcaption>An iteration of our introductory letter.</figcaption>
 		</figure>

@@ -14,13 +14,12 @@ bodyClasses: 'product product-not-now'
 </div>
 <div class="wrapper wrapper-grid">
 	<div class="grid-item">
-		<figure><img src="{{ site.distbase }}/images/not-now/not-now-popup.jpg" alt="">
-		</figure>
+		<figure>{% include img-lazy.html src="not-now/not-now-popup.jpg" alt="Not Now - Popup" %}</figure>
 	</div>
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/not-now/not-now-settings.jpg" alt="">
+				{% include img-lazy.html src="not-now/not-now-settings.jpg" alt="Not Now - Settings" %}
 			</div>
 		</figure>
 	</div>

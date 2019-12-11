@@ -17,7 +17,7 @@ bodyClasses: 'case-study case-study-kellyinthecity'
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/case-studies/kellyinthecity-old.jpg" alt="Old Kelly in the City">
+				{% include img-lazy.html no-lazy="true" src="case-studies/kellyinthecity-old.jpg" alt="Old Kelly in the City" %}
 			</div>
 			<figcaption>The previous kellyinthecity.com home page design, which the client liked aesthetically.</figcaption>
 		</figure>
@@ -42,7 +42,7 @@ bodyClasses: 'case-study case-study-kellyinthecity'
 	<div class="grid-item">
 		<figure class="browser">
 			<div class="browser-chrome">
-				<img src="{{ site.distbase }}/images/case-studies/kellyinthecity-new.jpg" alt="New Kelly in the City">
+				{% include img-lazy.html src="case-studies/kellyinthecity-new.jpg" alt="New Kelly in the City" %}
 			</div>
 			<figcaption>The new kellyinthecity.com home page design.</figcaption>
 		</figure>

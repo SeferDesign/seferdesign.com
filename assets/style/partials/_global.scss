@@ -219,6 +219,21 @@ figure {
 
 }
 
+img {
+
+	&.lazy {
+		opacity: 0;
+		transition: opacity $transition-speed;
+	}
+
+	&.initial,
+	&.loaded,
+	&.error {
+		opacity: 1;
+	}
+
+}
+
 hr {
 	margin: 3rem auto;
 	width: 40%;
