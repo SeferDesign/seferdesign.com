@@ -58,7 +58,6 @@ function sassOpps(files, destination) {
       return notify().write(error);
     }))
     .pipe(autoprefixer({
-      browsers: ['last 10 versions', 'ie 9'],
       errLogToConsole: true,
       sync: true
     }))
