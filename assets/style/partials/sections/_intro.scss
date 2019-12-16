@@ -43,7 +43,7 @@
 
 	}
 
-	.more-arrow {
+	.more-arrow-wrap {
 		display: none;
 	}
 
@@ -70,10 +70,6 @@
 			}
 		}
 
-		.more-arrow {
-			opacity: 0;
-		}
-
 		.logo {
 			@include sdcLogoDimensions(30rem);
 		}
@@ -92,9 +88,14 @@
 
 		}
 
-		.more-arrow  {
+		.more-arrow-wrap  {
 
+			opacity: 0;
 			display: block;
+			position: absolute;
+			bottom: 1.5rem;
+			left: 50%;
+			transform: translate(-50%, 0px);
 			animation: {
 				name: fadeInUpMoreArrow;
 				delay: $animation-intro-extra-delay;
@@ -104,10 +105,14 @@
 			}
 			transition: color $transition-speed;
 
-			&:hover {
-				cursor: pointer;
-				padding-bottom: 0.125rem;
-				color: $grey;
+			.more-arrow {
+
+				&:hover {
+					cursor: pointer;
+					padding-bottom: 0.125rem;
+					color: $grey;
+				}
+
 			}
 
 		}
