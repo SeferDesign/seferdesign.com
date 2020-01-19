@@ -13,6 +13,10 @@
       "homepage": "https://rsefer.com"
     }
   ],
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.5",
     "classlist.js": "^1.1.20150312",

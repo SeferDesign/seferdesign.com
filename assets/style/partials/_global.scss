@@ -56,11 +56,6 @@ body {
 
 	&.nav-active {
 
-		&:before,
-		&:after {
-			background: $blue;
-		}
-
 		&:after {
 			position: fixed;
 		}
