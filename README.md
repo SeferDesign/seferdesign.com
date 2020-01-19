@@ -6,6 +6,5 @@ Install [Node.js](http://nodejs.org/) on your local machine.
 
 ```
 npm install
-gulp
-
+npm start
 ```
