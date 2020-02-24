@@ -178,13 +178,14 @@ nav {
 
 	a {
 
+		display: inline-block;
 		color: $white;
 		font-weight: 700;
 		text-decoration: none;
-		transition: color $transition-speed;
 
 		&:hover {
 			color: $grey;
+			transform: translate(0px, -0.0625em);
 		}
 
 	}
