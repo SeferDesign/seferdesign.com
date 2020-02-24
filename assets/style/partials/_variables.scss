@@ -24,6 +24,10 @@ $chrome-green: #2ecc71;
 $font-family: 'futura-pt', sans-serif;
 $font-size-base: 16px;
 
+$border-radius: 0.375em;
+
+$box-shadow: 0px 0.0625rem 0.375rem 0px transparentize($black, 0.9);
+
 $screen-sm: 48rem;
 $screen-md: 64rem;
 $screen-lg: 75rem;
