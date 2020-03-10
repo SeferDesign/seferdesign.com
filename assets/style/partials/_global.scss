@@ -62,6 +62,23 @@ body {
 
 	}
 
+	&.page-redirect {
+
+		text-align: center;
+
+		&:before,
+		&:after {
+			content: '';
+			display: none;
+		}
+
+		.back,
+		.nav-toggle {
+			display: none;
+		}
+
+	}
+
 }
 
 .wrapper {
