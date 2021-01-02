@@ -1,0 +1,72 @@
+.services {
+
+	padding: 4rem 0px;
+	color: $white;
+	background: $black;
+
+	h2 {
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+
+	&-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+	}
+
+	&-item {
+
+		flex-basis: calc((100% - 2rem) / 2);
+
+		&-full {
+
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+
+			.service {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				justify-content: center;
+				align-items: baseline;
+				flex-grow: 1;
+			}
+
+		}
+
+	}
+
+	.service {
+
+		padding: 2rem;
+		border: 1px solid $white;
+		border-radius: 0.5rem;
+
+		&:not(:first-child) {
+			margin-top: 2rem;
+		}
+
+		&-alt {
+			color: $black;
+			background: $white;
+		}
+
+		& > * {
+
+			&:not(:first-child) {
+				margin-top: 1rem;
+			}
+
+		}
+
+		&-title {
+			@include caps();
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+	}
+
+}

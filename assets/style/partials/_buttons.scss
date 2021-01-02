@@ -65,4 +65,18 @@
 
 	}
 
+	&-success {
+
+		background-color: $green;
+
+		&:hover {
+			background-color: darken($green, 2%);
+		}
+
+		&:active {
+			background-color: darken($green, 4%);
+		}
+
+	}
+
 }
