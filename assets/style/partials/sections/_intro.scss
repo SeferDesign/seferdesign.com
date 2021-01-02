@@ -58,8 +58,9 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			margin: 0px auto;
-			width: 50rem;
-			max-width: 50rem;
+			padding: 0px 2rem;
+			width: $mobile-breakpoint - 4rem;
+			max-width: 100%;
 			opacity: 0;
 			animation: {
 				name: fadeIn;
@@ -115,6 +116,28 @@
 
 			}
 
+		}
+
+	}
+
+	@media screen and (min-width: $mobile-breakpoint) and (max-height: 600px) {
+
+		.letter {
+
+			margin-top: 2rem;
+
+			p {
+				font-size: 1.25rem;
+			}
+		}
+
+	}
+
+	@media screen and (min-width: $screen-md) {
+
+		.content {
+			padding: 0px;
+			width: $mobile-breakpoint + 8rem;
 		}
 
 	}
