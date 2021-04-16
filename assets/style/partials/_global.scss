@@ -176,6 +176,16 @@ figure {
 			box-shadow: $box-shadow;
 		}
 
+		&.figure-spaced {
+
+			img {
+				margin: 4rem 0px;
+				box-shadow: none;
+				border-radius: 0px;
+			}
+
+		}
+
 	}
 
 	&.browser {
@@ -237,6 +247,11 @@ figure {
 		margin-top: 1rem;
 		text-align: center;
 		font-size: 0.75em;
+	}
+
+	+ figure,
+	+ figure.browser {
+		margin-top: 4rem;
 	}
 
 }
