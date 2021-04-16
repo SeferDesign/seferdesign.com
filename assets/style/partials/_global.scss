@@ -90,6 +90,17 @@ body {
 		width: $mobile-breakpoint - 2rem;
 	}
 
+	&-wide-med {
+
+		margin: 0px 1.5rem;
+
+		@media screen and (min-width: $wide-breakpoint) {
+			margin: 0px auto;
+			width: $wide-breakpoint - 4rem;
+		}
+
+	}
+
 	&-wide {
 
 		@media screen and (min-width: $wide-breakpoint) {
