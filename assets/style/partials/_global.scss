@@ -94,9 +94,13 @@ body {
 
 		margin: 0px 1.5rem;
 
+		@media screen and (min-width: $mobile-breakpoint) {
+			margin: 0px 3rem;
+		}
+
 		@media screen and (min-width: $wide-breakpoint) {
 			margin: 0px auto;
-			width: $wide-breakpoint - 4rem;
+			width: $wide-breakpoint - 8rem;
 		}
 
 	}
