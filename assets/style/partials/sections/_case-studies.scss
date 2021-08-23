@@ -157,7 +157,13 @@
 			}
 
 			&:last-child {
+
 				margin-bottom: 3rem;
+
+				&:nth-child(odd) {
+					margin-bottom: 0px;
+				}
+
 			}
 
 		}
