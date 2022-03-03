@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $black: #000;
 $white: #fff;
 $grey: #777777;
@@ -39,4 +41,4 @@ $animation-speed: 400ms;
 $animation-fade-in-up-speed: $animation-speed;
 $animation-slide-in-right-speed: $animation-speed;
 $animation-intro-extra-delay: 4000ms;
-$transition-speed: $animation-speed / 2;
+$transition-speed: math.div($animation-speed, 2);
