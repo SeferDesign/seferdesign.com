@@ -1,197 +1,88 @@
 .case-studies {
 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+
 	.case-study-preview {
 
-		.case-study-preview-title {
+		flex-basis: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem;
+		background: $grey-lighter;
 
-			&-label {
-				color: transparentize($white, 0.35);
+		&:nth-child(2n) {
+			background: $grey-light;
+		}
+
+		@include mq($screen-sm) {
+
+			flex-basis: 50%;
+			background: $grey-light;
+
+			&:nth-child(2),
+			&:nth-child(3),
+			&:nth-child(6),
+			&:nth-child(7),
+			&:nth-child(10),
+			&:nth-child(11),
+			&:nth-child(14),
+			&:nth-child(15) {
+				background: $grey-lighter;
 			}
 
 		}
 
-		&:nth-child(odd) .case-study-preview-title {
-			background: $grey;
-		}
+		// @include mq($screen-md) {
 
-		&:nth-child(even) .case-study-preview-title {
-			background: $blue;
-		}
+		// 	flex-basis: 25%;
 
-		// &:nth-child(4n) .case-study-preview-title {
-		// 	background: $grey-light;
-		// }
+		// 	&:nth-child(1),
+		// 	&:nth-child(3),
+		// 	&:nth-child(6),
+		// 	&:nth-child(8),
+		// 	&:nth-child(11),
+		// 	&:nth-child(14),
+		// 	&:nth-child(16) {
+		// 		background: $grey-light;
+		// 	}
 
-		// &:nth-child(3n-2) .case-study-preview-title {
-		// 	background: $grey-light;
-		// }
+		// 	&:nth-child(2),
+		// 	&:nth-child(4),
+		// 	&:nth-child(5),
+		// 	&:nth-child(7),
+		// 	&:nth-child(10),
+		// 	&:nth-child(12),
+		// 	&:nth-child(13) {
+		// 		background: $grey-lighter;
+		// 	}
 
-		// &:nth-child(3n-1) .case-study-preview-title {
-		// 	background: $blue;
-		// }
-
-		// &:nth-child(3n) .case-study-preview-title {
-		// 	background: $orange;
 		// }
 
 		&-title {
-
-			padding: 1.5rem;
+			flex-basis: calc(60% - 2rem);
 			color: $white;
-			font-weight: 500;
-			font-size: 1.25rem;
-
-			&-label {
-				margin-bottom: 0.5rem;
-				font-size: 0.625em;
-				@include caps();
-			}
-
 		}
 
-		&-description {
-			padding: 1.5rem;
+		img {
+			flex-basis: 40%;
+			margin-left: 2rem;
+			width: 6rem;
+			height: 6rem;
+			object-fit: contain;
+
+			@include mq($screen-xs) {
+				width: 10rem;
+				height: 10rem;
+			}
 		}
 
-		&-images-wrap {
-
-			margin: 0px 1.5rem;
-
-			figure {
-				margin: 0px;
-			}
-
-			img {
-				display: block;
-				margin: 0px auto;
-				width: 100%;
-				max-width: 30rem;
-				// border: 1px solid $grey-lighter;
-				box-shadow: $box-shadow;
-				border-radius: $border-radius;
-			}
-
-		}
-
-		+ .case-study-preview {
-			margin-top: 4rem;
-		}
-
-		&:last-child {
-			margin-bottom: 4rem;
-		}
-
-	}
-
-	@media screen and (min-width: $mobile-breakpoint) {
-
-		$marginUnit: 4rem;
-
-		.case-study-preview {
-
-			position: relative;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: center;
-			padding: $marginUnit 0px;
-
-			&:nth-child(odd):before {
-				content: ' ';
-				z-index: -1;
-				position: absolute;
-				left: 50%;
-				top: 0px;
-				width: 100vw;
-				height: 100%;
-				transform: translate(-50%, 0px);
-				background: $grey-lightest;
-			}
-
-			&-content {
-				flex-basis: 55%;
-			}
-
-			&-title {
-				padding: 2rem $marginUnit;
-				font-size: 2rem;
-			}
-
-			&-description {
-
-				padding: 2rem $marginUnit;
-				font-size: 1.75rem;
-
-				.btn {
-					font-size: 1.25rem;
-				}
-
-			}
-
-			&-images-wrap {
-
-				margin: 0px $marginUnit 0px 0px;
-				flex-basis: calc(45% - #{$marginUnit * 2});
-
-				img {
-					max-width: 100%;
-				}
-
-			}
-
-			&:nth-child(even) {
-
-				.case-study-preview-images-wrap {
-					order: 1;
-					margin: 0px 0px 0px $marginUnit;
-				}
-
-				.case-study-preview-content {
-					order: 2;
-				}
-
-			}
-
-			+ .case-study-preview {
-				margin-top: 3rem;
-			}
-
-			&:last-child {
-
-				margin-bottom: 3rem;
-
-				&:nth-child(odd) {
-					margin-bottom: 0px;
-				}
-
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width: $screen-lg) {
-
-		.case-study-preview {
-
-			&-title {
-				padding-top: 3rem;
-				padding-bottom: 3rem;
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width: $screen-xl) {
-
-		.case-study-preview {
-
-			&-title {
-				padding-top: 4rem;
-				padding-bottom: 4rem;
-			}
-
+		&-meal-plans:hover {
+			background: $orange;
 		}
 
 	}

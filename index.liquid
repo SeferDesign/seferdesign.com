@@ -1,0 +1,57 @@
+---
+layout: default
+bodyClasses: 'home'
+sitemap:
+  priority: 1.0
+  changefreq: 'monthly'
+---
+
+<section class="intro home-section">
+	<div class="wrapper">
+		<div class="content">
+			<svg class="logo" role="img"><use xlink:href="#logo"></use></svg>
+			<h1 class="tagline">We make sites and tools for the modern web.</h1>
+			<div class="letter">
+				<p>For the better part of a decade, we've been creating digital products of all shapes and sizes. From comprehensive <a href="#case-study-meal-plans">subscription services</a> to interactive animations, <a href="#case-study-kelly-in-the-city">magazine-like style publications</a> to <a href="#case-study-ftq">productivity utilities</a> &mdash; we touch it all.</p>
+				<p>As the list of web technologies grows longer and longer, it's easier than ever to fall behind or wander off track. Our work aims to strip away all the &lsquo;other&rsquo; by focusing on simplicity and clarity. We start by asking, &ldquo;What's the primary objective?&rdquo; and drive all decision-making to achieve that. <a href="#endorsements">But don't take our word for it.</a></p>
+				<p>Do you have a project in mind? <a href="#contact">Get in touch.</a> We're excited to hear what challenge you'll throw at us next.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#endorsements" title="More" class="more-arrow-wrap"><svg class="more-arrow chevron-down-solid" role="img"><use xlink:href="#chevron-down-solid"></use></svg></a>
+</section>
+
+<section id="case-studies" class="home-section case-studies" data-menu-title="Case Studies">
+	{% for i in (1..8) %}
+	<div class="case-study-preview case-study-preview-meal-plans">
+		<div class="case-study-preview-title">Meal Plans by The College Nutritionist</div>
+		{% image './_src/images/case-studies/meal-plans-home.jpg', 'Meal Plans', '', 'lazy', '200' %}
+	</div>
+	<div class="case-study-preview">
+		<div class="case-study-preview-title">Civilian</div>
+		{% image './_src/images/case-studies/civilian.svg', 'Civilian', '', 'lazy', '200' %}
+	</div>
+	{% endfor %}
+</section>
+
+<section id="endorsements" class="home-section endorsements" data-menu-title="Endorsements">
+	<ul class="endorsements-list">
+		<li>
+			<div class="wrapper-wide-med">
+				<q><span>Working with Sefer Design Co. makes my life a million times easier.</span> Beyond the fact that Rob is exceedingly talented and knowledgable, I never have to worry about deadlines or project management. When he is working on something, I know it will be done right, on-time, and within the allotted budget.</q>
+				<div class="attribution">Juliet Glassroth, <span>Glassroth Creative Strategies</span></div>
+			</div>
+		</li>
+	</ul>
+</section>
+
+<section id="endorsements-secondary" class="home-section endorsements" data-menu-title="Endorsements">
+	<ul class="endorsements-list">
+		<li>
+			<div class="wrapper-wide-med">
+				<q>Rob was incredibly responsive and helpful with any question I had, and <span>I could rely on him to think outside the box</span> to help me create a product that didn't yet exist. The project exceeded my expectations &mdash; I can't recommend Sefer Design Co. enough!</q>
+				<div class="attribution">Rachel Paul, <span>The College Nutritionist</span></div>
+			</div>
+		</li>
+	</ul>
+</section>

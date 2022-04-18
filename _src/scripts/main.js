@@ -25,7 +25,3 @@ document.querySelectorAll('#main-nav a').forEach(function(link) {
 window.addEventListener('resize', function() {
 	setVH();
 });
-
-var lazyLoadInstance = new LazyLoad({
-	elements_selector: 'img.lazy'
-});
