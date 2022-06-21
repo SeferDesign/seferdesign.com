@@ -3,7 +3,9 @@ const UglifyJS = require('uglify-js');
 const sass = require('sass');
 
 function generateCSS() {
-	const rendered = sass.compile('./_src/style/style.scss').css;
+	const rendered = sass.compile('./_src/style/style.scss', {
+		style: 'compressed'
+	}).css;
 	const renderedToString = rendered.toString();
 	fs.writeFileSync('dist/style.css', renderedToString);
 	return {

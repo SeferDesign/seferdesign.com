@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{% if page.redirect == true %}<meta http-equiv="refresh" content="0; URL='{{ page.redirect_url }}'" />{% endif %}
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% if page.url != '/' %}{{ title }} | {% endif %} {{ helpers.site.title }} | {{ helpers.site.description }}</title>
-	<link rel="shortcut icon" href="/dist/images/favicon.png" />
-	<style>
-	{{ helpers.css }}
-	</style>
-
-	<link rel="stylesheet" href="https://use.typekit.net/tax4mgp.css" />
-</head>
+{% include 'head' %}
 <body class="page-{% if page.bodyClasses == blank or page.bodyClasses == '' %}default{% else %}{{ page.bodyClasses }}{%endif %}">
 
 {% include 'svg-symbols.svg' %}
@@ -21,19 +10,7 @@
 
 {% include 'footer' %}
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-3797528-17"></script>
-<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'UA-3797528-17');
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js" integrity="sha256-vP+F+14A1ogChQs5Osd5LJl/ci9TbzjiZjjEbcqOXrY=" crossorigin="anonymous"></script>
-<script>
-{{ helpers.js }}
-</script>
+{% include 'scripts' %}
 
 </body>
 </html>

@@ -13,7 +13,9 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 2rem;
+		color: currentColor;
 		background: $grey-lighter;
+		text-decoration: none;
 
 		&:nth-child(2n) {
 			background: $grey-light;
