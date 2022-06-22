@@ -1,195 +1,111 @@
+@use 'sass:math';
+
 .case-studies {
 
-	.case-study-preview {
+	&-list {
 
-		.case-study-preview-title {
-
-			&-label {
-				color: transparentize($white, 0.35);
-			}
-
-		}
-
-		&:nth-child(odd) .case-study-preview-title {
-			background: $grey;
-		}
-
-		&:nth-child(even) .case-study-preview-title {
-			background: $blue;
-		}
-
-		// &:nth-child(4n) .case-study-preview-title {
-		// 	background: $grey-light;
-		// }
-
-		// &:nth-child(3n-2) .case-study-preview-title {
-		// 	background: $grey-light;
-		// }
-
-		// &:nth-child(3n-1) .case-study-preview-title {
-		// 	background: $blue;
-		// }
-
-		// &:nth-child(3n) .case-study-preview-title {
-		// 	background: $orange;
-		// }
-
-		&-title {
-
-			padding: 1.5rem;
-			color: $white;
-			font-weight: 500;
-			font-size: 1.25rem;
-
-			&-label {
-				margin-bottom: 0.5rem;
-				font-size: 0.625em;
-				@include caps();
-			}
-
-		}
-
-		&-description {
-			padding: 1.5rem;
-		}
-
-		&-images-wrap {
-
-			margin: 0px 1.5rem;
-
-			figure {
-				margin: 0px;
-			}
-
-			img {
-				display: block;
-				margin: 0px auto;
-				width: 100%;
-				max-width: 30rem;
-				// border: 1px solid $grey-lighter;
-				box-shadow: $box-shadow;
-				border-radius: $border-radius;
-			}
-
-		}
-
-		+ .case-study-preview {
-			margin-top: 4rem;
-		}
-
-		&:last-child {
-			margin-bottom: 4rem;
-		}
-
-	}
-
-	@media screen and (min-width: $mobile-breakpoint) {
-
-		$marginUnit: 4rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
 
 		.case-study-preview {
 
-			position: relative;
+			flex-basis: 100%;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
-			padding: $marginUnit 0px;
+			padding: 2rem;
+			color: currentColor;
+			background: $grey-lighter;
+			text-decoration: none;
+			transition: background $transition-speed;
+			will-change: background;
 
-			&:nth-child(odd):before {
-				content: ' ';
-				z-index: -1;
-				position: absolute;
-				left: 50%;
-				top: 0px;
-				width: 100vw;
-				height: 100%;
-				transform: translate(-50%, 0px);
-				background: $grey-lightest;
+			&:hover {
+				background: $grey-light;
 			}
 
-			&-content {
-				flex-basis: 55%;
+			@include mq($screen-md) {
+
+				flex-basis: math.percentage(math.div(1, 2));
+				background: $grey-light;
+
+				&:nth-child(3) {
+					flex-basis: 100%;
+				}
+
+			}
+
+			@include mq($screen-lg) {
+
+				&:nth-child(n) {
+					flex-basis: math.percentage(math.div(1, 3));
+					min-height: 300px;
+				}
+
 			}
 
 			&-title {
-				padding: 2rem $marginUnit;
-				font-size: 2rem;
-			}
 
-			&-description {
+				flex: 1;
+				color: $white;
+				font-size: 1.25rem;
 
-				padding: 2rem $marginUnit;
-				font-size: 1.75rem;
+				&:before {
+					content: 'Case Study';
+					display: block;
+					margin-bottom: 0.375em;
+					color: transparentize($white, 0.35);
+					font-size: 0.625em;
+					font-weight: 500;
+					text-transform: uppercase;
+					letter-spacing: .05em;
+				}
 
-				.btn {
-					font-size: 1.25rem;
+				@include mq($screen-sm) {
+					font-size: 1.75rem;
+				}
+
+				@include mq($screen-md) {
+					font-size: 1.5rem;
 				}
 
 			}
 
-			&-images-wrap {
+			img {
 
-				margin: 0px $marginUnit 0px 0px;
-				flex-basis: calc(45% - #{$marginUnit * 2});
+				margin-left: 2rem;
+				width: 1em;
+				height: 1em;
+				font-size: 6rem;
+				object-fit: contain;
 
-				img {
-					max-width: 100%;
+				@include mq($screen-xs) {
+					font-size: 10rem;
+				}
+
+				@include mq($screen-md) {
+					font-size: 10rem;
+				}
+
+				@include mq($screen-lg) {
+					font-size: 8rem;
 				}
 
 			}
 
-			&:nth-child(even) {
-
-				.case-study-preview-images-wrap {
-					order: 1;
-					margin: 0px 0px 0px $marginUnit;
-				}
-
-				.case-study-preview-content {
-					order: 2;
-				}
-
+			&-meal-plans {
+				background: $orange;
 			}
 
-			+ .case-study-preview {
-				margin-top: 3rem;
+			&-ftq {
+				background: $blue;
 			}
 
-			&:last-child {
-
-				margin-bottom: 3rem;
-
-				&:nth-child(odd) {
-					margin-bottom: 0px;
-				}
-
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width: $screen-lg) {
-
-		.case-study-preview {
-
-			&-title {
-				padding-top: 3rem;
-				padding-bottom: 3rem;
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width: $screen-xl) {
-
-		.case-study-preview {
-
-			&-title {
-				padding-top: 4rem;
-				padding-bottom: 4rem;
+			&-kelly-in-the-city {
+				background: $green;
 			}
 
 		}

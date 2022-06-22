@@ -1,2 +1,0 @@
-function index(e,t){return[].slice.call(document.querySelectorAll(t)).indexOf(e)}var workTitles=document.querySelectorAll(".work-titles li"),workContent=document.querySelectorAll(".work-content li");[].forEach.call(workTitles,function(e){e.addEventListener("click",function(t){t.preventDefault();var l=index(e,".work-titles li");[].forEach.call(workTitles,function(e){e.classList.remove("active")}),[].forEach.call(workContent,function(e){e.classList.remove("active")}),e.classList+="active",workContent[l].classList+="active"})});
-//# sourceMappingURL=all.js.map

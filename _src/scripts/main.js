@@ -6,7 +6,7 @@ function setVH() {
 setVH();
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 400
+	speed: 250
 });
 
 document.querySelector('#nav-toggle').addEventListener('click', function() {
@@ -24,8 +24,4 @@ document.querySelectorAll('#main-nav a').forEach(function(link) {
 
 window.addEventListener('resize', function() {
 	setVH();
-});
-
-var lazyLoadInstance = new LazyLoad({
-	elements_selector: 'img.lazy'
 });
