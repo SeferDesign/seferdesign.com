@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 {% include 'head' %}
-<body class="page-{% if page.bodyClasses == blank or page.bodyClasses == '' %}default{% else %}{{ page.bodyClasses }}{%endif %}">
+<body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{%endif %}">
 
 {% include 'svg-symbols.svg' %}
 {% include 'nav' %}
 
+{% if caseStudy or product %}
+<article>
+	{{ content }}
+</article>
+{% else %}
 {{ content }}
+{% endif %}
 
 {% include 'footer' %}
 

@@ -6,7 +6,7 @@ function setVH() {
 setVH();
 
 var scroll = new SmoothScroll('a[href*="#"]', {
-	speed: 400
+	speed: 250
 });
 
 document.querySelector('#nav-toggle').addEventListener('click', function() {

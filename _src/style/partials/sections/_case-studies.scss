@@ -2,79 +2,122 @@
 
 .case-studies {
 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: stretch;
+	// padding: 8rem 0px;
 
-	.case-study-preview {
+	// .section-title {
+	// 	margin-bottom: 2rem;
+	// 	text-align: center;
+	// }
 
-		flex-basis: 100%;
+	&-list {
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: center;
-		padding: 2rem;
-		color: currentColor;
-		background: $grey-lighter;
-		text-decoration: none;
+		align-items: stretch;
 
-		&:nth-child(2n) {
-			background: $grey-light;
-		}
+		.case-study-preview {
 
-		@include mq($screen-md) {
+			flex-basis: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem;
+			color: currentColor;
+			background: $grey-lighter;
+			text-decoration: none;
 
-			flex-basis: math.percentage(1/3);
-			background: $grey-light;
+			// &:nth-child(2n) {
+			// 	background: $grey-light;
+			// }
 
-			&:nth-child(even) {
-				background: $grey-lighter;
+			&:hover {
+				background: $grey-light;
 			}
 
-		}
-
-		&-title {
-
-			flex-basis: calc(60% - 2rem);
-			color: $white;
-			font-size: 1.25rem;
-
 			@include mq($screen-md) {
-				font-size: 1rem;
+
+				flex-basis: math.percentage(math.div(1, 2));
+				background: $grey-light;
+
+				&:nth-child(3) {
+					flex-basis: 100%;
+				}
+
+				// &:nth-child(even) {
+				// 	background: $grey-lighter;
+				// }
+
 			}
 
 			@include mq($screen-lg) {
+
+				&:nth-child(n) {
+					flex-basis: math.percentage(math.div(1, 3));
+					min-height: 300px;
+				}
+
+			}
+
+			&-title {
+
+				flex-basis: calc(60% - 2rem);
+				color: $white;
 				font-size: 1.25rem;
+
+				&:before {
+					content: 'Case Study';
+					display: block;
+					margin-bottom: 0.375em;
+					color: transparentize($white, 0.35);
+					font-size: 0.625em;
+					font-weight: 500;
+					text-transform: uppercase;
+					letter-spacing: .05em;
+				}
+
+				@include mq($screen-xl) {
+					font-size: 1.5rem;
+				}
+
 			}
 
-		}
+			img {
 
-		img {
-
-			flex-basis: 40%;
-			margin-left: 2rem;
-			width: 1em;
-			height: 1em;
-			font-size: 6rem;
-			object-fit: contain;
-
-			@include mq($screen-xs) {
-				font-size: 10rem;
-			}
-
-			@include mq($screen-md) {
+				flex-basis: 40%;
+				margin-left: 2rem;
+				width: 1em;
+				height: 1em;
 				font-size: 6rem;
+				object-fit: contain;
+
+				@include mq($screen-xs) {
+					font-size: 10rem;
+				}
+
+				@include mq($screen-md) {
+					font-size: 6rem;
+				}
+
+				@include mq($screen-lg) {
+					font-size: 8rem;
+				}
+
 			}
 
-			@include mq($screen-lg) {
-				font-size: 8rem;
+			&-meal-plans {
+				background: $orange;
 			}
 
-		}
+			&-ftq {
+				background: $blue;
+			}
 
-		&-meal-plans:hover {
-			background: $orange;
+			&-kelly-in-the-city {
+				background: $green;
+			}
+
 		}
 
 	}

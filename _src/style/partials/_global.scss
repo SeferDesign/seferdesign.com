@@ -98,9 +98,9 @@ body {
 			margin: 0px 3rem;
 		}
 
-		@media screen and (min-width: $wide-breakpoint) {
+		@media screen and (min-width: $screen-md) {
 			margin: 0px auto;
-			width: $wide-breakpoint - 8rem;
+			width: $screen-md - 8rem;
 		}
 
 	}
@@ -177,6 +177,7 @@ figure {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 30rem;
+		height: auto;
 
 		@media screen and (min-width: $mobile-breakpoint) {
 			max-width: 100%;
