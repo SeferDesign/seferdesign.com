@@ -7,7 +7,6 @@ function generateCSS() {
 		style: 'compressed'
 	}).css;
 	const renderedToString = rendered.toString();
-	fs.writeFileSync('dist/style.css', renderedToString);
 	return {
 		string: renderedToString
 	};
@@ -15,7 +14,6 @@ function generateCSS() {
 
 function generateJS() {
 	const rendered = UglifyJS.minify(fs.readFileSync('./_src/scripts/main.js', 'utf8')).code;
-	fs.writeFileSync('dist/main.js', rendered);
 	return rendered;
 }
 
