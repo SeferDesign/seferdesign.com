@@ -38,22 +38,6 @@ body {
 		background: $blue;
 	}
 
-	// &.case-study-meal-plans:before {
-	// 	background: $green;
-	// }
-
-	// &.case-study-sdc:before {
-	// 	background: $blue;
-	// }
-
-	// &.case-study-kellyinthecity:before {
-	// 	background: $red;
-	// }
-
-	// &.case-study-civilian:before {
-	// 	background: $grey-light;
-	// }
-
 	&.nav-active {
 
 		&:after {
@@ -147,10 +131,6 @@ body {
 		@media screen and (min-width: $screen-lg) {
 			width: $screen-lg - 2rem;
 		}
-
-		// @media screen and (min-width: $screen-xl) {
-		// 	width: $screen-xl - 2rem;
-		// }
 
 	}
 

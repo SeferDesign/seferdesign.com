@@ -19,11 +19,5 @@ function generateJS() {
 
 module.exports = {
 	css: generateCSS().string,
-	js: generateJS(),
-	site: {
-		title: 'Sefer Design Co.',
-		company_name: 'Sefer Design Company LLC',
-		description: 'Chicago Web Design and Web Development',
-		descriptionLong: 'Chicago Web Design and Web Development. We build sites and tools for the modern web.'
-	}
+	js: generateJS()
 };

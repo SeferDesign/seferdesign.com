@@ -10,11 +10,17 @@
 <article>
 	{{ content }}
 </article>
+{% elsif redirect %}
+<article>
+	<h1>Redirecting...</h1>
+</article>
 {% else %}
 {{ content }}
 {% endif %}
 
+{% if redirect != true %}
 {% include 'footer' %}
+{% endif %}
 
 {% include 'scripts' %}
 

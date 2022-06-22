@@ -24,7 +24,7 @@ module.exports = eleventyConfig => {
 
 	eleventyConfig.addShortcode('image', imageShortcode);
 
-	eleventyConfig.addPassthroughCopy('static');
+	eleventyConfig.addPassthroughCopy({ 'static':  '.' });
 
 	eleventyConfig.addWatchTarget('_src/**/*.scss');
 	eleventyConfig.addWatchTarget('_src/**/*.js');
