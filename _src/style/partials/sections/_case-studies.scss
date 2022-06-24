@@ -74,13 +74,18 @@
 
 			}
 
-			img {
+			picture {
 
 				margin-left: 2rem;
 				width: 1em;
 				height: 1em;
 				font-size: 6rem;
 				object-fit: contain;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
 
 				@include mq($screen-xs) {
 					font-size: 10rem;
@@ -132,6 +137,11 @@
 		flex-basis: var(--clips-size);
 		width: var(--clips-size);
 		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 
 		&:nth-child(1) {
 			margin-top: 0px;

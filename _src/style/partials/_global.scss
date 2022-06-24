@@ -152,12 +152,17 @@ article {
 
 figure {
 
-	img {
+	picture {
 
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 30rem;
 		height: auto;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
 
 		@media screen and (min-width: $mobile-breakpoint) {
 			max-width: 100%;
@@ -229,6 +234,7 @@ figure {
 		box-shadow: $box-shadow;
 	}
 
+	picture,
 	img,
 	video {
 		display: block;
@@ -248,21 +254,6 @@ figure {
 	+ figure,
 	+ figure.browser {
 		margin-top: 4rem;
-	}
-
-}
-
-img {
-
-	&.lazy {
-		opacity: 0;
-		transition: opacity $transition-speed;
-	}
-
-	&.initial,
-	&.loaded,
-	&.error {
-		opacity: 1;
 	}
 
 }
