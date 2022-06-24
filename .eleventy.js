@@ -2,7 +2,7 @@ const Image = require('@11ty/eleventy-img');
 
 async function imageShortcode(src, alt, klass = '', loading = 'lazy', sizes = null) {
 	let extension = src.split('.').pop();
-	let formats = ['jpeg'];
+	let formats = ['avif','webp', 'jpeg'];
 	if (extension == 'svg') {
 		formats = ['svg'];
 	}
