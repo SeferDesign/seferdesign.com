@@ -114,6 +114,74 @@
 
 }
 
+.clips-list {
+
+	--clips-gap: 2rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: var(--clips-gap);
+	background: $grey-light;
+
+	& > * {
+
+		--clips-size: 100%;
+
+		margin-top: var(--clips-gap);
+		flex-basis: var(--clips-size);
+		width: var(--clips-size);
+		height: auto;
+
+		&:nth-child(1) {
+			margin-top: 0px;
+		}
+
+		@include mq($screen-xs) {
+
+			--clips-size: calc((100% - var(--clips-gap)) / 2);
+
+			&:nth-child(2) {
+				margin-top: 0px;
+			}
+
+		}
+
+		@include mq($screen-sm) {
+
+			--clips-size: calc((100% - (var(--clips-gap) * 2)) / 3);
+
+			&:nth-child(3) {
+				margin-top: 0px;
+			}
+
+		}
+
+		@include mq($screen-md) {
+
+			--clips-size: calc((100% - (var(--clips-gap) * 3)) / 4);
+
+			&:nth-child(4) {
+				margin-top: 0px;
+			}
+
+		}
+
+		@include mq($screen-lg) {
+
+			--clips-size: calc((100% - (var(--clips-gap) * 5)) / 6);
+
+			&:nth-child(5),
+			&:nth-child(6) {
+				margin-top: 0px;
+			}
+
+		}
+
+	}
+
+}
+
 .page-case-study {
 
 	.endorsements {
