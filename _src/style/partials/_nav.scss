@@ -173,6 +173,18 @@ nav {
 		display: block;
 	}
 
+	@include mq('desktop') {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: auto;
+		bottom: auto;
+		width: 100%;
+		display: block;
+		background: none;
+		font-size: 1.25rem;
+	}
+
 	a {
 
 		display: inline-block;
@@ -180,9 +192,22 @@ nav {
 		font-weight: 700;
 		text-decoration: none;
 
+		&.btn-outline {
+			color: $white;
+		}
+
 		&:hover {
 			color: $grey;
 			transform: translate(0px, -0.0625em);
+
+			@include mq('desktop') {
+				transform: none;
+			}
+
+		}
+
+		@include mq('desktop') {
+			// color: $black;
 		}
 
 	}
@@ -204,10 +229,37 @@ nav {
 		margin: 0px;
 		padding: 0px;
 
+		@include mq('desktop') {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			align-items: center;
+			position: static;
+			transform: none;
+			width: 100%;
+		}
+
 		li {
 
+			@include mq('desktop') {
+
+				display: inline-block;
+				vertical-align: middle;
+
+				&:nth-child(1) {
+					margin-right: auto;
+				}
+
+			}
+
 			+ li {
+
 				margin-top: 2.5em;
+
+				@include mq('desktop') {
+					margin: 0px 0px 0px 2rem;
+				}
+
 			}
 
 		}

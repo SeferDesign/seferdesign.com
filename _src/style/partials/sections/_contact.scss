@@ -4,7 +4,7 @@
 	background: $grey-lightest;
 	text-align: center;
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 		padding: 6rem 0px;
 	}
 
@@ -24,7 +24,7 @@
 
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 
 		h2 {
 			font-size: 4rem;

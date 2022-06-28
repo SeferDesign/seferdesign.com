@@ -79,7 +79,7 @@
 
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 
 		&-inner {
 			display: flex;

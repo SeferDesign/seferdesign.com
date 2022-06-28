@@ -1,10 +1,11 @@
 .btn {
 
 	display: inline-block;
-	padding: 0.75em 1em 0.5625em;
+	padding: 0.75em 1em;
 	color: $white;
 	background: $black;
 	text-decoration: none;
+	border: 0.125em solid $black;
 	border-radius: $border-radius;
 	@include caps();
 	font-weight: 700;
@@ -44,6 +45,13 @@
 
 	&:active {
 		background-color: $grey;
+		border-color: $grey;
+	}
+
+	&-outline {
+		color: currentColor;
+		background: none;
+		border-color: currentColor;
 	}
 
 	&-trans {
@@ -63,6 +71,10 @@
 			background-color: transparent;
 		}
 
+	}
+
+	&-wide {
+		padding: 1em 3em;
 	}
 
 }

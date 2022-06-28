@@ -24,7 +24,7 @@ h2 {
 	font-size: 2rem;
 }
 
-@media screen and (min-width: $mobile-breakpoint) {
+@include mq($screen-sm) {
 
 	h1 {
 		font-size: 3rem;
@@ -54,7 +54,7 @@ p {
 		font-weight: bold;
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 
 		margin-bottom: 2rem;
 

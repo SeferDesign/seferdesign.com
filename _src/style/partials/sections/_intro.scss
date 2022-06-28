@@ -3,9 +3,33 @@
 	position: relative;
 	padding: 3rem 0px;
 	overflow: hidden;
-	color: $black;
+	min-height: calc(var(--vh, 1vh) * 80);
+	color: $white;
+	background: $blue;
+	text-align: center;
+	overflow: hidden;
 
-	a {
+	.wrapper {
+
+		z-index: 1;
+		position: relative;
+
+		@include mq($screen-sm) {
+			position: static;
+		}
+
+	}
+
+	.graph {
+		z-index: 0;
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		transform: translate(-50%, 0px);
+		width: 105vw;
+	}
+
+	a:not(.btn) {
 
 		color: currentColor;
 		transition: color $transition-speed;
@@ -23,9 +47,18 @@
 	}
 
 	.tagline {
+
 		margin-top: 1rem;
 		font-size: 1.5rem;
 		text-align: center;
+
+		@media (max-width: 499px) {
+
+			span.space {
+				display: block;
+			}
+
+		}
 	}
 
 	.letter {
@@ -47,28 +80,34 @@
 		display: none;
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	.content {
+		margin: 0px auto;
+		max-width: 500px;
+	}
+
+	@include mq($screen-sm) {
 
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
 
 		.content {
+			z-index: 1;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			margin: 0px auto;
 			padding: 0px 2rem;
-			width: $mobile-breakpoint - 4rem;
+			width: $screen-sm - 4rem;
 			max-width: 100%;
-			opacity: 0;
-			animation: {
-				name: fadeIn;
-				delay: 500ms;
-				duration: $animation-fade-in-up-speed;
-				timing-function: ease-out;
-				fill-mode: forwards;
-			}
+			// opacity: 0;
+			// animation: {
+			// 	name: fadeIn;
+			// 	delay: 500ms;
+			// 	duration: $animation-fade-in-up-speed;
+			// 	timing-function: ease-out;
+			// 	fill-mode: forwards;
+			// }
 		}
 
 		.logo {
@@ -77,6 +116,7 @@
 
 		.tagline {
 			font-size: 2rem;
+			font-weight: bold;
 		}
 
 		.letter {
@@ -119,7 +159,7 @@
 
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) and (max-height: 600px) {
+	@media screen and (min-width: $screen-sm) and (max-height: 600px) {
 
 		.letter {
 
@@ -132,11 +172,11 @@
 
 	}
 
-	@media screen and (min-width: $screen-md) {
+	@include mq('desktop') {
 
 		.content {
 			padding: 0px;
-			width: $mobile-breakpoint + 8rem;
+			width: 40rem;
 		}
 
 	}

@@ -6,33 +6,33 @@ body {
 
 	position: relative;
 
-	&:before,
-	&:after {
-		content: ' ';
-		z-index: 999999;
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		right: 0px;
-		height: 0.25rem;
-		background: $black;
-	}
+	// &:before,
+	// &:after {
+	// 	content: ' ';
+	// 	z-index: 999999;
+	// 	position: fixed;
+	// 	top: 0px;
+	// 	left: 0px;
+	// 	right: 0px;
+	// 	height: 0.25rem;
+	// 	background: $black;
+	// }
 
-	&:before {
-		animation: {
-			name: topBorderLeftToRight;
-			duration: $animation-speed * 1.5;
-			timing-function: linear;
-			fill-mode: forwards;
-		}
-		will-change: right;
-	}
+	// &:before {
+	// 	animation: {
+	// 		name: topBorderLeftToRight;
+	// 		duration: $animation-speed * 1.5;
+	// 		timing-function: linear;
+	// 		fill-mode: forwards;
+	// 	}
+	// 	will-change: right;
+	// }
 
-	&:after {
-		position: absolute;
-		top: auto;
-		bottom: 0px;
-	}
+	// &:after {
+	// 	position: absolute;
+	// 	top: auto;
+	// 	bottom: 0px;
+	// }
 
 	&.page-case-study:before {
 		background: $blue;
@@ -69,20 +69,20 @@ body {
 
 	margin: 0px 1.5rem;
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 		margin: 0px auto;
-		width: $mobile-breakpoint - 2rem;
+		width: $screen-sm - 2rem;
 	}
 
 	&-wide-med {
 
 		margin: 0px 1.5rem;
 
-		@media screen and (min-width: $mobile-breakpoint) {
+		@include mq($screen-sm) {
 			margin: 0px 3rem;
 		}
 
-		@media screen and (min-width: $screen-md) {
+		@include mq('desktop') {
 			margin: 0px auto;
 			width: $screen-md - 8rem;
 		}
@@ -111,7 +111,7 @@ body {
 
 		}
 
-		@media screen and (min-width: $mobile-breakpoint) {
+		@include mq($screen-sm) {
 
 			display: flex;
 			flex-wrap: wrap;
@@ -128,7 +128,7 @@ body {
 
 		}
 
-		@media screen and (min-width: $screen-lg) {
+		@include mq($screen-lg) {
 			width: $screen-lg - 2rem;
 		}
 
@@ -164,7 +164,7 @@ figure {
 			height: auto;
 		}
 
-		@media screen and (min-width: $mobile-breakpoint) {
+		@include mq($screen-sm) {
 			max-width: 100%;
 		}
 
@@ -195,7 +195,7 @@ figure {
 		margin: 1rem auto;
 		max-width: 30rem;
 
-		@media screen and (min-width: $mobile-breakpoint) {
+		@include mq($screen-sm) {
 			max-width: 100%;
 		}
 

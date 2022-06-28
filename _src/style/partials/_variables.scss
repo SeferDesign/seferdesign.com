@@ -23,7 +23,7 @@ $chrome-red: #e74c3c;
 $chrome-yellow: #f1c40f;
 $chrome-green: #2ecc71;
 
-$font-family: 'futura-pt', sans-serif;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 $font-size-base: 16px;
 
 $border-radius: 0.375em;
@@ -35,7 +35,7 @@ $screen-sm: 48rem;
 $screen-md: 64rem;
 $screen-lg: 75rem;
 $screen-xl: 95rem;
-$mobile-breakpoint: $screen-sm;
+$mobile-breakpoint: $screen-md;
 $wide-breakpoint: $screen-xl;
 
 $animation-speed: 400ms;

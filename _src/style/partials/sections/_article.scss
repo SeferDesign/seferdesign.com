@@ -10,7 +10,7 @@ article {
 		color: $black;
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
+	@include mq($screen-sm) {
 
 		h1,
 		h2 {
