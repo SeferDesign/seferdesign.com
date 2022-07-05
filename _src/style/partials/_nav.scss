@@ -174,12 +174,16 @@ nav {
 	}
 
 	@include mq('desktop') {
+		z-index: 999;
 		position: absolute;
 		top: 0px;
-		left: 0px;
+		left: 50%;
 		right: auto;
 		bottom: auto;
+		transform: translate(-50%, 0px);
+		padding: 1rem 2rem;
 		width: 100%;
+		max-width: $screen-xl;
 		display: block;
 		background: none;
 		font-size: 1.25rem;
@@ -213,9 +217,19 @@ nav {
 	}
 
 	.logo {
+
 		display: block;
 		margin: 0px auto;
 		@include sdcLogoDimensions(7em);
+
+		@include mq('desktop') {
+			@include sdcLogoDimensions(9em);
+		}
+
+		@include mq($screen-lg) {
+			@include sdcLogoDimensions(11em);
+		}
+
 	}
 
 	ul {

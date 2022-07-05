@@ -1,0 +1,11 @@
+.philosophy {
+
+	@include mq('desktop') {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 80vh;
+	}
+
+}

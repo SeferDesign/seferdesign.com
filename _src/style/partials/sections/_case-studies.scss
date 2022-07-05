@@ -70,6 +70,10 @@
 				}
 
 				@include mq($screen-md) {
+					font-size: 1.375rem;
+				}
+
+				@include mq($screen-xl) {
 					font-size: 1.5rem;
 				}
 
