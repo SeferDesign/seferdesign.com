@@ -10,14 +10,8 @@
 	overflow: hidden;
 
 	.wrapper {
-
 		z-index: 10;
-		position: relative;
-
-		@include mq($screen-sm) {
-			position: static;
-		}
-
+		position: static;
 	}
 
 	.clouds {
@@ -157,8 +151,23 @@
 	}
 
 	.content {
+		z-index: 1;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		margin: 0px auto;
-		max-width: 500px;
+		padding: 0px 2rem;
+		width: $screen-sm - 4rem;
+		max-width: 100%;
+		// opacity: 0;
+		// animation: {
+		// 	name: fadeIn;
+		// 	delay: 500ms;
+		// 	duration: $animation-fade-in-up-speed;
+		// 	timing-function: ease-out;
+		// 	fill-mode: forwards;
+		// }
 	}
 
 	@include mq($screen-sm) {
@@ -166,33 +175,12 @@
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
 
-		.content {
-			z-index: 1;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			margin: 0px auto;
-			padding: 0px 2rem;
-			width: $screen-sm - 4rem;
-			max-width: 100%;
-			// opacity: 0;
-			// animation: {
-			// 	name: fadeIn;
-			// 	delay: 500ms;
-			// 	duration: $animation-fade-in-up-speed;
-			// 	timing-function: ease-out;
-			// 	fill-mode: forwards;
-			// }
-		}
-
 		.logo {
 			@include sdcLogoDimensions(30rem);
 		}
 
 		.tagline {
 			font-size: 2rem;
-			font-weight: bold;
 		}
 
 		.letter {

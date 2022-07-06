@@ -1,21 +1,39 @@
+.philosophy-transition {
+	width: 100%;
+	height: 10rem;
+	background: linear-gradient(to bottom, $grey-lightest 0%, transparent 100%);
+}
+
 .philosophy {
+
+	padding: 4rem 0px;;
 
 	@include mq('desktop') {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: center;
+		padding: 0px;
 		min-height: 80vh;
 	}
 
 	.tagline {
 		text-align: center;
-		font-weight: bold;
-		// @include caps();
 	}
 
 	p {
 		font-size: 1.25rem;
+	}
+
+	a:not(.btn) {
+
+		color: currentColor;
+		transition: color $transition-speed;
+
+		&:hover {
+			color: $grey;
+		}
+
 	}
 
 }
