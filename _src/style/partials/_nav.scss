@@ -197,12 +197,26 @@ nav {
 		text-decoration: none;
 
 		&.btn-outline {
+
 			color: $white;
 			padding: 0.65em 1em;
+
+			&:hover {
+				color: $white;
+				border-color: $black;
+			}
+
+			&:active {
+				color: $white;
+				border-color: $black;
+				background: $black;
+			}
+
 		}
 
 		&:hover {
-			color: $grey;
+
+			color: $black;
 			transform: translate(0px, -0.0625em);
 
 			@include mq('desktop') {
