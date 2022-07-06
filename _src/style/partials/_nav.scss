@@ -148,8 +148,8 @@ body.nav-active {
 
 	}
 
-	@media screen and (min-width: $mobile-breakpoint) {
-		display: block;
+	@include mq('desktop') {
+		display: none;
 	}
 
 }
@@ -186,7 +186,7 @@ nav {
 		max-width: $screen-xl;
 		display: block;
 		background: none;
-		font-size: 1.25rem;
+		font-size: 1.125rem;
 	}
 
 	a {
@@ -198,6 +198,7 @@ nav {
 
 		&.btn-outline {
 			color: $white;
+			padding: 0.65em 1em;
 		}
 
 		&:hover {

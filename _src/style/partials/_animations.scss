@@ -101,3 +101,19 @@
 	}
 
 }
+
+@keyframes cloud1 {
+
+	to {
+		left: calc(100% + 200px);
+	}
+
+}
+
+@keyframes cloud2 {
+
+	to {
+		left: -300px;
+	}
+
+}

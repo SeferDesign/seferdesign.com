@@ -8,4 +8,14 @@
 		min-height: 80vh;
 	}
 
+	.tagline {
+		text-align: center;
+		font-weight: bold;
+		// @include caps();
+	}
+
+	p {
+		font-size: 1.25rem;
+	}
+
 }
