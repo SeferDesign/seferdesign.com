@@ -16,6 +16,8 @@
 
 	.clouds {
 
+		display: none;
+
 		.cloud {
 
 			z-index: 0;
@@ -86,12 +88,22 @@
 	}
 
 	.graph {
+
 		z-index: 0;
 		position: absolute;
 		bottom: 0px;
 		left: 50%;
 		transform: translate(-50%, 0px);
 		width: 101vw;
+
+		@include mq($screen-md) {
+			bottom: -50px;
+		}
+
+		@include mq($screen-lg) {
+			bottom: -100px;
+		}
+
 	}
 
 	a:not(.btn) {
@@ -117,18 +129,8 @@
 	}
 
 	.tagline {
-
-		margin-top: 1rem;
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		text-align: center;
-
-		@media (max-width: 499px) {
-
-			span.space {
-				display: block;
-			}
-
-		}
 	}
 
 	.letter {
@@ -180,7 +182,7 @@
 		}
 
 		.tagline {
-			font-size: 2rem;
+			font-size: 2.5rem;
 		}
 
 		.letter {
@@ -232,6 +234,7 @@
 			p {
 				font-size: 1.25rem;
 			}
+
 		}
 
 	}
