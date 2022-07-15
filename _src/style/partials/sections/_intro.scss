@@ -5,7 +5,7 @@
 	overflow: hidden;
 	min-height: calc(var(--vh, 1vh) * 80);
 	color: $white;
-	background: $blue-light;
+	background: $green;
 	text-align: center;
 	overflow: hidden;
 
@@ -106,6 +106,40 @@
 
 	}
 
+	&-images {
+
+		margin-bottom: 2rem;
+		padding: 1rem;
+
+		img {
+			z-index: 1;
+			position: relative;
+			width: 1em;
+			height: 1em;
+			font-size: 12rem;
+			border: 0.125rem solid $grey-light;
+			border-radius: 0.0625em;
+			object-fit: cover;
+			box-shadow: 0px 4px 12px transparentize($black, 0.9);
+		}
+
+		picture:nth-child(1) img {
+			transform: translate(0.125em, 0.0625em);
+		}
+
+		picture:nth-child(2) img {
+			z-index: 0;
+			transform: translate(0px, -0.0625em);
+			width: 1.5em;
+			border-color: transparent;
+		}
+
+		picture:nth-child(3) img {
+			transform: translate(-0.125em, 0.0625em);
+		}
+
+	}
+
 	a:not(.btn) {
 
 		color: currentColor;
@@ -118,8 +152,8 @@
 	}
 
 	.btn {
-		background: $green;
-		border-color: $green;
+		background: $orange;
+		border-color: $orange;
 	}
 
 	.logo {
