@@ -15,7 +15,7 @@ $blue-light: #bad7f2;
 $red: #8c5248;
 $orange: #d27f4d;
 
-$blue-to-light-blue: linear-gradient(to bottom, darken($blue-light, 5%) 40%, $blue-light 100%);
+$blue-to-white: linear-gradient(to bottom, darken($blue-light, 5%) 40%, $white 100%);
 
 $green-highlight: #b7f3c9;
 $blue-highlight: #a5cefa;

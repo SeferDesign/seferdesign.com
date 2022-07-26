@@ -212,10 +212,18 @@ nav {
 
 		}
 
-
-
 		.page-home & {
+
 			color: $white;
+
+			&:hover {
+
+				@include mq('desktop') {
+					color: $grey-dark;
+
+				}
+
+			}
 		}
 
 		&.btn-outline {

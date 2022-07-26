@@ -4,7 +4,7 @@
 	padding: 3rem 0px;
 	overflow: hidden;
 	color: $white;
-	background: $blue-to-light-blue;
+	background: $blue-to-white;
 	text-align: center;
 	overflow: hidden;
 
@@ -113,8 +113,9 @@
 
 	.tagline {
 
-		color: $black;
+		color: $grey-dark;
 		font-size: 1.5rem;
+		line-height: 1.1;
 		text-align: center;
 
 		@include mq($screen-sm) {
@@ -229,6 +230,8 @@
 			transition: color $transition-speed;
 
 			.more-arrow {
+
+				color: $grey-dark;
 
 				&:hover {
 					cursor: pointer;
