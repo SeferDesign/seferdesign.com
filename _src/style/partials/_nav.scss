@@ -17,10 +17,10 @@ body.nav-active {
 
 	&:hover {
 
-		color: $grey;
+		color: $grey-darker;
 
 		svg {
-			fill: $grey;
+			fill: $grey-darker;
 		}
 
 	}
@@ -52,7 +52,7 @@ body.nav-active {
 		cursor: pointer;
 
 		span {
-			background: $grey;
+			background: $grey-darker;
 		}
 
 	}
@@ -80,7 +80,7 @@ body.nav-active {
 			transition: color $transition-speed;
 
 			&:hover {
-				color: $grey;
+				color: $grey-darker;
 			}
 
 		}
@@ -197,7 +197,7 @@ nav {
 		text-decoration: none;
 
 		@include mq('desktop') {
-			color: $black;
+			color: $grey-darker;
 		}
 
 		&:hover {
@@ -218,12 +218,14 @@ nav {
 
 			&:hover {
 
-				@include mq('desktop') {
-					color: $grey-dark;
+				color: $grey;
 
+				@include mq('desktop') {
+					color: $grey-darker;
 				}
 
 			}
+
 		}
 
 		&.btn-outline {
@@ -232,7 +234,8 @@ nav {
 			padding: 0.65em 1em;
 
 			@include mq('desktop') {
-				color: $black;
+
+				color: $grey-darker;
 
 				.page-home & {
 					color: $white;
@@ -242,7 +245,7 @@ nav {
 
 			&:hover {
 				color: $white;
-				border-color: $black;
+				border-color: $grey-darker;
 			}
 
 			&:active {
