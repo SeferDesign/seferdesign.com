@@ -124,17 +124,10 @@
 
 	}
 
-	.letter {
+	.description {
 
-		margin-top: 3rem;
-
-		p {
-			font-size: 1.125rem;
-		}
-
-		.signature {
-			text-align: right;
-			font-weight: bold;
+		@include mq('desktop') {
+			font-size: 1.25rem;
 		}
 
 	}
@@ -202,16 +195,6 @@
 			font-size: 3rem;
 		}
 
-		.letter {
-
-			margin-top: 4rem;
-
-			p {
-				font-size: 1.5rem;
-			}
-
-		}
-
 		.more-arrow-wrap  {
 
 			opacity: 0;
@@ -238,20 +221,6 @@
 					color: $grey;
 				}
 
-			}
-
-		}
-
-	}
-
-	@media screen and (min-width: $screen-sm) and (max-height: 600px) {
-
-		.letter {
-
-			margin-top: 2rem;
-
-			p {
-				font-size: 1.25rem;
 			}
 
 		}

@@ -74,6 +74,10 @@ body {
 		width: $screen-sm - 2rem;
 	}
 
+	@include mq('desktop') {
+		width: $screen-md - 8rem;
+	}
+
 	&-wide-med {
 
 		margin: 0px 1.5rem;
