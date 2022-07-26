@@ -8,10 +8,10 @@ body.nav-active {
 .back {
 
 	display: block;
-	z-index: 2;
+	z-index: 1000;
 	position: absolute;
-	top: 1.5rem;
-	left: 1.5rem;
+	top: 1.375rem;
+	left: 1.375rem;
 	color: $grey-lighter;
 	transition: color $transition-speed;
 
@@ -181,7 +181,7 @@ nav {
 		right: auto;
 		bottom: auto;
 		transform: translate(-50%, 0px);
-		padding: 1rem 2rem;
+		padding: 1rem 3rem;
 		width: 100%;
 		max-width: $screen-xl;
 		display: block;
@@ -196,10 +196,41 @@ nav {
 		font-weight: 700;
 		text-decoration: none;
 
+		@include mq('desktop') {
+			color: $black;
+		}
+
+		&:hover {
+
+			color: $grey;
+			transform: translate(0px, -0.0625em);
+
+			@include mq('desktop') {
+				color: $black;
+				transform: none;
+			}
+
+		}
+
+
+
+		.page-home & {
+			color: $white;
+		}
+
 		&.btn-outline {
 
 			color: $white;
 			padding: 0.65em 1em;
+
+			@include mq('desktop') {
+				color: $black;
+
+				.page-home & {
+					color: $white;
+				}
+
+			}
 
 			&:hover {
 				color: $white;
@@ -212,21 +243,6 @@ nav {
 				background: $black;
 			}
 
-		}
-
-		&:hover {
-
-			color: $black;
-			transform: translate(0px, -0.0625em);
-
-			@include mq('desktop') {
-				transform: none;
-			}
-
-		}
-
-		@include mq('desktop') {
-			// color: $black;
 		}
 
 	}

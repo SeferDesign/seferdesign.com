@@ -48,6 +48,48 @@
 
 }
 
+@keyframes fadeInUpImg1 {
+
+  from {
+    opacity: 0;
+    transform: translate(0.125em, 1em);
+  }
+
+  to {
+    opacity: 1;
+		transform: translate(0.125em, 0.0625em);
+  }
+
+}
+
+@keyframes fadeInUpImg2 {
+
+  from {
+    opacity: 0;
+    transform: translate(0, 1em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0px, -0.0625em);
+  }
+
+}
+
+@keyframes fadeInUpImg3 {
+
+  from {
+    opacity: 0;
+    transform: translate(-0.125em, 1em);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-0.125em, 0.0625em);
+  }
+
+}
+
 @keyframes fadeInDown {
 
   from {
@@ -98,22 +140,6 @@
 
 	to {
 		right: 0%;
-	}
-
-}
-
-@keyframes cloud1 {
-
-	to {
-		left: calc(100% + 200px);
-	}
-
-}
-
-@keyframes cloud2 {
-
-	to {
-		left: -300px;
 	}
 
 }

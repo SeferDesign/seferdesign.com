@@ -2,6 +2,10 @@ article {
 
 	padding: 6rem 0px;
 
+	@include mq('desktop') {
+		padding: 8rem 0px;
+	}
+
 	p {
 		font-size: 1.5rem;
 	}
