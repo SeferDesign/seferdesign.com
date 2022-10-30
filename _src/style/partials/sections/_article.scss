@@ -6,7 +6,18 @@ article {
 		padding: 8rem 0px;
 	}
 
-	p {
+	.page-legal & {
+
+		margin: 0px auto;
+		max-width: 1200px;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+
+	}
+
+	p,
+	ul,
+	ol {
 		font-size: 1.5rem;
 	}
 
