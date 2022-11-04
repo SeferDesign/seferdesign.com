@@ -42,31 +42,34 @@ h2 {
 
 p {
 
-	margin: 0px 0px 1.5rem;
-	line-height: 1.4;
-
-	&:last-child {
-		margin-bottom: 0px;
-	}
-
 	&.question {
 		margin-bottom: 0.5rem;
 		font-weight: bold;
 	}
 
-	@include mq($screen-sm) {
 
-		margin-bottom: 2rem;
+
+}
+
+p,
+	ul,
+	ol {
+
+		margin: 0px 0px 1.5rem;
+		font-size: 1.5rem;
+		line-height: 1.4;
 
 		&:last-child {
 			margin-bottom: 0px;
 		}
 
-	}
+		@include mq($screen-sm) {
+			margin-bottom: 2rem;
+		}
 
-	strong,
+		strong,
 	b {
 		font-weight: 500;
 	}
 
-}
+	}
