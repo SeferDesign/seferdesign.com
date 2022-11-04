@@ -11,11 +11,12 @@ $grey-lighter: #c8c8c8;
 $grey-lightest: #eaeaea;
 $green: #5ea071;
 $blue: #48658c;
+$blue-dark: darken($blue, 5%);
 $blue-light: #bad7f2;
 $red: #8c5248;
 $orange: #d27f4d;
 
-$blue-to-white: linear-gradient(to bottom, darken($blue-light, 5%) 40%, $white 100%);
+$blue-to-white: linear-gradient(to bottom, $blue-dark 10%, darken($blue, 2%) 30%, $blue 50%, lighten($blue, 20%) 70%, lighten($blue, 40%) 90%, $white 100%);
 
 $green-highlight: #b7f3c9;
 $blue-highlight: #a5cefa;

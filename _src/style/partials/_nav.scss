@@ -207,7 +207,7 @@ nav {
 		text-decoration: none;
 
 		@include mq('desktop') {
-			color: $grey-darker;
+			color: $grey-dark;
 		}
 
 		&:hover {
@@ -222,21 +222,21 @@ nav {
 
 		}
 
-		.page-home & {
+		// .page-home & {
 
-			color: $white;
+		// 	color: $white;
 
-			&:hover {
+		// 	&:hover {
 
-				color: $grey;
+		// 		color: $grey;
 
-				@include mq('desktop') {
-					color: $grey-darker;
-				}
+		// 		@include mq('desktop') {
+		// 			color: $grey-darker;
+		// 		}
 
-			}
+		// 	}
 
-		}
+		// }
 
 		&.btn-outline {
 
@@ -247,9 +247,9 @@ nav {
 
 				color: $grey-darker;
 
-				.page-home & {
-					color: $white;
-				}
+				// .page-home & {
+				// 	color: $white;
+				// }
 
 			}
 
