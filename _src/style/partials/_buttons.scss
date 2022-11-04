@@ -78,4 +78,29 @@
 		padding: 1em 3em;
 	}
 
+	.intro & {
+
+		$color: $orange;
+		background: $color;
+		border-color: $color;
+		animation: {
+			name: fadeInUp;
+			duration: 500ms;
+			delay: 1500ms;
+			iteration-count: 1;
+			fill-mode: forwards;
+		}
+		opacity: 0;
+		will-change: opacity, transform;
+
+		&:hover {
+			background: darken($color, 3%);
+		}
+
+		&:active {
+			background: darken($color, 10%);
+		}
+
+	}
+
 }

@@ -1,9 +1,11 @@
 .banner {
 
+	$color: $green;
+
 	display: block;
 	padding: 1.25em 0px;
 	color: $white;
-	background: $orange;
+	background: $color;
 	font-size: 0.75rem;
 	text-align: center;
 	text-decoration: none;
@@ -42,7 +44,7 @@
 
 	&:hover {
 
-		background: darken($orange, 3%);
+		background: darken($color, 3%);
 
 		.chevron-right-solid {
 			transform: translate(10%, -10%);
@@ -51,7 +53,7 @@
 	}
 
 	&:active {
-		background: darken($orange, 10%);
+		background: darken($color, 10%);
 	}
 
 }

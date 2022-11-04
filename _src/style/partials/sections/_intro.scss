@@ -97,20 +97,6 @@
 
 	}
 
-	.btn {
-		background: $green;
-		border-color: $green;
-		animation: {
-			name: fadeInUp;
-			duration: 500ms;
-			delay: 1500ms;
-			iteration-count: 1;
-			fill-mode: forwards;
-		}
-		opacity: 0;
-		will-change: opacity, transform;
-	}
-
 	.tagline {
 
 		color: $grey-darker;
@@ -168,6 +154,22 @@
 
 		}
 
+		@media (min-width: $screen-sm) and (max-height: 750px) {
+
+			.tagline {
+				font-size: 2rem;
+			}
+
+			.intro-images img {
+				font-size: 7rem;
+			}
+
+			.btn {
+				padding: 0.5em 1.5em;
+			}
+
+		}
+
 		@media (min-width: $screen-sm) and (max-height: 600px) {
 
 			.tagline {
@@ -178,10 +180,6 @@
 				font-size: 6rem;
 			}
 
-			.btn {
-				padding: 0.5em 1.5em;
-			}
-
 		}
 
 	}
@@ -190,6 +188,7 @@
 
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
+		min-height: 550px;
 
 		.has-banner & {
 			height: calc(var(--vh, 1vh) * 100 - 3rem);
