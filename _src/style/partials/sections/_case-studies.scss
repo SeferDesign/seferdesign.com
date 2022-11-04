@@ -28,20 +28,14 @@
 			}
 
 			@include mq($screen-md) {
-
 				flex-basis: math.percentage(math.div(1, 2));
 				background: $grey-light;
-
-				&:nth-child(3) {
-					flex-basis: 100%;
-				}
-
 			}
 
 			@include mq($screen-lg) {
 
 				&:nth-child(n) {
-					flex-basis: math.percentage(math.div(1, 3));
+					// flex-basis: math.percentage(math.div(1, 3));
 					min-height: 300px;
 				}
 
@@ -115,6 +109,10 @@
 			}
 
 			&-kelly-in-the-city {
+				background: $grey;
+			}
+
+			&-bioquipbugs {
 				background: $green;
 			}
 
