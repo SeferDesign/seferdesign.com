@@ -38,10 +38,10 @@
 			height: 1em;
 			font-size: 5rem;
 			font-size: 20vw;
-			border: 0.125rem solid $grey-lightest;
+			border: 0.125rem solid $grey-lighter;
 			border-radius: 0.0625em;
 			object-fit: cover;
-			box-shadow: 0px 4px 12px 0px transparentize($black, 0.9);
+			box-shadow: 0px 0px 30px transparentize($black, 0.8);
 			animation: {
 				duration: 500ms;
 				delay: 500ms;

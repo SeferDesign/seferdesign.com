@@ -10,7 +10,7 @@ body.nav-active {
 	display: block;
 	z-index: 1000;
 	position: absolute;
-	top: 1.675rem;
+	top: 1.375rem;
 	left: 1.375rem;
 	color: $grey-lighter;
 	transition: color $transition-speed;
@@ -222,35 +222,13 @@ nav {
 
 		}
 
-		// .page-home & {
-
-		// 	color: $white;
-
-		// 	&:hover {
-
-		// 		color: $grey;
-
-		// 		@include mq('desktop') {
-		// 			color: $grey-darker;
-		// 		}
-
-		// 	}
-
-		// }
-
 		&.btn-outline {
 
 			color: $white;
 			padding: 0.65em 1em;
 
 			@include mq('desktop') {
-
 				color: $grey-darker;
-
-				// .page-home & {
-				// 	color: $white;
-				// }
-
 			}
 
 			&:hover {
@@ -265,6 +243,23 @@ nav {
 			}
 
 		}
+
+	}
+
+	ul {
+
+		li {
+
+			&:not(.li-logo) {
+
+				@include mq('desktop') {
+					font-size: 1rem;
+				}
+
+			}
+
+		}
+
 
 	}
 

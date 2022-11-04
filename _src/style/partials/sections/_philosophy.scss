@@ -1,27 +1,19 @@
-.philosophy-transition {
-	width: 100%;
-	background: $green;
-
-	svg {
-		display: block;
-		width: 100%;
-	}
-}
-
 .philosophy {
 
 	padding: 4rem 0px;
+	color: $grey-darker;
+	background: $blue-lighter;
 
 	@include mq('desktop') {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: center;
-		padding: 0px;
 		min-height: 80vh;
 	}
 
 	.tagline {
+		color: $black;
 		text-align: center;
 	}
 

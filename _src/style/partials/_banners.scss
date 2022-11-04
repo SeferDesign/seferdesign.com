@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .banner {
 
 	$color: $blue;
@@ -10,7 +12,7 @@
 	font-size: 0.75rem;
 	text-align: center;
 	text-decoration: none;
-	transition: background #{$animation-speed / 2};
+	transition: background #{math.div($animation-speed, 2)};
 	will-change: background;
 
 	@include mq('desktop') {
