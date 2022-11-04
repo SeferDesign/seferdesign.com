@@ -14,9 +14,31 @@
 			color: $white;
 			background: $grey-darker;
 
-			&:nth-child(even) {
+			&:nth-child(2) {
+
 				color: $black;
 				background: $white;
+
+				.attribution {
+
+					span {
+						color: $green;
+					}
+
+				}
+
+			}
+
+			&:nth-child(3),
+			&.alt {
+
+				color: $black;
+				background: $blue-lighter;
+
+				.attribution {
+					color: $black;
+				}
+
 			}
 
 		}
