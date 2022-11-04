@@ -47,6 +47,10 @@ body.nav-active {
 	height: 2.5625rem;
 	overflow: hidden;
 
+	.has-banner & {
+		display: none;
+	}
+
 	&:hover {
 
 		cursor: pointer;
@@ -174,6 +178,7 @@ nav {
 	}
 
 	@include mq('desktop') {
+
 		z-index: 999;
 		position: absolute;
 		top: 0px;
@@ -187,6 +192,11 @@ nav {
 		display: block;
 		background: none;
 		font-size: 1.125rem;
+
+		.has-banner & {
+			top: 3rem;
+		}
+
 	}
 
 	a {

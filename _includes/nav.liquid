@@ -1,20 +1,26 @@
-{% if page.url != '/' %}<a class="back" href="/"><svg class="chevron-left-solid" role="img"><use xlink:href="#chevron-left-solid"></use></svg></a>{% endif %}
+{% if page.url != '/' %}
+  <a class="back" href="/">
+    <svg class="chevron-left-solid" role="img">
+      <use xlink:href="#chevron-left-solid"></use>
+    </svg>
+  </a>
+{% endif %}
 
 <nav id="main-nav">
-	<ul>
-		<li><a href="/"><svg class="logo" role="img"><use xlink:href="#logo"></use></svg></a></li>
-		<li><a href="/#philosophy">Our Philosophy</a></li>
-		<li><a href="/#case-studies">Case Studies</a></li>
-		<li><a class="btn btn-outline" href="#contact">Contact</a></li>
-	</ul>
+  <ul>
+    <li><a href="/"><svg class="logo" role="img"><use xlink:href="#logo"></use></svg></a></li>
+    <li><a href="/#philosophy">Our Philosophy</a></li>
+    <li><a href="/#case-studies">Case Studies</a></li>
+    <li><a class="btn btn-outline" href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <div id="nav-toggle" class="nav-toggle">
-	<div class="menu-title-wrap"></div>
-	<div class="closed">
-	  <span></span>
-	  <span></span>
-	  <span></span>
-	</div>
-	<div class="open">&times;</div>
+  <div class="menu-title-wrap"></div>
+  <div class="closed">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="open">&times;</div>
 </div>

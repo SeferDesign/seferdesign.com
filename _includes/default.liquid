@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include 'head' %}
-  <body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{%endif %}">
+  <body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{% endif %}{% if page.url == '/' and site.showBanner %} has-banner{% endif %}">
 
     {% include 'svg-symbols.svg' %}
+    {% if page.url == '/' and site.showBanner %}
+      {% include 'banner' %}
+    {% endif %}
     {% include 'nav' %}
 
     {% if caseStudy or product %}
