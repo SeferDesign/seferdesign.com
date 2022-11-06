@@ -34,9 +34,9 @@ body {
 	// 	bottom: 0px;
 	// }
 
-	&.page-case-study:before {
-		background: $blue;
-	}
+	// &.page-case-study:before {
+	// 	background: $blue;
+	// }
 
 	&.nav-active {
 
@@ -115,6 +115,14 @@ body {
 
 		}
 
+		.grid-item {
+
+			&:nth-child(n+2) {
+				margin-top: 1.5rem;
+			}
+
+		}
+
 		@include mq($screen-sm) {
 
 			display: flex;
@@ -127,7 +135,21 @@ body {
 			}
 
 			.grid-item {
+
 				flex-basis: 45%;
+
+				&:nth-child(n+2) {
+					margin-top: 0px;
+				}
+
+			}
+
+			&[data-columns="3"] {
+
+				.grid-item {
+					flex-basis: 30%;
+				}
+
 			}
 
 		}
@@ -172,6 +194,10 @@ figure {
 			max-width: 100%;
 		}
 
+	}
+
+	&.full {
+		margin: 0px;
 	}
 
 	&:not(.browser) {
@@ -268,4 +294,41 @@ hr {
 	height: 0.0625rem;
 	background: $blue;
 	border: 0px;
+}
+
+.page-case-study,
+.page-product {
+
+	.endorsements {
+
+		margin: 2rem 0px;
+
+		&-footer {
+			margin-bottom: -6rem;
+		}
+
+	}
+
+}
+
+.product-cta-buttons {
+	text-align: center;
+
+	a {
+
+		display: inline-block;
+		vertical-align: middle;
+
+		img,
+		svg {
+			display: block;
+
+			&.mac-app-store {
+				height: 4rem;
+				width: auto;
+			}
+		}
+
+	}
+
 }
