@@ -15,8 +15,7 @@ async function imageShortcode(src, alt, klass = '', loading = 'lazy', sizes = nu
     alt,
     sizes,
     loading: loading,
-		class: klass,
-    decoding: 'async'
+		class: klass
   });
 }
 
