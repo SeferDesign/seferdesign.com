@@ -78,6 +78,21 @@ body {
 		width: $screen-md - 8rem;
 	}
 
+	&-tight {
+
+		margin: 0px 1.5rem;
+
+		@include mq($screen-sm) {
+			margin: 0px auto;
+			width: $screen-sm - 2rem;
+		}
+
+		@include mq('desktop') {
+			width: $screen-md - 12rem;
+		}
+
+	}
+
 	&-wide-med {
 
 		margin: 0px 1.5rem;
