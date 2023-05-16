@@ -82,7 +82,8 @@
 
 			}
 
-			picture {
+			// picture {
+			img {
 
 				margin-left: 2rem;
 				width: 1em;
@@ -90,10 +91,10 @@
 				font-size: 6rem;
 				object-fit: contain;
 
-				img {
-					width: 100%;
-					height: auto;
-				}
+				// img {
+				// 	width: 100%;
+				// 	height: auto;
+				// }
 
 				@include mq($screen-xs) {
 					font-size: 10rem;
