@@ -1,6 +1,6 @@
-const fs = require('fs');
-const UglifyJS = require('uglify-js');
-const sass = require('sass');
+import fs from 'fs';
+import UglifyJS from 'uglify-js';
+import sass from 'sass';
 
 function generateCSS() {
 	const rendered = sass.compile('./_src/style/style.scss', {
@@ -17,7 +17,5 @@ function generateJS() {
 	return rendered;
 }
 
-module.exports = {
-	css: generateCSS().string,
-	js: generateJS()
-};
+export const css = generateCSS().string;
+export const js = generateJS();

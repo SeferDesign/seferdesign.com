@@ -1,29 +1,29 @@
-const Image = require('@11ty/eleventy-img');
+import Image from '@11ty/eleventy-img';
 
 async function imageShortcode(src, alt, klass = '', loading = 'lazy', sizes = null) {
 	let extension = src.split('.').pop();
 	let formats = ['jpeg']; // webp, avif
-	if (extension == 'svg') {
+	if (extension === 'svg') {
 		formats = ['svg'];
 	}
-  return Image.generateHTML(await Image(src, {
-    widths: [200, 800, 1500],
-    formats: formats,
+	return Image.generateHTML(await Image(src, {
+		widths: [200, 800, 1500],
+		formats: formats,
 		outputDir: './_site/dist/images/',
 		urlPath: '/dist/images/'
-  }), {
-    alt,
-    sizes,
-    loading: loading,
+	}), {
+		alt,
+		sizes,
+		loading: loading,
 		class: klass
-  });
+	});
 }
 
-module.exports = eleventyConfig => {
+export default (eleventyConfig) => {
 
 	eleventyConfig.addShortcode('image', imageShortcode);
 
-	eleventyConfig.addPassthroughCopy({ 'static':  '.' });
+	eleventyConfig.addPassthroughCopy({ 'static': '.' });
 
 	eleventyConfig.addWatchTarget('_src/**/*.scss');
 	eleventyConfig.addWatchTarget('_src/**/*.js');
