@@ -1,10 +1,13 @@
+@use "../mixins";
+@use "../variables";
+
 .contact {
 
 	padding: 4rem 0px;
-	background: $grey-lightest;
+	background: variables.$grey-lightest;
 	text-align: center;
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 		padding: 6rem 0px;
 	}
 
@@ -15,16 +18,16 @@
 
 	a {
 
-		color: $black;
-		transition: color $transition-speed;
+		color: variables.$black;
+		transition: color variables.$transition-speed;
 
 		&:hover {
-			color: $grey;
+			color: variables.$grey;
 		}
 
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 
 		h2 {
 			font-size: 2rem;

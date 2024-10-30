@@ -1,21 +1,25 @@
+@use "sass:color";
+@use "mixins";
+@use "variables";
+
 @use 'sass:math';
 
 .banner {
 
-	$color: $blue;
+	$color: variables.$blue;
 
 	position: relative;
 	display: block;
 	padding: 1.25em 0px;
-	color: $white;
+	color: variables.$white;
 	background: $color;
 	font-size: 0.75rem;
 	text-align: center;
 	text-decoration: none;
-	transition: background #{math.div($animation-speed, 2)};
+	transition: background #{math.div(variables.$animation-speed, 2)};
 	will-change: background;
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 		padding: 0.75em 0px;
 		font-size: 1rem;
 	}
@@ -36,7 +40,7 @@
 		width: 1em;
 		height: 1em;
 		transform: translate(0px, -10%);
-		transition: transform $animation-speed;
+		transition: transform variables.$animation-speed;
 		will-change: transform;
 
 		&:not(:first-child) {
@@ -47,7 +51,7 @@
 
 	&:hover {
 
-		background: darken($color, 3%);
+		background: color.adjust($color, $lightness: -3%);
 
 		.chevron-right-solid {
 			transform: translate(10%, -10%);
@@ -56,7 +60,7 @@
 	}
 
 	&:active {
-		background: darken($color, 10%);
+		background: color.adjust($color, $lightness: -10%);
 	}
 
 }

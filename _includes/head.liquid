@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{% if page.url != '/' %}{{ title }} | {% endif %} {{ site.title }} | {{ site.description }}</title>
 	<meta name="description" content="{{ site.descriptionLong }}" />
+	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
 	<style>
 	{{ helpers.css }}

@@ -1,17 +1,21 @@
+@use "sass:color";
+@use "mixins";
+@use "variables";
+
 .btn {
 
 	display: inline-block;
 	padding: 0.75em 1em;
-	color: $white;
-	background: $black;
+	color: variables.$white;
+	background: variables.$black;
 	text-decoration: none;
-	border: 0.125em solid $black;
-	border-radius: $border-radius;
-	@include caps();
+	border: 0.125em solid variables.$black;
+	border-radius: variables.$border-radius;
+	@include mixins.caps();
 	font-weight: 700;
 	line-height: 1;
-	transition: background-color $transition-speed;
-	box-shadow: $box-shadow;
+	transition: background-color variables.$transition-speed;
+	box-shadow: variables.$box-shadow;
 
 	.chevron-right-solid,
 	.chevron-left-solid {
@@ -21,7 +25,7 @@
 		margin-bottom: 0.1875em;
 		width: 0.625em;
 		height: 1em;
-		transition: margin $transition-speed;
+		transition: margin variables.$transition-speed;
 	}
 
 	.chevron-left-solid {
@@ -31,7 +35,7 @@
 
 	&:hover {
 
-		background-color: $grey-dark;
+		background-color: variables.$grey-dark;
 
 		.chevron-right-solid {
 			margin-left: 0.625em;
@@ -44,8 +48,8 @@
 	}
 
 	&:active {
-		background-color: $grey;
-		border-color: $grey;
+		background-color: variables.$grey;
+		border-color: variables.$grey;
 	}
 
 	&-outline {
@@ -58,7 +62,7 @@
 
 		padding-top: 0px;
 		padding-bottom: 0px;
-		color: $blue;
+		color: variables.$blue;
 		background-color: transparent;
 		border-radius: 0px;
 		box-shadow: none;
@@ -80,7 +84,7 @@
 
 	.intro & {
 
-		$color: $green;
+		$color: variables.$green;
 		background: $color;
 		border-color: $color;
 		animation: {
@@ -94,11 +98,11 @@
 		will-change: opacity, transform;
 
 		&:hover {
-			background: darken($color, 3%);
+			background: color.adjust($color, $lightness: -3%);
 		}
 
 		&:active {
-			background: darken($color, 10%);
+			background: color.adjust($color, $lightness: -10%);
 		}
 
 	}

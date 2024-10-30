@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 body.nav-active {
 	overflow: hidden;
 	position: fixed;
@@ -12,15 +15,15 @@ body.nav-active {
 	position: absolute;
 	top: 1.375rem;
 	left: 1.375rem;
-	color: $grey-lighter;
-	transition: color $transition-speed;
+	color: variables.$grey-lighter;
+	transition: color variables.$transition-speed;
 
 	&:hover {
 
-		color: $grey-darker;
+		color: variables.$grey-darker;
 
 		svg {
-			fill: $grey-darker;
+			fill: variables.$grey-darker;
 		}
 
 	}
@@ -30,8 +33,8 @@ body.nav-active {
 		width: 1em;
 		height: 1.6em;
 		font-size: 1rem;
-		fill: $grey-lighter;
-		transition: fill $transition-speed;
+		fill: variables.$grey-lighter;
+		transition: fill variables.$transition-speed;
 	}
 
 }
@@ -56,7 +59,7 @@ body.nav-active {
 		cursor: pointer;
 
 		span {
-			background: $grey-darker;
+			background: variables.$grey-darker;
 		}
 
 	}
@@ -77,14 +80,14 @@ body.nav-active {
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			color: $white;
+			color: variables.$white;
 			font-size: 5rem;
 			line-height: 0.5;
 			font-weight: 500;
-			transition: color $transition-speed;
+			transition: color variables.$transition-speed;
 
 			&:hover {
-				color: $grey-darker;
+				color: variables.$grey-darker;
 			}
 
 		}
@@ -101,7 +104,7 @@ body.nav-active {
 		width: 100%;
 
 		&:hover span {
-			background: $grey;
+			background: variables.$grey;
 		}
 
 		span {
@@ -109,8 +112,8 @@ body.nav-active {
 			display: block;
 			width: 100%;
 			height: 0.1875rem;
-			background: $black;
-			transition: background $transition-speed;
+			background: variables.$black;
+			transition: background variables.$transition-speed;
 
 			.page-home & {
 
@@ -118,7 +121,7 @@ body.nav-active {
 				will-change: transform;
 				animation: {
 					name: navToggleSlideIn;
-					duration: $animation-slide-in-right-speed;
+					duration: variables.$animation-slide-in-right-speed;
 					timing-function: ease-out;
 					fill-mode: forwards;
 				}
@@ -126,12 +129,12 @@ body.nav-active {
 				@for $i from 1 through 3 {
 
 					&:nth-child(#{$i}) {
-						animation-delay: #{($animation-intro-extra-delay * 1.5) + (50 * ($i - 1))};
+						animation-delay: #{(variables.$animation-intro-extra-delay * 1.5) + (50 * ($i - 1))};
 					}
 
-					@media screen and (min-width: $mobile-breakpoint) {
+					@media screen and (min-width: variables.$mobile-breakpoint) {
 						&:nth-child(#{$i}) {
-							animation-delay: #{$animation-intro-extra-delay + (50 * ($i - 1))};
+							animation-delay: #{variables.$animation-intro-extra-delay + (50 * ($i - 1))};
 						}
 					}
 
@@ -152,7 +155,7 @@ body.nav-active {
 
 	}
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 		display: none;
 	}
 
@@ -167,17 +170,17 @@ nav {
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
-	background: $black;
+	background: variables.$black;
 	text-align: center;
 	font-size: 4vh;
 	font-size: calc(var(--vh, 1vh) * 4);
-	@include caps();
+	@include mixins.caps();
 
 	.nav-active & {
 		display: block;
 	}
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 
 		z-index: 999;
 		position: absolute;
@@ -188,7 +191,7 @@ nav {
 		transform: translate(-50%, 0px);
 		padding: 1rem 3rem;
 		width: 100%;
-		max-width: $screen-xl;
+		max-width: variables.$screen-xl;
 		display: block;
 		background: none;
 		font-size: 1.125rem;
@@ -202,21 +205,21 @@ nav {
 	a {
 
 		display: inline-block;
-		color: $white;
+		color: variables.$white;
 		font-weight: 700;
 		text-decoration: none;
 
-		@include mq('desktop') {
-			color: $grey-dark;
+		@include mixins.mq('desktop') {
+			color: variables.$grey-dark;
 		}
 
 		&:hover {
 
-			color: $grey;
+			color: variables.$grey;
 			transform: translate(0px, -0.0625em);
 
-			@include mq('desktop') {
-				color: $black;
+			@include mixins.mq('desktop') {
+				color: variables.$black;
 				transform: none;
 			}
 
@@ -224,22 +227,22 @@ nav {
 
 		&.btn-outline {
 
-			color: $white;
+			color: variables.$white;
 			padding: 0.65em 1em;
 
-			@include mq('desktop') {
-				color: $grey-darker;
+			@include mixins.mq('desktop') {
+				color: variables.$grey-darker;
 			}
 
 			&:hover {
-				color: $white;
-				border-color: $grey-darker;
+				color: variables.$white;
+				border-color: variables.$grey-darker;
 			}
 
 			&:active {
-				color: $white;
-				border-color: $black;
-				background: $black;
+				color: variables.$white;
+				border-color: variables.$black;
+				background: variables.$black;
 			}
 
 		}
@@ -252,7 +255,7 @@ nav {
 
 			&:not(.li-logo) {
 
-				@include mq('desktop') {
+				@include mixins.mq('desktop') {
 					font-size: 1rem;
 				}
 
@@ -267,14 +270,14 @@ nav {
 
 		display: block;
 		margin: 0px auto;
-		@include sdcLogoDimensions(7em);
+		@include mixins.sdcLogoDimensions(7em);
 
-		@include mq('desktop') {
-			@include sdcLogoDimensions(9em);
+		@include mixins.mq('desktop') {
+			@include mixins.sdcLogoDimensions(9em);
 		}
 
-		@include mq($screen-lg) {
-			@include sdcLogoDimensions(11em);
+		@include mixins.mq(variables.$screen-lg) {
+			@include mixins.sdcLogoDimensions(11em);
 		}
 
 	}
@@ -290,7 +293,7 @@ nav {
 		margin: 0px;
 		padding: 0px;
 
-		@include mq('desktop') {
+		@include mixins.mq('desktop') {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-end;
@@ -302,7 +305,7 @@ nav {
 
 		li {
 
-			@include mq('desktop') {
+			@include mixins.mq('desktop') {
 
 				display: inline-block;
 				vertical-align: middle;
@@ -317,7 +320,7 @@ nav {
 
 				margin-top: 2.5em;
 
-				@include mq('desktop') {
+				@include mixins.mq('desktop') {
 					margin: 0px 0px 0px 2rem;
 				}
 

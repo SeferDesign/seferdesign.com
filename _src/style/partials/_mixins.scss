@@ -1,8 +1,13 @@
+@use "sass:color";
+@use "sass:meta";
+@use "sass:string";
+@use "variables";
+
 @mixin fadeInUp($delay: 0ms) {
 	animation: {
 		name: fadeInUp;
 		delay: $delay;
-		duration: $animation-fade-in-up-speed;
+		duration: variables.$animation-fade-in-up-speed;
 		timing-function: ease-out;
 		fill-mode: forwards;
 	}
@@ -19,9 +24,9 @@
 }
 
 @mixin mq($name: 'desktop') {
-	$mqueryString: "(min-width: #{$mobile-breakpoint})";
+	$mqueryString: "(min-width: #{variables.$mobile-breakpoint})";
 	@if $name == 'desktop' {
-		$mqueryString: "(min-width: #{$mobile-breakpoint})";
+		$mqueryString: "(min-width: #{variables.$mobile-breakpoint})";
 	} @else if $name == 'mobile' {
 		$mqueryString: "(max-width: #{$mobile-breakpoint-px - 1})";
 	} @else {
@@ -43,9 +48,9 @@
 }
 
 @function encodecolor($string) {
-	@if type-of($string) == 'color' {
-		$hex: str-slice(ie-hex-str($string), 4);
-		$string:unquote("#{$hex}");
+	@if meta.type-of($string) == 'color' {
+		$hex: string.slice(color.ie-hex-str($string), 4);
+		$string:string.unquote("#{$hex}");
 	}
 	$string: '%23' + $string;
 	@return $string;

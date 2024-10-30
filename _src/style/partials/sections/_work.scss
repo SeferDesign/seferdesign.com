@@ -1,3 +1,6 @@
+@use "../mixins";
+@use "../variables";
+
 .work {
 
 	margin: 4rem 0px;
@@ -14,7 +17,7 @@
 
 			padding: 2rem;
 			width: 100%;
-			transition: width $transition-speed;
+			transition: width variables.$transition-speed;
 			font-weight: 500;
 
 			&:hover {
@@ -22,36 +25,36 @@
 			}
 
 			&:nth-child(odd) {
-				background: $grey-lighter;
+				background: variables.$grey-lighter;
 			}
 
 			&:nth-child(even) {
-				background: $grey-light;
+				background: variables.$grey-light;
 			}
 
 			&.active {
-				background: $green;
+				background: variables.$green;
 			}
 
 			&:nth-child(3n+2).active {
-				background: $blue;
+				background: variables.$blue;
 			}
 
 			&:nth-child(3n+3).active {
-				background: $red;
+				background: variables.$red;
 			}
 
 			a {
 
-				color: $white;
+				color: variables.$white;
 				text-decoration: none;
-				transition: padding $transition-speed;
+				transition: padding variables.$transition-speed;
 
 				span {
 					display: block;
 					margin-bottom: 0.5rem;
 					font-size: 0.75em;
-					@include caps();
+					@include mixins.caps();
 				}
 
 			}
@@ -79,7 +82,7 @@
 
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 
 		&-inner {
 			display: flex;

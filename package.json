@@ -14,9 +14,9 @@
     "start": "npx @11ty/eleventy --serve --port=3000"
   },
   "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-img": "^2.0.1",
-    "sass": "^1.52.3",
-    "uglify-js": "^3.16.1"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^5.0.0",
+    "sass": "^1.80.5",
+    "uglify-js": "^3.19.3"
   }
 }

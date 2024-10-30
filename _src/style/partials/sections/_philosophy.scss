@@ -1,10 +1,13 @@
+@use "../mixins";
+@use "../variables";
+
 .philosophy {
 
 	padding: 4rem 0px;
-	color: $grey-darker;
-	background: $blue-lighter;
+	color: variables.$grey-darker;
+	background: variables.$blue-lighter;
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;
@@ -13,17 +16,17 @@
 	}
 
 	.tagline {
-		color: $black;
+		color: variables.$black;
 		text-align: center;
 	}
 
 	a:not(.btn) {
 
 		color: currentColor;
-		transition: color $transition-speed;
+		transition: color variables.$transition-speed;
 
 		&:hover {
-			color: $grey;
+			color: variables.$grey;
 		}
 
 	}

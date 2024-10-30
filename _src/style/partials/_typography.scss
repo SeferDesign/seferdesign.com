@@ -1,7 +1,10 @@
+@use "mixins";
+@use "variables";
+
 html,
 body {
-	font-size: $font-size-base;
-	font-family: $font-family;
+	font-size: variables.$font-size-base;
+	font-family: variables.$font-family;
 	font-weight: 400;
 	line-height: 1.2;
 }
@@ -24,7 +27,7 @@ h2 {
 	font-size: 1.75rem;
 }
 
-@include mq($screen-sm) {
+@include mixins.mq(variables.$screen-sm) {
 
 	h1 {
 		font-size: 3rem;
@@ -63,7 +66,7 @@ ol {
 		margin-bottom: 0px;
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 		margin-bottom: 2rem;
 	}
 

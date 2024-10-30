@@ -1,3 +1,4 @@
+@use "sass:color";
 @use 'sass:math';
 
 $black: #000;
@@ -11,13 +12,13 @@ $grey-lighter: #c8c8c8;
 $grey-lightest: #eaeaea;
 $green: #5ea071;
 $blue: #48658c;
-$blue-dark: darken($blue, 5%);
+$blue-dark: color.adjust($blue, $lightness: -5%);
 $blue-light: #bad7f2;
-$blue-lighter: lighten($blue-light, 12%);
+$blue-lighter: color.adjust($blue-light, $lightness: 12%);
 $red: #8c5248;
 $orange: #d27f4d;
 
-$blue-to-white: linear-gradient(to bottom, $blue-dark 10%, darken($blue, 2%) 30%, $blue 50%, lighten($blue, 20%) 70%, lighten($blue, 40%) 90%, $white 100%);
+$blue-to-white: linear-gradient(to bottom, $blue-dark 10%, color.adjust($blue, $lightness: -2%) 30%, $blue 50%, color.adjust($blue, $lightness: 20%) 70%, color.adjust($blue, $lightness: 40%) 90%, $white 100%);
 
 $green-highlight: #b7f3c9;
 $blue-highlight: #a5cefa;
@@ -33,7 +34,7 @@ $font-size-base: 16px;
 
 $border-radius: 0.375em;
 
-$box-shadow: 0px 0.0625rem 0.375rem 0px transparentize($black, 0.9);
+$box-shadow: 0px 0.0625rem 0.375rem 0px color.adjust($black, $alpha: -0.9);
 
 $screen-xs: 34rem;
 $screen-sm: 48rem;

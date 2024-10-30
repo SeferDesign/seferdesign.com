@@ -1,9 +1,12 @@
+@use "mixins";
+@use "variables";
+
 footer {
 
 	padding: 4rem 0px;
 	text-align: center;
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 		padding: 6rem 0px;
 	}
 
@@ -14,24 +17,24 @@ footer {
 	.copy {
 
 		display: inline-block;
-		color: $grey-light;
+		color: variables.$grey-light;
 		font-size: 4vw;
 		opacity: 0.5;
 		text-decoration: none;
-		transition: opacity $transition-speed;
+		transition: opacity variables.$transition-speed;
 
 		&:hover {
 			opacity: 1;
 		}
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			font-size: 2rem;
 		}
 
 		.logo {
 			display: inline-block;
 			vertical-align: middle;
-			@include sdcLogoDimensions(10em);
+			@include mixins.sdcLogoDimensions(10em);
 		}
 
 	}

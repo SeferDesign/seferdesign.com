@@ -1,8 +1,11 @@
+@use "../mixins";
+@use "../variables";
+
 article {
 
 	padding: 6rem 0px;
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 		padding: 8rem 0px;
 	}
 
@@ -33,10 +36,10 @@ article {
 	}
 
 	a {
-		color: $black;
+		color: variables.$black;
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 
 		h1,
 		h2 {

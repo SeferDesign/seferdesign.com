@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../mixins";
+@use "../variables";
+
 .intro {
 
 	position: relative;
@@ -12,9 +16,9 @@
 
 		display: block;
 		margin: 0px auto 1.5rem;
-		@include sdcLogoDimensions(16rem);
+		@include mixins.sdcLogoDimensions(16rem);
 
-		@include mq('desktop') {
+		@include mixins.mq('desktop') {
 			display: none;
 		}
 
@@ -38,10 +42,10 @@
 			height: 1em;
 			font-size: 5rem;
 			font-size: 20vw;
-			border: 0.125rem solid $grey-lighter;
+			border: 0.125rem solid variables.$grey-lighter;
 			border-radius: 0.0625em;
 			object-fit: cover;
-			box-shadow: 0px 0px 30px transparentize($black, 0.8);
+			box-shadow: 0px 0px 30px color.adjust(variables.$black, $alpha: -0.8);
 			animation: {
 				duration: 500ms;
 				delay: 500ms;
@@ -51,11 +55,11 @@
 			opacity: 0;
 			will-change: opacity, transform;
 
-			@include mq($screen-sm) {
+			@include mixins.mq(variables.$screen-sm) {
 				font-size: 8rem;
 			}
 
-			@include mq($screen-md) {
+			@include mixins.mq(variables.$screen-md) {
 				font-size: 12rem;
 			}
 
@@ -92,10 +96,10 @@
 	a:not(.btn) {
 
 		color: currentColor;
-		transition: color $transition-speed;
+		transition: color variables.$transition-speed;
 
 		&:hover {
-			color: $grey;
+			color: variables.$grey;
 		}
 
 	}
@@ -107,7 +111,7 @@
 		line-height: 1.1;
 		text-align: center;
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			font-size: 2.5rem;
 		}
 
@@ -115,7 +119,7 @@
 
 	.description {
 
-		@include mq('desktop') {
+		@include mixins.mq('desktop') {
 			font-size: 1.25rem;
 		}
 
@@ -130,18 +134,18 @@
 		margin: 0px auto;
 		padding: 0px;
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			z-index: 1;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			padding: 0px 2rem;
-			width: $screen-sm - 4rem;
+			width: variables.$screen-sm - 4rem;
 			max-width: 100%;
 		}
 
-		@media (min-width: $screen-sm) and (max-width: 1023px) and (max-height: 750px) {
+		@media (min-width: variables.$screen-sm) and (max-width: 1023px) and (max-height: 750px) {
 
 			.tagline {
 				font-size: 1.75rem;
@@ -157,7 +161,7 @@
 
 		}
 
-		@media (min-width: $screen-sm) and (max-height: 750px) {
+		@media (min-width: variables.$screen-sm) and (max-height: 750px) {
 
 			.tagline {
 				font-size: 2rem;
@@ -173,7 +177,7 @@
 
 		}
 
-		@media (min-width: $screen-sm) and (max-height: 600px) {
+		@media (min-width: variables.$screen-sm) and (max-height: 600px) {
 
 			.tagline {
 				font-size: 1.75rem;
@@ -187,7 +191,7 @@
 
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 
 		height: 100vh;
 		height: calc(var(--vh, 1vh) * 100);
@@ -211,20 +215,20 @@
 			transform: translate(-50%, 0px);
 			animation: {
 				name: fadeInUpMoreArrow;
-				delay: $animation-intro-extra-delay;
-				duration: $animation-fade-in-up-speed;
+				delay: variables.$animation-intro-extra-delay;
+				duration: variables.$animation-fade-in-up-speed;
 				timing-function: ease-out;
 				fill-mode: forwards;
 			}
-			transition: color $transition-speed;
+			transition: color variables.$transition-speed;
 
 			.more-arrow {
 
-				color: $grey-darker;
+				color: variables.$grey-darker;
 
 				&:hover {
 					cursor: pointer;
-					color: $grey;
+					color: variables.$grey;
 				}
 
 			}
@@ -233,7 +237,7 @@
 
 	}
 
-	@include mq('desktop') {
+	@include mixins.mq('desktop') {
 
 		.content {
 			padding: 0px;

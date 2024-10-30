@@ -1,3 +1,6 @@
+@use "../mixins";
+@use "../variables";
+
 .endorsements {
 
 	text-align: center;
@@ -11,18 +14,18 @@
 		li {
 
 			padding: 2rem 0px;
-			color: $white;
-			background: $grey-darker;
+			color: variables.$white;
+			background: variables.$grey-darker;
 
 			&:nth-child(2) {
 
-				color: $black;
-				background: $white;
+				color: variables.$black;
+				background: variables.$white;
 
 				.attribution {
 
 					span {
-						color: $green;
+						color: variables.$green;
 					}
 
 				}
@@ -32,11 +35,11 @@
 			&:nth-child(3),
 			&.alt {
 
-				color: $black;
-				background: $blue-lighter;
+				color: variables.$black;
+				background: variables.$blue-lighter;
 
 				.attribution {
-					color: $black;
+					color: variables.$black;
 				}
 
 			}
@@ -63,11 +66,11 @@
 	.attribution {
 
 		margin-top: 2rem;
-		color: $grey-light;
+		color: variables.$grey-light;
 		font-size: 1.25rem;
 		font-weight: 700;
 		line-height: 1.4;
-		@include caps();
+		@include mixins.caps();
 
 		&:before {
 			content: '\2015';
@@ -75,12 +78,12 @@
 		}
 
 		span {
-			color: $blue;
+			color: variables.$blue;
 		}
 
 	}
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 
 		ul {
 

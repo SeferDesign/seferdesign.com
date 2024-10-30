@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../mixins";
+@use "../variables";
+
 @use 'sass:math';
 
 .case-studies {
@@ -18,21 +22,21 @@
 			align-items: center;
 			padding: 2rem;
 			color: currentColor;
-			background: $grey-lighter;
+			background: variables.$grey-lighter;
 			text-decoration: none;
-			transition: background $transition-speed;
+			transition: background variables.$transition-speed;
 			will-change: background;
 
 			&:hover {
-				background: $grey-light;
+				background: variables.$grey-light;
 			}
 
-			@include mq($screen-md) {
+			@include mixins.mq(variables.$screen-md) {
 				flex-basis: math.percentage(math.div(1, 2));
-				background: $grey-light;
+				background: variables.$grey-light;
 			}
 
-			@include mq($screen-lg) {
+			@include mixins.mq(variables.$screen-lg) {
 
 				&:nth-child(n) {
 					// flex-basis: math.percentage(math.div(1, 3));
@@ -41,7 +45,7 @@
 
 			}
 
-			@include mq($screen-xl) {
+			@include mixins.mq(variables.$screen-xl) {
 
 				&:nth-child(n) {
 					flex-basis: math.percentage(math.div(1, 4));
@@ -53,7 +57,7 @@
 			&-title {
 
 				flex: 1;
-				color: $white;
+				color: variables.$white;
 				font-size: 1.25rem;
 				font-weight: 500;
 
@@ -61,22 +65,22 @@
 					content: 'Case Study';
 					display: block;
 					margin-bottom: 0.375em;
-					color: transparentize($white, 0.35);
+					color: color.adjust(variables.$white, $alpha: -0.35);
 					font-size: 0.625em;
 					font-weight: 700;
 					text-transform: uppercase;
 					letter-spacing: .05em;
 				}
 
-				@include mq($screen-sm) {
+				@include mixins.mq(variables.$screen-sm) {
 					font-size: 1.75rem;
 				}
 
-				@include mq($screen-md) {
+				@include mixins.mq(variables.$screen-md) {
 					font-size: 1.375rem;
 				}
 
-				@include mq($screen-xl) {
+				@include mixins.mq(variables.$screen-xl) {
 					font-size: 1.5rem;
 				}
 
@@ -96,34 +100,34 @@
 				// 	height: auto;
 				// }
 
-				@include mq($screen-xs) {
+				@include mixins.mq(variables.$screen-xs) {
 					font-size: 10rem;
 				}
 
-				@include mq($screen-md) {
+				@include mixins.mq(variables.$screen-md) {
 					font-size: 10rem;
 				}
 
-				@include mq($screen-lg) {
+				@include mixins.mq(variables.$screen-lg) {
 					font-size: 8rem;
 				}
 
 			}
 
 			&-meal-plans {
-				background: $orange;
+				background: variables.$orange;
 			}
 
 			&-ftq {
-				background: $blue;
+				background: variables.$blue;
 			}
 
 			&-kelly-in-the-city {
-				background: $grey;
+				background: variables.$grey;
 			}
 
 			&-bioquipbugs {
-				background: $green;
+				background: variables.$green;
 			}
 
 		}
@@ -140,7 +144,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: var(--clips-gap);
-	background: $grey-lighter;
+	background: variables.$grey-lighter;
 
 	& > * {
 
@@ -160,7 +164,7 @@
 			margin-top: 0px;
 		}
 
-		@include mq($screen-xs) {
+		@include mixins.mq(variables.$screen-xs) {
 
 			--clips-size: calc((100% - var(--clips-gap)) / 2);
 
@@ -170,7 +174,7 @@
 
 		}
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 
 			--clips-size: calc((100% - (var(--clips-gap) * 2)) / 3);
 
@@ -180,7 +184,7 @@
 
 		}
 
-		@include mq($screen-md) {
+		@include mixins.mq(variables.$screen-md) {
 
 			--clips-size: calc((100% - (var(--clips-gap) * 3)) / 4);
 
@@ -190,7 +194,7 @@
 
 		}
 
-		@include mq($screen-lg) {
+		@include mixins.mq(variables.$screen-lg) {
 
 			--clips-size: calc((100% - (var(--clips-gap) * 5)) / 6);
 
@@ -213,15 +217,15 @@
 		text-align: center;
 
 		.logo {
-			@include sdcLogoDimensions(16rem);
+			@include mixins.sdcLogoDimensions(16rem);
 		}
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 
 			margin: 4rem 0px;
 
 			.logo {
-				@include sdcLogoDimensions(36rem);
+				@include mixins.sdcLogoDimensions(36rem);
 			}
 
 		}

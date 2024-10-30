@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 * {
 	box-sizing: border-box;
 }
@@ -69,26 +72,26 @@ body {
 
 	margin: 0px 1.5rem;
 
-	@include mq($screen-sm) {
+	@include mixins.mq(variables.$screen-sm) {
 		margin: 0px auto;
-		width: $screen-sm - 2rem;
+		width: variables.$screen-sm - 2rem;
 	}
 
-	@include mq('desktop') {
-		width: $screen-md - 8rem;
+	@include mixins.mq('desktop') {
+		width: variables.$screen-md - 8rem;
 	}
 
 	&-tight {
 
 		margin: 0px 1.5rem;
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			margin: 0px auto;
-			width: $screen-sm - 2rem;
+			width: variables.$screen-sm - 2rem;
 		}
 
-		@include mq('desktop') {
-			width: $screen-md - 12rem;
+		@include mixins.mq('desktop') {
+			width: variables.$screen-md - 12rem;
 		}
 
 	}
@@ -97,22 +100,22 @@ body {
 
 		margin: 0px 1.5rem;
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			margin: 0px 3rem;
 		}
 
-		@include mq('desktop') {
+		@include mixins.mq('desktop') {
 			margin: 0px auto;
-			width: $screen-md - 8rem;
+			width: variables.$screen-md - 8rem;
 		}
 
 	}
 
 	&-wide {
 
-		@media screen and (min-width: $wide-breakpoint) {
+		@media screen and (min-width: variables.$wide-breakpoint) {
 			margin: 0px auto;
-			width: $wide-breakpoint - 2rem;
+			width: variables.$wide-breakpoint - 2rem;
 		}
 
 	}
@@ -138,7 +141,7 @@ body {
 
 		}
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 
 			display: flex;
 			flex-wrap: wrap;
@@ -169,8 +172,8 @@ body {
 
 		}
 
-		@include mq($screen-lg) {
-			width: $screen-lg - 2rem;
+		@include mixins.mq(variables.$screen-lg) {
+			width: variables.$screen-lg - 2rem;
 		}
 
 	}
@@ -181,10 +184,10 @@ article {
 
 	a {
 
-		transition: color $transition-speed;
+		transition: color variables.$transition-speed;
 
 		&:hover {
-			color: $grey;
+			color: variables.$grey;
 		}
 
 	}
@@ -206,7 +209,7 @@ figure {
 		// 	height: auto;
 		// }
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			max-width: 100%;
 		}
 
@@ -220,7 +223,7 @@ figure {
 
 		img,
 		video {
-			box-shadow: $box-shadow;
+			box-shadow: variables.$box-shadow;
 		}
 
 		&.figure-spaced {
@@ -241,7 +244,7 @@ figure {
 		margin: 1rem auto;
 		max-width: 30rem;
 
-		@include mq($screen-sm) {
+		@include mixins.mq(variables.$screen-sm) {
 			max-width: 100%;
 		}
 
@@ -255,18 +258,18 @@ figure {
 			left: 0.5rem;
 			width: 0.5rem;
 			height: 0.5rem;
-			background: $chrome-red;
-			border-radius: $border-radius;
+			background: variables.$chrome-red;
+			border-radius: variables.$border-radius;
 		}
 
 		.browser-chrome:before {
 			left: 1.5rem;
-			background: $chrome-yellow;
+			background: variables.$chrome-yellow;
 		}
 
 		.browser-chrome:after {
 			left: 2.5rem;
-			background: $chrome-green;
+			background: variables.$chrome-green;
 		}
 
 	}
@@ -274,10 +277,10 @@ figure {
 	.browser-chrome {
 		position: relative;
 		padding: 1.25rem 1px 1px;
-		background: $chrome-grey;
+		background: variables.$chrome-grey;
 		border-top-left-radius: 0.375rem;
 		border-top-right-radius: 0.375rem;
-		box-shadow: $box-shadow;
+		box-shadow: variables.$box-shadow;
 	}
 
 	picture,
@@ -308,7 +311,7 @@ hr {
 	margin: 3rem auto;
 	width: 40%;
 	height: 0.0625rem;
-	background: $blue;
+	background: variables.$blue;
 	border: 0px;
 }
 
