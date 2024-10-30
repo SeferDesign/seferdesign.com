@@ -7,14 +7,12 @@
 {% endif %}
 
 <nav id="main-nav">
+	<a href="/">
+		<svg class="logo" role="img">
+			<use xlink:href="#logo"></use>
+		</svg>
+	</a>
   <ul>
-    <li class="li-logo">
-      <a href="/">
-        <svg class="logo" role="img">
-          <use xlink:href="#logo"></use>
-        </svg>
-      </a>
-    </li>
     <li>
       <a href="/#philosophy">Our Philosophy</a>
     </li>
@@ -22,12 +20,12 @@
       <a href="/#case-studies">Case Studies</a>
     </li>
     <li>
-      <a class="btn btn-outline" href="#contact">Contact</a>
+			<a href="/#contact">Contact</a>
     </li>
   </ul>
 </nav>
 
-<div id="nav-toggle" class="nav-toggle">
+{% comment %} <div id="nav-toggle" class="nav-toggle">
   <div class="menu-title-wrap"></div>
   <div class="closed">
     <span></span>
@@ -35,4 +33,4 @@
     <span></span>
   </div>
   <div class="open">&times;</div>
-</div>
+</div> {% endcomment %}

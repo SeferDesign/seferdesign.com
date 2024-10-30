@@ -1,21 +1,20 @@
-@use 'vendor/normalize';
-
-/*! site */
+@use '../../node_modules/normalize.css/normalize';
 @use 'partials/variables';
-@use 'partials/animations';
 @use 'partials/mixins';
-@use 'partials/typography';
-@use 'partials/svgs';
 @use 'partials/global';
-@use 'partials/banners';
-@use 'partials/nav';
-@use 'partials/buttons';
-@use 'partials/footer';
+// @use 'partials/animations';
+// @use 'partials/typography';
+// @use 'partials/svgs';
+// @use 'partials/global';
+// @use 'partials/banners';
+// @use 'partials/nav';
+// @use 'partials/buttons';
+// @use 'partials/footer';
 
-@use 'partials/sections/intro';
-@use 'partials/sections/philosophy';
-@use 'partials/sections/case-studies';
-@use 'partials/sections/endorsements';
-@use 'partials/sections/work';
-@use 'partials/sections/contact';
-@use 'partials/sections/article';
+// @use 'partials/sections/intro';
+// @use 'partials/sections/philosophy';
+// @use 'partials/sections/case-studies';
+// @use 'partials/sections/endorsements';
+// @use 'partials/sections/work';
+// @use 'partials/sections/contact';
+// @use 'partials/sections/article';

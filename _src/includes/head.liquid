@@ -6,7 +6,8 @@
 	<meta name="description" content="{{ site.descriptionLong }}" />
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
-	<style>
+	<link rel="stylesheet" href="{{ "/style/style.css" | rev }}" />
+	{% comment %} <style>
 	{{ helpers.css }}
-	</style>
+	</style> {% endcomment %}
 </head>

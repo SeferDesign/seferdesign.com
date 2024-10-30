@@ -37,16 +37,6 @@
 	}
 }
 
-@mixin clear($pseudo: 'before') {
-
-	&:#{$pseudo} {
-		content: ' ';
-		display: block;
-		clear: both;
-	}
-
-}
-
 @function encodecolor($string) {
 	@if meta.type-of($string) == 'color' {
 		$hex: string.slice(color.ie-hex-str($string), 4);

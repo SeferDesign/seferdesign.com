@@ -1,0 +1,16 @@
+function setVH() {
+	document.documentElement.style.setProperty('--vh', (Math.ceil((window.innerHeight * 0.01) * 100) / 100) + 'px');
+}
+
+setVH();
+
+// document.querySelector('#nav-toggle').addEventListener('click', function() {
+// 	if (!document.body.classList.contains('nav-has-toggled')) {
+// 		document.body.classList.add('nav-has-toggled');
+// 	}
+// 	document.body.classList.toggle('nav-active');
+// });
+
+window.addEventListener('resize', function() {
+	setVH();
+});
