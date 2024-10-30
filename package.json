@@ -1,22 +1,23 @@
 {
-  "name": "seferdesignco",
-  "version": "3.0.0",
-  "description": "Site for Sefer Design Company LLC.",
-  "authors": [
-    {
-      "name": "Robert Sefer",
-      "email": "rsefer@gmail.com",
-      "homepage": "https://rsefer.com"
-    }
-  ],
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --port=3000"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^5.0.0",
-    "sass": "^1.80.5",
-    "uglify-js": "^3.19.3"
-  }
+	"name": "seferdesignco",
+	"version": "4.0.0",
+	"description": "Site for Sefer Design Company LLC.",
+	"authors": [
+		{
+			"name": "Robert Sefer",
+			"email": "rsefer@gmail.com",
+			"homepage": "https://rsefer.com"
+		}
+	],
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"start": "npx @11ty/eleventy --serve --port=3000"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^5.0.0",
+		"sass": "^1.80.5",
+		"uglify-js": "^3.19.3"
+	}
 }

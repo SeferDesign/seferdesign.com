@@ -1,6 +1,6 @@
 import fs from 'fs';
 import UglifyJS from 'uglify-js';
-import sass from 'sass';
+import * as sass from 'sass'
 
 function generateCSS() {
 	const rendered = sass.compile('./_src/style/style.scss', {
