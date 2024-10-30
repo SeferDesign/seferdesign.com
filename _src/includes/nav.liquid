@@ -1,36 +1,26 @@
-{% if page.url != '/' %}
-  <a class="back" href="/">
-    <svg class="chevron-left-solid" role="img">
-      <use xlink:href="#chevron-left-solid"></use>
-    </svg>
-  </a>
-{% endif %}
-
 <nav id="main-nav">
-	<a href="/">
+	<a class="logo-link" href="/">
 		<svg class="logo" role="img">
 			<use xlink:href="#logo"></use>
 		</svg>
 	</a>
-  <ul>
-    <li>
-      <a href="/#philosophy">Our Philosophy</a>
+	<div id="nav-main-toggle" class="nav-main-toggle">
+		<span class="nav-main-toggle-box">
+			<span class="nav-main-toggle-inner"></span>
+		</span>
+	</div>
+  <ul class="main-menu">
+		<li>
+      <a href="/">Home</a>
     </li>
     <li>
-      <a href="/#case-studies">Case Studies</a>
+      <a href="/philosophy/">Our Philosophy</a>
     </li>
+    {% comment %} <li>
+      <a href="/case-studies/">Case Studies</a>
+    </li> {% endcomment %}
     <li>
-			<a href="/#contact">Contact</a>
+			<a href="/contact/">Contact</a>
     </li>
   </ul>
 </nav>
-
-{% comment %} <div id="nav-toggle" class="nav-toggle">
-  <div class="menu-title-wrap"></div>
-  <div class="closed">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="open">&times;</div>
-</div> {% endcomment %}

@@ -6,12 +6,55 @@
 }
 
 :root {
-	--color-black: red;
+	--color-black: #000;
 	--color-white: #d3d3d3;
 	--color-grey: #777;
+}
+
+.svg-dump {
+	display: none;
 }
 
 body {
 	color: var(--color-white);
 	background-color: var(--color-black);
+}
+
+.site-wrap {
+
+	@include mixins.mq('desktop') {
+
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1rem;
+
+		nav {
+			flex-basis: 100px;
+		}
+
+		main {
+			flex: 1;
+		}
+
+	}
+
+}
+
+.logo {
+
+	display: block;
+	width: 6.7em;
+	height: 1em;
+
+	&-link {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+}
+
+article {
+	font-size: 2rem;
 }

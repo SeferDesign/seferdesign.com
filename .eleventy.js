@@ -43,10 +43,8 @@ export default (eleventyConfig) => {
       sass: {
         style: 'expanded',
         sourceMap: true
-      }
-    }, {
-      rev: true,
-      when: { ELEVENTY_ENV: 'stage' }
+      },
+			rev: true,
     }, {
       sass: {
         style: 'compressed',

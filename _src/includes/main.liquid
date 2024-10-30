@@ -1,5 +1,5 @@
 <main>
-	{% comment %} {% if caseStudy or product %}
+	{% if caseStudy or product %}
 	<article>
 		{{ content }}
 	</article>
@@ -14,5 +14,5 @@
 	</article>
 	{% else %}
 	{{ content }}
-	{% endif %} {% endcomment %}
+	{% endif %}
 </main>

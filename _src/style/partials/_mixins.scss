@@ -28,7 +28,7 @@
 	@if $name == 'desktop' {
 		$mqueryString: "(min-width: #{variables.$mobile-breakpoint})";
 	} @else if $name == 'mobile' {
-		$mqueryString: "(max-width: #{$mobile-breakpoint-px - 1})";
+		$mqueryString: "(max-width: #{variables.$mobile-breakpoint-px - 1})";
 	} @else {
 		$mqueryString: "(min-width: #{$name})";
 	}

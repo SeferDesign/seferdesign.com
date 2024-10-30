@@ -4,15 +4,16 @@
   <body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{% endif %}{% if page.url == '/' and site.showBanner %} has-banner{% endif %}">
 
     {% include 'svg-symbols.svg' %}
-    {% comment %} {% if page.url == '/' and site.showBanner %}
-      {% include 'banner' %}
-    {% endif %} {% endcomment %}
-    {% include 'nav' %}
-		{% include 'main' %}
-
-    {% comment %} {% if redirect != true %}
-      {% include 'footer' %}
-    {% endif %} {% endcomment %}
+		<div class="site-wrap">
+			{% comment %} {% if page.url == '/' and site.showBanner %}
+				{% include 'banner' %}
+			{% endif %} {% endcomment %}
+			{% include 'nav' %}
+			{% include 'main' %}
+			{% comment %} {% if redirect != true %}
+				{% include 'footer' %}
+			{% endif %} {% endcomment %}
+		</div>
 
     {% include 'scripts' %}
 
