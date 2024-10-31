@@ -1,0 +1,60 @@
+@use "variables";
+@use "mixins";
+
+.case-studies-list {
+
+	--case-studies-list-gap: var(--site-gap);
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: var(--case-studies-list-gap);
+
+	& > * {
+
+		flex-basis: 100%;
+
+		@include mixins.mq('desktop') {
+			flex-basis: calc((100% - var(--case-studies-list-gap)) / 2);
+		}
+
+	}
+
+	&__item {
+
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+
+		&-image {
+
+			position: relative;
+
+			// &:before {
+			// 	content: '';
+			// 	display: block;
+			// 	padding-top: 66.66%;
+			// }
+
+			img {
+				width: 100%;
+				height: 100px;
+			}
+
+			// img {
+			// 	position: absolute;
+			// 	top: 0px;
+			// 	left: 0px;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	object-fit: cover;
+			// }
+
+		}
+
+	}
+
+}

@@ -10,10 +10,15 @@ nav {
 	align-items: center;
 	gap: 0.5rem;
 	padding: var(--site-gap);
+	width: var(--nav-width);
+	background: var(--color-white);
 	font-size: 1rem;
 	font-weight: 500;
 
 	@include mixins.mq('desktop') {
+		position: fixed;
+		top: 0px;
+		left: 0px;
 		flex-direction: column;
 		align-items: flex-start;
 		padding-right: 0px;
@@ -68,10 +73,6 @@ nav {
 			transform: translate(0px, 0px);
 		}
 
-		@include mixins.mq(variables.$screen-xs) {
-			font-size: 2rem;
-		}
-
 		@include mixins.mq('desktop') {
 			position: static;
 			flex-basis: auto;
@@ -80,6 +81,8 @@ nav {
 			margin-top: auto;
 			padding: 0px;
 			height: auto;
+			background: transparent;
+			font-size: 1em;
 		}
 
 		li {

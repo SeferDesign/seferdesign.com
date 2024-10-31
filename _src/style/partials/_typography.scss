@@ -73,6 +73,10 @@ article {
 			margin-top: 1rem;
 		}
 
+		&.seo-only + *:not(:first-child) {
+			margin-top: 0px;
+		}
+
 	}
 
 	a {
