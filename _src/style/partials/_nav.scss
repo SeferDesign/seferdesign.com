@@ -9,13 +9,16 @@ nav {
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.5rem;
-	padding: 1rem;
-	color: var(--color-white);
+	padding: var(--site-gap);
 	font-size: 1rem;
+	font-weight: 500;
 
 	@include mixins.mq('desktop') {
-		padding: 2rem;
-		height: calc(100 * var(--vh));
+		flex-direction: column;
+		align-items: flex-start;
+		padding-right: 0px;
+		height: calc(100 * var(--vh, 10px));
+		min-height: var(--site-min-height);
 		font-size: 1.5rem;
 	}
 
@@ -33,17 +36,99 @@ nav {
 
 	}
 
+
+	a {
+		color: currentColor;
+		text-decoration: none;
+	}
+
+	.main-menu {
+
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		height: calc(100 * var(--vh, 10px));
+		transform: translate(100%, 0px);
+		flex-basis:	100%;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		background: var(--color-white);
+		font-size: 2rem;
+		text-align: center;
+		transition: transform var(--transition-speed);
+
+		.nav-expanded & {
+			transform: translate(0px, 0px);
+		}
+
+		@include mixins.mq('desktop') {
+			position: static;
+			flex-basis: auto;
+			transform: none;
+			display: flex;
+			margin-top: auto;
+			height: auto;
+			text-align: left;
+		}
+
+		li {
+
+			flex-basis: 100%;
+
+			a {
+
+				position: relative;
+
+				&:before {
+					content: '';
+					user-select: none;
+					pointer-events: none;
+					position: absolute;
+					top: 50%;
+					left: -1.75em;
+					transform: translate(-50%, -50%);
+					font-size: 0.25em;
+					width: 1em;
+					height: 1em;
+					border-radius: 50%;
+					background: transparent;
+					transition: background var(--transition-speed);
+					will-change: background;
+				}
+
+			}
+
+			&[aria-current="page"] a:before {
+				background: var(--color-grey);
+			}
+
+			&:not([aria-current="page"]) a:hover:before {
+				background: var(--color-grey-light);
+			}
+
+		}
+
+	}
+
 	.nav-main-toggle {
 
-		$toggle-width: 1.75rem;
-		$toggle-height: 1.25rem;
-		$toggle-inner-height: 0.15rem;
+		--toggle-width: 1.75rem;
+		--toggle-height: 1rem;
+		--toggle-inner-height: 0.15rem;
 
 		margin-left: auto;
 		display: block;
 		z-index: 12;
-		width: $toggle-width;
-		height: $toggle-height;
+		width: var(--toggle-width);
+		height: var(--toggle-height);
 		transition: {
 			property: opacity, filter;
 			duration: 150ms;
@@ -63,7 +148,7 @@ nav {
 
 			.nav-main-toggle-inner {
 
-				top: calc(50% - #{$toggle-inner-height * 0.4});
+				top: calc(50% - var(--toggle-inner-height) * 0.4);
 				transform: rotate(45deg);
 				transition: {
 					delay: 120ms;
@@ -95,14 +180,14 @@ nav {
 		&-box {
 			display: inline-block;
 			position: relative;
-			width: $toggle-width;
-			height: $toggle-height;
+			width: var(--toggle-width);
+			height: var(--toggle-height);
 		}
 
 		&-inner {
 
 			display: block;
-			top: calc(50% - #{$toggle-inner-height * 1.2});
+			top: calc(50% - var(--toggle-inner-height) * 1.5);
 			transform: translate(0px, -50%);
 			transition: {
 				duration: 75ms;
@@ -113,9 +198,9 @@ nav {
 			&:before,
 			&:after {
 				position: absolute;
-				width: $toggle-width;
-				height: $toggle-inner-height;
-				background-color: var(--color-white);
+				width: var(--toggle-width);
+				height: var(--toggle-inner-height);
+				background-color: currentColor;
 				transition: {
 					property: transform;
 					duration: 150ms;
@@ -134,37 +219,15 @@ nav {
 			}
 
 			&:before {
-				top: #{$toggle-height * math.div(10, 24) * -1};
+				top: calc(var(--toggle-height) * (-10 / 24));
 				transition: top 75ms 120ms ease, opacity 75ms ease;
 			}
 
 			&:after {
-				bottom: #{$toggle-height * -0.5};
+				bottom: calc(var(--toggle-height) * -0.5);
 				transition: bottom 75ms 120ms ease, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 			}
 
-		}
-
-	}
-
-	a {
-		color: currentColor;
-	}
-
-	.main-menu {
-
-		flex-basis:	100%;
-		display: none;
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;
-
-		.nav-expanded & {
-			display: block;
-		}
-
-		@include mixins.mq('desktop') {
-			display: block;
 		}
 
 	}

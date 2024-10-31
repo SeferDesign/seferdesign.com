@@ -1,14 +1,30 @@
 @use "mixins";
 @use "variables";
 
+@view-transition {
+  navigation: auto;
+}
+
 * {
 	box-sizing: border-box;
 }
 
 :root {
+
+	--vh: 10px;
+	--transition-speed: 300ms;
 	--color-black: #000;
-	--color-white: #d3d3d3;
+	--color-white: #fff;
 	--color-grey: #777;
+	--color-grey-light: #d4d4d4;
+	--font-family-main: 'Inter', 'Helvetica', sans-serif;
+	--site-gap: 1.5rem;
+	--site-min-height: 400px;
+
+	@include mixins.mq('desktop') {
+		--site-gap: 2rem;
+	}
+
 }
 
 .svg-dump {
@@ -16,26 +32,60 @@
 }
 
 body {
+
+	color: var(--color-black);
+	background: var(--color-white);
+	font-family: var(--font-family-main);
+
+	&.nav-expanded {
+
+		overflow: hidden;
+
+		@include mixins.mq('desktop') {
+			overflow: inherit;
+		}
+
+	}
+
+}
+
+::selection {
 	color: var(--color-white);
-	background-color: var(--color-black);
+	background: var(--color-grey);
 }
 
 .site-wrap {
 
 	@include mixins.mq('desktop') {
 
+		max-width: 1440px;
+		min-height: var(--site-min-height);
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
 		align-items: center;
-		gap: 1rem;
+		gap: var(--site-gap);
 
 		nav {
-			flex-basis: 100px;
+			flex-basis: 250px;
 		}
 
 		main {
 			flex: 1;
+
+			article {
+				padding: var(--site-gap);
+				padding-left: 0px;
+			}
+
+		}
+
+	}
+
+	@include mixins.mq(variables.$screen-md) {
+
+		nav {
+			flex-basis: 300px;
 		}
 
 	}
@@ -55,6 +105,12 @@ body {
 
 }
 
+a {
+	color: currentColor;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
 article {
-	font-size: 2rem;
+	padding: var(--site-gap);
 }

@@ -1,0 +1,66 @@
+@use "variables";
+@use "mixins";
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/Inter.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/Inter-Italic.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+
+h1 {
+
+	font-size: 2rem;
+
+	@include mixins.mq(variables.$screen-xs) {
+		font-size: 3rem;
+	}
+
+}
+
+h2 {
+
+	font-size: 1.75rem;
+
+	@include mixins.mq(variables.$screen-xs) {
+		font-size: 2.25rem;
+	}
+
+}
+
+p {
+	font-size: 1.25rem;
+	line-height: 1.35;
+}
+
+article {
+
+	& > * {
+
+		margin: 0px;
+
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+
+	}
+
+}

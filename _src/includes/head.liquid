@@ -7,7 +7,15 @@
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
 	<link rel="stylesheet" href="{{ "/style/style.css" | rev }}" />
-	{% comment %} <style>
-	{{ helpers.css }}
-	</style> {% endcomment %}
+	<script type="speculationrules">
+		{
+			"prerender": [{
+				"source": "document",
+				"where": {
+					"href_matches": "/*"
+				},
+				"eagerness": "moderate"
+			}]
+		}
+	</script>
 </head>

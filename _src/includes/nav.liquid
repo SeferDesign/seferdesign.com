@@ -1,5 +1,5 @@
 <nav id="main-nav">
-	<a class="logo-link" href="/">
+	<a class="logo-link" href="/" title="{{ site.title }}">
 		<svg class="logo" role="img">
 			<use xlink:href="#logo"></use>
 		</svg>
@@ -10,17 +10,9 @@
 		</span>
 	</div>
   <ul class="main-menu">
-		<li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/philosophy/">Our Philosophy</a>
-    </li>
-    {% comment %} <li>
-      <a href="/case-studies/">Case Studies</a>
-    </li> {% endcomment %}
-    <li>
-			<a href="/contact/">Contact</a>
-    </li>
+		<li{% if page.url == '/' %} aria-current="page"{% endif %}><a href="/">Home</a></li>
+    <li{% if page.url == '/philosophy/' %} aria-current="page"{% endif %}><a href="/philosophy/">Our Philosophy</a></li>
+		<li{% if page.url == '/case-studies/' %} aria-current="page"{% endif %}><a href="/case-studies/">Case Studies</a></li>
+    <li{% if page.url == '/contact/' %} aria-current="page"{% endif %}><a href="/contact/">Contact</a></li>
   </ul>
 </nav>

@@ -1,0 +1,58 @@
+::view-transition {
+	background: black;
+}
+
+:root {
+	view-transition-name: none;
+}
+
+body {
+	view-transition-name: page;
+}
+
+::view-transition-group(page) {
+	animation-duration: 0.7s;
+}
+
+:root[data-transition="reload"] {
+
+	&::view-transition-old(page) {
+		display: none;
+	}
+
+	&::view-transition-new(page) {
+		animation-name: fade-in, scale-up;
+	}
+
+}
+
+:root[data-transition="push"] {
+
+	&::view-transition-old(page) {
+
+		&::view-transition-old(page) {
+			animation-name: shrink;
+			transform-origin: 100% 50%;
+		}
+
+	}
+
+	&::view-transition-new(page) {
+		animation-name: slide-in;
+	}
+
+}
+
+:root[data-transition="pop"] {
+
+	&::view-transition-old(page) {
+		animation-name: slide-out;
+		z-index: 1;
+	}
+
+	&::view-transition-new(page) {
+		animation-name: grow;
+		transform-origin: 100% 50%;
+	}
+
+}
