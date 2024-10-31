@@ -47,8 +47,20 @@ h2 {
 }
 
 p {
+
 	font-size: 1.25rem;
 	line-height: 1.35;
+
+	@include mixins.mq(variables.$screen-xs) {
+		font-size: 1.5rem;
+	}
+
+}
+
+a {
+	color: currentColor;
+	text-decoration: underline;
+	font-weight: 500;
 }
 
 article {
@@ -59,6 +71,16 @@ article {
 
 		&:not(:first-child) {
 			margin-top: 1rem;
+		}
+
+	}
+
+	a {
+
+		transition: color var(--transition-speed);
+
+		&:hover {
+			color: var(--color-grey);
 		}
 
 	}

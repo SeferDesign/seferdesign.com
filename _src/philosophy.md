@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 'Philosophy'
 bodyClasses: 'philosophy'
 sitemap:
   priority: '0.8'

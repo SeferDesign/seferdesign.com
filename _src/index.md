@@ -1,5 +1,6 @@
 ---
 layout: default
+title: 'Home'
 bodyClasses: 'home'
 sitemap:
   priority: '1.0'

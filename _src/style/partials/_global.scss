@@ -12,7 +12,7 @@
 :root {
 
 	--vh: 10px;
-	--transition-speed: 300ms;
+	--transition-speed: 600ms;
 	--color-black: #000;
 	--color-white: #fff;
 	--color-grey: #777;
@@ -63,15 +63,18 @@ body {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		gap: var(--site-gap);
 
 		nav {
+			position: sticky;
 			flex-basis: 250px;
 		}
 
 		main {
+
 			flex: 1;
+			min-height: max(calc(100 * var(--vh, 10px)), var(--site-min-height));
 
 			article {
 				padding: var(--site-gap);
@@ -92,6 +95,19 @@ body {
 
 }
 
+.page-home main {
+
+	@include mixins.mq('desktop') {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+
+}
+
 .logo {
 
 	display: block;
@@ -103,12 +119,6 @@ body {
 		vertical-align: middle;
 	}
 
-}
-
-a {
-	color: currentColor;
-	text-decoration: underline;
-	font-weight: 500;
 }
 
 article {

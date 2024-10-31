@@ -58,15 +58,18 @@ nav {
 		gap: 0.5rem;
 		list-style-type: none;
 		margin: 0px;
-		padding: 0px;
+		padding: calc(var(--site-gap) * 2);
 		width: 100%;
 		background: var(--color-white);
-		font-size: 2rem;
-		text-align: center;
+		font-size: 1.75rem;
 		transition: transform var(--transition-speed);
 
 		.nav-expanded & {
 			transform: translate(0px, 0px);
+		}
+
+		@include mixins.mq(variables.$screen-xs) {
+			font-size: 2rem;
 		}
 
 		@include mixins.mq('desktop') {
@@ -75,8 +78,8 @@ nav {
 			transform: none;
 			display: flex;
 			margin-top: auto;
+			padding: 0px;
 			height: auto;
-			text-align: left;
 		}
 
 		li {
