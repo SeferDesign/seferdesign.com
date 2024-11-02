@@ -11,7 +11,7 @@
 
 :root {
 
-	--vh: 10px;
+	--vh: 1vh;
 	--transition-speed: 600ms;
 	--font-family-main: 'Inter', 'Helvetica', sans-serif;
 	--site-gap: 1.5rem;
@@ -19,10 +19,22 @@
 	--nav-width: 100%;
 
 	--color-black: #000;
+	--color-black-off: #121212;
 	--color-white: #fff;
 	--color-white-off: #f3f3f3;
 	--color-grey: #777;
 	--color-grey-light: #d4d4d4;
+	--color-grey-lighter: #dbdbdb;
+
+	--color-text: var(--color-black-off);
+	--color-background: var(--color-white);
+	--color-link: var(--color-grey);
+
+	@media (prefers-color-scheme: dark) {
+		--color-text: var(--color-white);
+		--color-background: var(--color-black-off);
+		--color-link: var(--color-grey-lighter);
+	}
 
 	@include mixins.mq('desktop') {
 		--site-gap: 2rem;
@@ -41,8 +53,8 @@
 
 body {
 
-	color: var(--color-black);
-	background: var(--color-white);
+	color: var(--color-text);
+	background: var(--color-background);
 	font-family: var(--font-family-main);
 
 	&.nav-expanded {
@@ -64,9 +76,12 @@ body {
 
 .site-wrap {
 
+	min-height: max(calc(100 * var(--vh)), var(--site-min-height));
+
 	@include mixins.mq('desktop') {
 
-		max-width: 1440px;
+		margin: 0px auto;
+		max-width: variables.$wide-breakpoint;
 		min-height: var(--site-min-height);
 		display: flex;
 		flex-flow: row wrap;
@@ -78,7 +93,7 @@ body {
 
 			flex: 1;
 			margin-left: calc(var(--nav-width) + var(--site-gap));
-			min-height: max(calc(100 * var(--vh, 10px)), var(--site-min-height));
+			min-height: max(calc(100 * var(--vh)), var(--site-min-height));
 
 			article {
 				margin: var(--site-gap);
@@ -91,7 +106,7 @@ body {
 
 }
 
-.page-home main {
+.vertically-center main {
 
 	@include mixins.mq('desktop') {
 		display: flex;
@@ -101,40 +116,54 @@ body {
 		gap: 0.5rem;
 	}
 
-
 }
 
-.page-philosophy {
+// body.page-philosophy {
 
-	background: var(--color-white-off);
+// 	background: var(--color-white-off);
 
-	article {
+// 	@include mixins.mq('desktop') {
+// 		background: transparent;
+// 	}
 
-		padding: var(--site-gap);
-		background: var(--color-white);
-		box-shadow:
-    	0 -1px 1px rgba(0,0,0,0.15),
-			0 -10px 0 -5px #eee,
-			0 -10px 1px -4px rgba(0,0,0,0.15);
-		font-family: monospace;
+// 	.site-wrap {
 
-		@include mixins.mq(variables.$screen-xs) {
-			padding: calc(var(--site-gap) * 2);
-		}
+// 		padding-bottom: var(--site-gap);
+// 		background: var(--color-white-off);
 
-		p {
+// 		@include mixins.mq('desktop') {
+// 			padding-bottom: 0px;
+// 		}
 
-			font-size: 0.875rem;
+// 	}
 
-			@include mixins.mq(variables.$screen-xs) {
-				font-size: 1rem;
-			}
+// 	article {
 
-		}
+// 		padding: var(--site-gap);
+// 		background: var(--color-white);
+// 		box-shadow:
+//     	0 -1px 1px rgba(0,0,0,0.15),
+// 			0 -10px 0 -5px #eee,
+// 			0 -10px 1px -4px rgba(0,0,0,0.15);
+// 		font-family: monospace;
 
-	}
+// 		@include mixins.mq(variables.$screen-xs) {
+// 			padding: calc(var(--site-gap) * 2);
+// 		}
 
-}
+// 		p {
+
+// 			font-size: 0.875rem;
+
+// 			@include mixins.mq(variables.$screen-xs) {
+// 				font-size: 1rem;
+// 			}
+
+// 		}
+
+// 	}
+
+// }
 
 .logo {
 
