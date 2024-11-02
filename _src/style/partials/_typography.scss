@@ -3,7 +3,7 @@
 
 @font-face {
 	font-family: 'Inter';
-	src: url('/Inter.woff2') format('woff2');
+	src: url('/dist/fonts/Inter.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;
@@ -11,7 +11,7 @@
 
 @font-face {
 	font-family: 'Inter';
-	src: url('/Inter-Italic.woff2') format('woff2');
+	src: url('/dist/fonts/Inter-Italic.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: italic;
 	font-display: swap;
@@ -51,21 +51,6 @@ h2 {
 
 }
 
-p {
-
-	font-size: 1.25rem;
-	line-height: 1.35;
-
-	@include mixins.mq(variables.$screen-xs) {
-		font-size: 1.5rem;
-	}
-
-	@include mixins.mq(variables.$screen-lg) {
-		font-size: 1.75rem;
-	}
-
-}
-
 a {
 	color: currentColor;
 	text-decoration: underline;
@@ -84,6 +69,23 @@ article {
 
 		&.seo-only + *:not(:first-child) {
 			margin-top: 0px;
+		}
+
+	}
+
+	p,
+	ul,
+	ol {
+
+		font-size: 1.25rem;
+		line-height: 1.35;
+
+		@include mixins.mq(variables.$screen-xs) {
+			font-size: 1.5rem;
+		}
+
+		@include mixins.mq(variables.$screen-lg) {
+			font-size: 1.75rem;
 		}
 
 	}
