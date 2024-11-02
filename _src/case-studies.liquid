@@ -7,12 +7,14 @@ sitemap:
 ---
 
 <div class="case-studies-list">
-	{% for i in (1..5) %}
-	<a href="/bioquipbugs/" class="case-studies-list__item">
+	{% for post in collections.caseStudy %}
+	<a href="{{ post.data.page.url }}" class="case-studies-list__item">
 		{% image './_src/images/case-studies/meal-plans-home-2024.jpg', 'Meal Plans', 'case-studies-list__item-image', 'lazy', '200' %}
 		<div class="case-studies-list__item-content">
-			<div class="case-studies-list__item-title">Name of Case Study</div>
-			<div class="case-studies-list__item-description">Consectetur officia fugiat tempor exercitation sit Lorem id excepteur est occaecat elit tempor adipisicing.</div>
+			<div class="case-studies-list__item-title">{{ post.data.title }}</div>
+			{% if post.data.description not empty %}
+			<div class="case-studies-list__item-description">{{ post.data.description }}</div>
+			{% endif %}
 		</div>
 	</a>
 	{% endfor %}
