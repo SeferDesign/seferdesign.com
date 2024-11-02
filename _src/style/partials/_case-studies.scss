@@ -22,6 +22,7 @@
 	@include mixins.mq('desktop') {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		align-items: stretch;
 		min-height: calc(100 * var(--vh));
 	}
 

@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include '_partials/head' %}
-  <body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{% endif %}{% if page.url == '/' and site.showBanner %} has-banner{% endif %}">
+  <body class="page-{% if bodyClasses == blank or bodyClasses == '' %}default{% else %}{{ bodyClasses }}{% endif %}">
     {% include '_partials/svg-symbols.svg' %}
 		<div class="site-wrap">
-			{% comment %} {% if page.url == '/' and site.showBanner %}
-				{% include 'banner' %}
-			{% endif %} {% endcomment %}
 			{% include '_partials/nav' %}
 			{% include '_partials/main' %}
-			{% comment %} {% if redirect != true %}
-				{% include 'footer' %}
-			{% endif %} {% endcomment %}
+			{% comment %}{% include 'footer' %}{% endcomment %}
 		</div>
-
     {% include '_partials/scripts' %}
-
   </body>
 </html>
