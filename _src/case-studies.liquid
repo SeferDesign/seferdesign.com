@@ -9,7 +9,9 @@ sitemap:
 <div class="case-studies-list">
 	{% for post in collections.caseStudy %}
 	<a href="{{ post.data.page.url }}" class="case-studies-list__item">
-		{% image './_src/images/case-studies/meal-plans-home-2024.jpg', 'Meal Plans', 'case-studies-list__item-image', 'lazy', '200' %}
+		{% if post.data.featuredImage not empty %}
+		{% image post.data.featuredImage, post.data.featuredImageAlt, 'case-studies-list__item-image', 'lazy', '200' %}
+		{% endif %}
 		<div class="case-studies-list__item-content">
 			<div class="case-studies-list__item-title">{{ post.data.title }}</div>
 			{% if post.data.description not empty %}

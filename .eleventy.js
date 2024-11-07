@@ -21,9 +21,19 @@ async function imageShortcode(src, alt, klass = '', loading = 'lazy', sizes = nu
 	});
 }
 
+async function imageFigureShortcode(src, alt, klass = '', loading = 'lazy', sizes = null, caption = null) {
+	return `<figure>
+		<div>
+			${await imageShortcode(src, alt, klass, loading, sizes, caption)}
+		</div>
+		<figcaption>${caption}</figcaption>
+	</figure>`;
+}
+
 export default (eleventyConfig) => {
 
 	eleventyConfig.addShortcode('image', imageShortcode);
+	eleventyConfig.addShortcode('imageFigure', imageFigureShortcode)
 	eleventyConfig.addPassthroughCopy({ '_src/static': '.' });
 	eleventyConfig.addPassthroughCopy({ '_src/fonts': '/dist/fonts' });
 
