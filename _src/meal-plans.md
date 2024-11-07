@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 'Meal Plans by The College Nutritionist'
-tags: caseStudy
+tags:
+  - caseStudy
 featuredImage: ./_src/images/case-studies/meal-plans-home-2024.jpg
 featuredImageAlt: 'Meal Plans Home Page'
 bodyClasses: 'case-study case-study-meal-plans'

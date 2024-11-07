@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 'Fixing The "Bugs"'
-tags: caseStudy
+tags:
+  - caseStudy
 featuredImage: ./_src/images/case-studies/bqb-new-home.jpg
 featuredImageAlt: 'BioQuipBugs'
 bodyClasses: 'case-study case-study-bioquipbugs'
@@ -48,9 +49,9 @@ With the design finalized, we shifted our efforts to arguably the biggest projec
   <ul class="endorsements-list">
     <li class="alt">
       <div class="wrapper-wide-med">
-        <q>Sefer Design Co. was an absolute pleasure to work with from beginning to end, despite me being very particular about certain functionalities. My products are complicated and how I wanted them displayed to my diverse customers was no easy feat, but Rob worked with me every step of the way to make my vision function beautifully! I know nothing about website design but everything was clearly laid out every step of the way for me. Which of course, with everything else going on during the rebranding of my company, was very helpful.
+        <p>Sefer Design Co. was an absolute pleasure to work with from beginning to end, despite me being very particular about certain functionalities. My products are complicated and how I wanted them displayed to my diverse customers was no easy feat, but Rob worked with me every step of the way to make my vision function beautifully! I know nothing about website design but everything was clearly laid out every step of the way for me. Which of course, with everything else going on during the rebranding of my company, was very helpful.
           <em>Thank you Sefer Design Co. for helping to take my business to the next level!</em>
-        </q>
+        </p>
         <div class="attribution">Royce Cumming,
           <span>BioQuipBugs</span>
         </div>

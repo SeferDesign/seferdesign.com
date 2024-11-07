@@ -2,7 +2,8 @@
 layout: default
 title: 'Kelly in the City'
 description: 'Improving user experience through speed'
-tags: caseStudy
+tags:
+  - caseStudy
 featuredImage: ./_src/images/case-studies/kellyinthecity-new.jpg
 featuredImageAlt: 'Kelly in the City'
 bodyClasses: 'case-study case-study-kellyinthecity'

@@ -1,5 +1,5 @@
 <main>
-	{% if caseStudy or product or legal %}
+	{% if tags contains 'caseStudy' or product or legal %}
 	<article>
 		<h1>{{ title }}</h1>
 		{{ content }}

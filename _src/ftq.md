@@ -1,13 +1,14 @@
 ---
 layout: default
-title: 'FTQ App'
-tags: caseStudy
+title: 'First Time Quality'
+tags:
+  - caseStudy
 featuredImage: ./_src/images/case-studies/ftq-analyze.jpg
 featuredImageAlt: 'FTQ'
 bodyClasses: 'case-study case-study-ftq'
 ---
 
-# First Time Quality: From Outline &amp; Prototype to Product<
+## From Outline &amp; Prototype to Product
 
 TA Industrial Solutions specializes in maximizing production line efficiency for finishers and metal fabricators. Many of these facilities use legacy techniques that, in modern times, slow the line down and result in frustrating redundancies. When TA saw an opportunity to help their customer base, they asked Sefer Design Co. for assistance.
 
