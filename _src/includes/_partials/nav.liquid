@@ -12,7 +12,7 @@
   <ul class="main-menu">
 		<li{% if page.url == '/' %} aria-current="page"{% endif %}><a href="/">Home</a></li>
     <li{% if page.url == '/philosophy/' %} aria-current="page"{% endif %}><a href="/philosophy/">Philosophy</a></li>
-		<li{% if page.url == '/case-studies/' or caseStudy %} aria-current="page"{% endif %}><a href="/case-studies/">Case Studies</a></li>
+		<li{% if page.url == '/case-studies/' or tags contains 'caseStudy' %} aria-current="page"{% endif %}><a href="/case-studies/">Case Studies</a></li>
     <li{% if page.url == '/contact/' %} aria-current="page"{% endif %}><a href="/contact/">Contact</a></li>
   </ul>
 </nav>

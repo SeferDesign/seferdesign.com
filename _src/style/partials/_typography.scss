@@ -39,6 +39,10 @@ h1 {
 
 	}
 
+	span {
+		color: var(--color-text-alt);
+	}
+
 }
 
 h2 {
@@ -74,6 +78,7 @@ article {
 	}
 
 	p,
+	q,
 	ul,
 	ol {
 

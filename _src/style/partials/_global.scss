@@ -22,18 +22,25 @@
 	--color-black-off: #121212;
 	--color-white: #fff;
 	--color-white-off: #f3f3f3;
+	--color-grey-dark: #555;
 	--color-grey: #777;
 	--color-grey-light: #d4d4d4;
 	--color-grey-lighter: #dbdbdb;
 
 	--color-text: var(--color-black-off);
+	--color-text-alt: var(--color-grey-dark);
 	--color-background: var(--color-white);
+	--color-background-alt: var(--color-grey-lighter);
 	--color-link: var(--color-grey);
+	--color-ipad-frame-background: var(--color-black-off);
 
 	@media (prefers-color-scheme: dark) {
 		--color-text: var(--color-white);
+		--color-text-alt: var(--color-grey);
 		--color-background: var(--color-black-off);
+		--color-background-alt: var(--color-grey);
 		--color-link: var(--color-grey-lighter);
+		--color-ipad-frame-background: var(--color-grey-light);
 	}
 
 	@include mixins.mq('desktop') {
@@ -189,4 +196,97 @@ article {
 	width: 1px !important;
 	height: 1px !important;
 	overflow: hidden !important;
+}
+
+.grid-figures {
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 2rem;
+
+	& > * {
+		flex: 1;
+	}
+}
+
+figure {
+
+	& > * {
+		text-align: center;
+	}
+
+	.ipad {
+
+		--ipad-frame-border-radius: 1rem;
+		position: relative;
+		padding: 0.6875rem;
+		background: var(--color-ipad-frame-background);
+		border-radius: var(--ipad-frame-border-radius);
+
+		img {
+			z-index: 2;
+			position: relative;
+			border-radius: calc(var(--ipad-frame-border-radius) - 8px);
+		}
+
+	}
+
+	.half-width {
+		max-width: min(50%, 500px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	img {
+
+		max-width: 100%;
+		height: auto;
+
+		&[src$=".png"],
+		&[src$=".svg"] {
+
+			@media (prefers-color-scheme: dark) {
+				background: var(--color-white);
+			}
+
+		}
+
+	}
+
+	figcaption {
+		margin-top: 1rem;
+		text-align: center;
+		font-size: 0.875em;
+	}
+
+}
+
+blockquote {
+
+	background: var(--color-background-alt);
+
+	.attribution {
+
+		margin-top: 1em;
+		font-weight: 500;
+
+		&:before {
+			content: '\2015'; // Horizontal bar
+			display: inline-block;
+			margin-right: 1ch;
+		}
+
+		span {
+			font-weight: 400;
+		}
+
+	}
+
+}
+
+.endorsement {
+	padding: 2rem;
+	text-align: center;
 }
