@@ -3,5 +3,13 @@
 	"title": "Sefer Design Co.",
 	"company_name": "Sefer Design Company LLC",
 	"description": "Chicago Web Design and Web Development",
-	"descriptionLong": "Chicago Web Design and Web Development. We make all kinds of digital products, from web sites to internal tools that help you run your business."
+	"descriptionLong": "Chicago Web Design and Web Development. We make all kinds of digital products, from web sites to internal tools that help you run your business.",
+	"openGraph": {
+		"image": {
+			"path": "/open-graph.jpg",
+			"type": "image/jpeg",
+			"width": "1200",
+			"height": "630"
+		}
+	}
 }

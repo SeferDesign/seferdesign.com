@@ -1,8 +1,16 @@
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>{% if page.url != '/' %}{{ title }} | {% endif %}{{ site.title }} | {{ site.description }}</title>
 	<meta name="description" content="{% if description not empty %}{{ description }}{% else %}{{ site.descriptionLong }}{% endif %}" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{% if page.url != '/' %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
+	<meta property="og:description" content="{% if description not empty %}{{ description }}{% else %}{{ site.descriptionLong }}{% endif %}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	<meta property="og:image" content="{{ site.url }}{{ site.openGraph.image.path }}" />
+	<meta property="og:image:type" content="{{ site.openGraph.image.type }}" />
+	<meta property="og:image:width" content="{{ site.openGraph.image.width }}" />
+	<meta property="og:image:height" content="{{ site.openGraph.image.height }}" />
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
 	<link rel="stylesheet" href="{{ "/dist/style/style.css" | rev }}" />
