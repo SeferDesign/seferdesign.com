@@ -13,7 +13,7 @@
 	<meta property="og:image:height" content="{{ site.openGraph.image.height }}" />
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
-	<link rel="stylesheet" href="{{ "/dist/style/style.css" | rev }}" />
+	<style>{{ "./_src/style/style.scss" | sass }}</style>
 	<script type="speculationrules">
 		{
 			"prerender": [{
