@@ -11,6 +11,8 @@
 
 .case-studies-list {
 
+	$caseStudiesGridBreakpoint: variables.$screen-md;
+
 	--case-studies-list-gap: 0px;
 
 	display: flex;
@@ -19,7 +21,7 @@
 	align-items: flex-start;
 	gap: var(--case-studies-list-gap);
 
-	@include mixins.mq('desktop') {
+	@include mixins.mq($caseStudiesGridBreakpoint) {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: stretch;
@@ -30,7 +32,11 @@
 
 		flex-basis: 100%;
 
-		@include mixins.mq('desktop') {
+		@media (min-width: #{variables.$screen-sm}) and (max-width: #{variables.$screen-md-px - 1}) {
+			min-height: 25vh;
+		}
+
+		@include mixins.mq($caseStudiesGridBreakpoint) {
 
 			flex-basis: calc((100% - var(--case-studies-list-gap)) / 2);
 
@@ -45,11 +51,35 @@
 	&__item {
 
 		position: relative;
+		color: var(--color-text);
+		border: 0px solid var(--color-text-alt);
+
+		+ * {
+			border-top-width: 1px;
+		}
+
+		@include mixins.mq($caseStudiesGridBreakpoint) {
+
+			&:nth-child(2n) {
+				border-left-width: 1px;
+			}
+
+			&:nth-child(2) {
+				border-top-width: 0px;
+			}
+
+		}
 
 		&:before {
+
 			content: '';
 			display: block;
-			padding-top: 75%;
+			padding-top: 50%;
+
+			@include mixins.mq($caseStudiesGridBreakpoint) {
+				padding-top: 75%;
+			}
+
 		}
 
 		&:after {
@@ -60,8 +90,8 @@
 			left: 0px;
 			width: 100%;
 			height: 100%;
-			background: var(--color-black);
-			opacity: 0.85;
+			background: var(--color-background);
+			opacity: 0.9;
 		}
 
 		&-image {
@@ -89,7 +119,6 @@
 			justify-content: flex-start;
 			align-items: center;
 			gap: 1rem;
-			color: var(--color-white);
 			font-size: 1rem;
 
 			@include mixins.mq('desktop') {
@@ -103,7 +132,14 @@
 		}
 
 		&-title {
+
 			font-size: 2em;
+
+			.arrow {
+				font-size: 0.75em;
+				vertical-align: baseline;
+			}
+
 		}
 
 		&-description {

@@ -13,7 +13,7 @@ sitemap:
 		{% image post.data.featuredImage, post.data.featuredImageAlt, 'case-studies-list__item-image', 'lazy', '200' %}
 		{% endif %}
 		<div class="case-studies-list__item-content">
-			<div class="case-studies-list__item-title">{{ post.data.title }}</div>
+			<div class="case-studies-list__item-title">{{ post.data.title }} <span class="arrow">&rarr;</span></div>
 			{% if post.data.description not empty %}
 			<div class="case-studies-list__item-description">{{ post.data.description }}</div>
 			{% endif %}
