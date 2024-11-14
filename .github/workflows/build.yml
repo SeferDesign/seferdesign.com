@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build
+          ELEVENTY_ENV=production npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
