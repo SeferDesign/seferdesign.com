@@ -1,0 +1,22 @@
+<main>
+	{% if tags contains 'caseStudy' %}
+	<article>
+		<h1><span>Case Study:</span> {{ title }}</h1>
+		{% if description %}
+		<h2>{{ description }}</h2>
+		{% endif %}
+		{{ content }}
+	</article>
+	{% include '_partials/case-study-cta' %}
+	{% elsif tags product or legal %}
+	<article>
+		<h1>{{ title }}</h1>
+		{{ content }}
+	</article>
+	{% else %}
+	<article>
+		<h1 class="seo-only">{{ title }}</h1>
+		{{ content }}
+	</article>
+	{% endif %}
+</main>

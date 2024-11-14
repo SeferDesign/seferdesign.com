@@ -1,9 +1,20 @@
-html,
-body {
-	font-size: $font-size-base;
-	font-family: $font-family;
-	font-weight: 400;
-	line-height: 1.2;
+@use "variables";
+@use "mixins";
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/dist/fonts/Inter.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/dist/fonts/Inter-Italic.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+	font-display: swap;
 }
 
 h1,
@@ -12,64 +23,86 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0px 0px 1rem;
-	font-weight: 800;
+	font-weight: 500;
 }
 
 h1 {
-	font-size: 2rem;
+
+	&,
+	&.seo-only + h2 {
+
+		font-size: 2rem;
+
+		@include mixins.mq(variables.$screen-xs) {
+			font-size: 3rem;
+		}
+
+	}
+
+	span {
+		color: var(--color-text-alt);
+	}
+
 }
 
 h2 {
+
 	font-size: 1.75rem;
-}
 
-@include mq($screen-sm) {
-
-	h1 {
-		font-size: 3rem;
-	}
-
-	h2 {
-		font-size: 2.5rem;
-	}
-
-	h1 + h2 {
-		font-size: 2rem;
+	@include mixins.mq(variables.$screen-xs) {
+		font-size: 2.25rem;
 	}
 
 }
 
-p {
-
-	&.question {
-		margin-bottom: 0.5rem;
-		font-weight: bold;
-	}
-
-
-
+a {
+	color: currentColor;
+	text-decoration: underline;
+	font-weight: 500;
 }
 
-p,
-ul,
-ol {
+article {
 
-	margin: 0px 0px 1.5rem;
-	font-size: 1.5rem;
-	line-height: 1.4;
+	& > * {
 
-	&:last-child {
-		margin-bottom: 0px;
+		margin: 0px;
+
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+
+		&.seo-only + *:not(:first-child) {
+			margin-top: 0px;
+		}
+
 	}
 
-	@include mq($screen-sm) {
-		margin-bottom: 2rem;
+	p,
+	q,
+	ul,
+	ol {
+
+		font-size: 1.25rem;
+		line-height: 1.35;
+
+		@include mixins.mq(variables.$screen-xs) {
+			font-size: 1.5rem;
+		}
+
+		@include mixins.mq(variables.$screen-lg) {
+			font-size: 1.75rem;
+		}
+
 	}
 
-	strong,
-	b {
-		font-weight: 700;
+	a {
+
+		transition: color var(--transition-speed);
+
+		&:hover {
+			color: var(--color-link);
+		}
+
 	}
 
 }

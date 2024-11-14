@@ -1,0 +1,23 @@
+---
+layout: default
+title: 'Case Studies'
+bodyClasses: 'case-studies'
+sitemap:
+  priority: '0.8'
+---
+
+<div class="case-studies-list">
+	{% for post in collections.caseStudy %}
+	<a href="{{ post.data.page.url }}" class="case-studies-list__item">
+		{% if post.data.featuredImage not empty %}
+		{% image post.data.featuredImage, post.data.featuredImageAlt, 'case-studies-list__item-image', 'lazy', '200' %}
+		{% endif %}
+		<div class="case-studies-list__item-content">
+			<div class="case-studies-list__item-title">{{ post.data.title }}</div>
+			{% if post.data.description not empty %}
+			<div class="case-studies-list__item-description">{{ post.data.description }}</div>
+			{% endif %}
+		</div>
+	</a>
+	{% endfor %}
+</div>

@@ -1,21 +1,8 @@
-@import 'vendor/normalize';
-
-/*! site */
-@import 'partials/variables';
-@import 'partials/animations';
-@import 'partials/mixins';
-@import 'partials/typography';
-@import 'partials/svgs';
-@import 'partials/global';
-@import 'partials/banners';
-@import 'partials/nav';
-@import 'partials/buttons';
-@import 'partials/footer';
-
-@import 'partials/sections/intro';
-@import 'partials/sections/philosophy';
-@import 'partials/sections/case-studies';
-@import 'partials/sections/endorsements';
-@import 'partials/sections/work';
-@import 'partials/sections/contact';
-@import 'partials/sections/article';
+@use '../../node_modules/normalize.css/normalize';
+@use 'partials/variables';
+@use 'partials/mixins';
+@use 'partials/animations';
+@use 'partials/typography';
+@use 'partials/global';
+@use 'partials/nav';
+@use 'partials/case-studies';

@@ -1,22 +1,25 @@
 {
-  "name": "seferdesignco",
-  "version": "3.0.0",
-  "description": "Site for Sefer Design Company LLC.",
-  "authors": [
-    {
-      "name": "Robert Sefer",
-      "email": "rsefer@gmail.com",
-      "homepage": "https://rsefer.com"
-    }
-  ],
-  "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve --port=3000"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^1.0.1",
-    "@11ty/eleventy-img": "^2.0.1",
-    "sass": "^1.52.3",
-    "uglify-js": "^3.16.1"
-  }
+	"name": "seferdesignco",
+	"version": "4.0.0",
+	"description": "Site for Sefer Design Company LLC.",
+	"authors": [
+		{
+			"name": "Robert Sefer",
+			"email": "rsefer@gmail.com",
+			"homepage": "https://rsefer.com"
+		}
+	],
+	"type": "module",
+	"scripts": {
+		"build": "npx --node-options=\"--experimental-require-module\" @11ty/eleventy",
+		"start": "ELEVENTY_ENV=development npx --node-options=\"--experimental-require-module\" @11ty/eleventy --serve"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^5.0.0",
+		"eleventy-plugin-rev": "^2.0.0",
+		"eleventy-sass": "^3.0.0-beta.0",
+		"normalize.css": "^8.0.1",
+		"sass": "^1.80.6"
+	}
 }
