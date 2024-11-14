@@ -4,6 +4,8 @@
 
 nav {
 
+	--nav-height: calc(1rem + var(--site-gap) * 2);
+
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
@@ -39,8 +41,6 @@ nav {
 
 	.logo {
 
-		font-size: 1rem;
-
 		@include mixins.mq('desktop') {
 			font-size: 1em;
 		}
@@ -57,9 +57,9 @@ nav {
 
 		z-index: 999;
 		position: fixed;
-		top: 4rem;
+		top: var(--nav-height);
 		right: 0px;
-		height: calc(100 * var(--vh));
+		height: calc(100 * var(--vh) - var(--nav-height));
 		transform: translate(100%, 0px);
 		flex-basis:	100%;
 		display: flex;
@@ -70,7 +70,8 @@ nav {
 		gap: 0.5rem;
 		list-style-type: none;
 		margin: 0px;
-		padding: calc(var(--site-gap) * 2);
+		// padding: calc(var(--site-gap) * 2);
+		padding: calc(var(--site-gap) * 2) var(--site-gap);
 		padding-top: 0px;
 		width: 100%;
 		background: var(--color-background);
@@ -134,7 +135,7 @@ nav {
 
 	.nav-main-toggle {
 
-		--toggle-width: 1.75rem;
+		--toggle-width: 1.5rem;
 		--toggle-height: 1rem;
 		--toggle-inner-height: 0.15rem;
 
@@ -168,12 +169,6 @@ nav {
 					delay: 120ms;
 					timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 				}
-
-				// &,
-				// &:before,
-				// &:after {
-				// 	background-color: $white;
-				// }
 
 				&:before {
 					top: 0px;
