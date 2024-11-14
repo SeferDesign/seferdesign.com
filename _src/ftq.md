@@ -15,9 +15,6 @@ Together, we set out to make a prototype product to fit the customer needs. The 
 After a period of brainstorming, we compiled a list of requirements and set out to build. In order to minimize costs and enable the application to be used across an array of device types, we focused on building the initial system as a web application. This meant it could be accessed instantly from any smartphone or tablet without needing any setup. On the factory floor, speed and ease of use are paramount.
 
 <div class="grid-figures">
-	{% imageFigure './_src/images/case-studies/ftq-logo.svg', 'First Time Quality', 'half-width', 'eager', '200', 'FTQ logo' %}
-</div>
-<div class="grid-figures">
 	{% imageFigure './_src/images/case-studies/ftq-entry.jpg', 'New Entry', 'ipad', 'lazy', '200', 'Inspectors can make new product entries from any smart phone or tablet.' %}
 	{% imageFigure './_src/images/case-studies/ftq-analyze.jpg', 'Analyze Dashboard', 'ipad', 'lazy', '200', 'The Analyze dashboard allows inspectors to quickly identify common defects in their product line.' %}
 </div>

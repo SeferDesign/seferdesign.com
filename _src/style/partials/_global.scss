@@ -203,15 +203,30 @@ article {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
-	align-items: center;
-	gap: 2rem;
+	align-items: flex-start;
+	gap: var(--site-gap);
+
+	@include mixins.mq('desktop') {
+		align-items: center;
+	}
 
 	& > * {
-		flex: 1;
+
+		flex-basis: calc((100% - var(--site-gap)) / 2);
+
+		&:first-child:last-child {
+			flex-basis: 100%;
+		}
+
+
 	}
+
 }
 
 figure {
+
+	margin: 0px;
+	padding: 0px;//var(--site-gap);
 
 	& > * {
 		text-align: center;
@@ -219,16 +234,20 @@ figure {
 
 	.ipad {
 
-		--ipad-frame-border-radius: 1rem;
+		--ipad-frame-border-radius: 0.75rem;
 		position: relative;
-		padding: 0.6875rem;
+		padding: calc(var(--ipad-frame-border-radius) * 0.6875);
 		background: var(--color-ipad-frame-background);
 		border-radius: var(--ipad-frame-border-radius);
+
+		@include mixins.mq(variables.$screen-md) {
+			--ipad-frame-border-radius: 1rem;
+		}
 
 		img {
 			z-index: 2;
 			position: relative;
-			border-radius: calc(var(--ipad-frame-border-radius) - 8px);
+			border-radius: calc(var(--ipad-frame-border-radius) / 2);
 		}
 
 	}
@@ -256,7 +275,7 @@ figure {
 	}
 
 	figcaption {
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 		text-align: center;
 		font-size: 0.875em;
 	}

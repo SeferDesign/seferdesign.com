@@ -11,7 +11,7 @@
 
 .case-studies-list {
 
-	$caseStudiesGridBreakpoint: variables.$screen-md;
+	$caseStudiesGridBreakpoint: variables.$screen-md-px;
 
 	--case-studies-list-gap: 0px;
 
@@ -31,10 +31,7 @@
 	& > * {
 
 		flex-basis: 100%;
-
-		@media (min-width: #{variables.$screen-sm}) and (max-width: #{variables.$screen-md-px - 1}) {
-			min-height: 25vh;
-		}
+		text-decoration: none;
 
 		@include mixins.mq($caseStudiesGridBreakpoint) {
 
@@ -70,18 +67,6 @@
 
 		}
 
-		&:before {
-
-			content: '';
-			display: block;
-			padding-top: 50%;
-
-			@include mixins.mq($caseStudiesGridBreakpoint) {
-				padding-top: 75%;
-			}
-
-		}
-
 		&:after {
 			content: '';
 			z-index: 2;
@@ -107,11 +92,7 @@
 		&-content {
 
 			z-index: 3;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
+			position: relative;
 			padding: var(--site-gap);
 			display: flex;
 			flex-flow: row wrap;
@@ -120,8 +101,19 @@
 			align-items: center;
 			gap: 1rem;
 			font-size: 1rem;
+			min-height: 200px;
 
-			@include mixins.mq('desktop') {
+			@media (min-width: #{variables.$screen-sm}) and (max-width: #{$caseStudiesGridBreakpoint - 1}) {
+				min-height: calc((100 * var(--vh) - 3px) / 4);
+			}
+
+			@include mixins.mq($caseStudiesGridBreakpoint) {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				min-height: 0px;
 				align-content: flex-start;
 			}
 
@@ -136,8 +128,10 @@
 			font-size: 2em;
 
 			.arrow {
-				font-size: 0.75em;
+				display: inline-block;
 				vertical-align: baseline;
+				font-size: 0.75em;
+				user-select: none;
 			}
 
 		}

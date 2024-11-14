@@ -36,7 +36,7 @@ After a thorough design process with [scientific illustrator Liz Sisk](https://w
 
 <div class="grid-figures">
 	{% imageFigure './_src/images/case-studies/bqb-shop.jpg', 'BQB Shop', 'ipad', 'lazy', '200', 'Shopping categories' %}
-	{% imageFigure './_src/images/case-studies/bqb-butterfly.jpg', 'Butterfly', '', 'lazy', '200', 'An example of Royce\'s macro bug photography' %}
+	{% imageFigure './_src/images/case-studies/bqb-butterfly.jpg', 'Butterfly', '', 'lazy', '200', 'An example of Royce\'s incredible macro bug photography' %}
 </div>
 
 With the design finalized, we shifted our efforts to arguably the biggest project hurdle: data transfer. The existing product catalog included 17,000+ SKUs, with disparate groupings and formats throughout. Royce wanted to minimize the amount of data entry his team would need to do in order to complete the product catalog on the new site. After a thorough education on bug taxonomies, geographies, and more, we built a transfer tool that saved the BioQuipBugs team an immense amount of time entering and checking data. In the end, the new site has the complete product set, neatly organized and cataloged in such a way that makes administration simple and fast for Royce and his team.
