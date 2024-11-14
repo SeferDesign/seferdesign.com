@@ -22,7 +22,7 @@ In surveying the competitive landscape, there were others that Royce admired but
 
 The existing site was loosely functional but seemed to have been designed twenty years earlier. It likely hadn't been touched since! In line with [our philosophy](/philosophy/), Royce agreed that the simplicity needed to remain. We would focus on creating a beautiful aesthetic layer while enhancing critical features.
 
-<blockquote class="endorsement">
+<blockquote>
 	<q>Sometimes I felt like I had ridiculous requests because I wanted things to look and function in a very particular way, but Rob's attitude was always "I will find a way". No request of mine went unattended.</q>
 	<div class="attribution">Royce Cumming, <span>BioQuipBugs</span></div>
 </blockquote>
@@ -41,7 +41,7 @@ After a thorough design process with [scientific illustrator Liz Sisk](https://w
 
 With the design finalized, we shifted our efforts to arguably the biggest project hurdle: data transfer. The existing product catalog included 17,000+ SKUs, with disparate groupings and formats throughout. Royce wanted to minimize the amount of data entry his team would need to do in order to complete the product catalog on the new site. After a thorough education on bug taxonomies, geographies, and more, we built a transfer tool that saved the BioQuipBugs team an immense amount of time entering and checking data. In the end, the new site has the complete product set, neatly organized and cataloged in such a way that makes administration simple and fast for Royce and his team.
 
-<blockquote class="endorsement">
+<blockquote>
 	<q>Sefer Design Co. was an absolute pleasure to work with from beginning to end, despite me being very particular about certain functionalities. My products are complicated and how I wanted them displayed to my diverse customers was no easy feat, but Rob worked with me every step of the way to make my vision function beautifully! I know nothing about website design but everything was clearly laid out every step of the way for me. Which of course, with everything else going on during the rebranding of my company, was very helpful. <em>Thank you Sefer Design Co. for helping to take my business to the next level!</em></q>
 	<div class="attribution">Royce Cumming, <span>BioQuipBugs</span></div>
 </blockquote>

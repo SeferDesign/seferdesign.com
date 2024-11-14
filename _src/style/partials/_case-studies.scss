@@ -114,8 +114,7 @@
 
 }
 
-.case-study-cta {
-	margin: 2rem 0px 4rem;
-	// text-align: center;
+article.case-study-cta {
+	margin: var(--site-gap);
 	font-size: 2rem;
 }

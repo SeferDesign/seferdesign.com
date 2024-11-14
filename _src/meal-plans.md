@@ -21,7 +21,7 @@ Together, we brainstormed what eventually became the centerpiece of her product:
 
 Users can search by meal type, calories, dietary restrictions, food groups, and more. Weekly grocery lists and daily caloric intake are automatically compiled from included meals. If desired, they can even multiply portions for a given meal to account for a partner or expanded diet. Want to print an easy to read summary that can be taped to the fridge? That's in there, too.
 
-<blockquote class="endorsement">
+<blockquote>
   <q>Sefer Design Co. was absolutely fantastic! Rob thought of issues I never would have to make the experience positive and easy to use for subscribers. I can't recommend him enough!</q>
 	<div class="attribution">Rachel Paul, <span>The College Nutritionist</span></div>
 </blockquote>

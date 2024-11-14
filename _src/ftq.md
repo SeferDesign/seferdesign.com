@@ -24,7 +24,7 @@ After a period of brainstorming, we compiled a list of requirements and set out 
 
 The best ideas to improve the concept came from the customers themselves. Upon completion of the initial buildout, we put the application in their hands and received positive, effective feedback that shaped the next several iterations. Mixed in with a bit of aesthetic and branding magic (we named the product **First Time Quality** &ndash; FTQ for short), the prototype became a real, robust product offering.
 
-<blockquote class="endorsement">
+<blockquote>
 	<q>Working with Sefer Design Co. on this project was very effective. They provided a productive framework to help us through each stage and provided great results along the way. We plan to continue working on this project with Sefer Design Co. as our partner.</q>
 	<div class="attribution">Peter Koury, <span>President, TA Industrial Solutions</span></div>
 </blockquote>

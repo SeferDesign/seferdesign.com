@@ -16,7 +16,7 @@ As readership grew, Kelly recognized her site needed changes, quickly. While she
 
 {% imageFigure './_src/images/case-studies/kellyinthecity-old.jpg', 'Old Kelly in the City', 'ipad', 'eager', '200', 'The previous kellyinthecity.com home page design, which the client liked aesthetically.' %}
 
-<blockquote class="endorsement">
+<blockquote>
   <q>While I liked how my old site looked, parts of the blog were failing on a regular basis. I was constantly receiving emails from readers telling me that they couldn't get it to load!</q>
 	<div class="attribution">Kelly Larkin, <span>Kelly in the City</span>
 </blockquote>
@@ -29,7 +29,7 @@ After careful consideration, we came up with a two-pronged approach to solve the
 
 The above, combined with a complete re-architecture of her site theme and countless added features, resulted in a ***72%+ reduction in page load time***. That's the difference between a reader losing patience (eventually leaving the site) and staying to read a post.
 
-<blockquote class="endorsement">
+<blockquote>
   <q>I truly can't get over how perfect my new blog is. These improvements have made it one-of-a-kind and special. Not only have readers expressed that they love the new site, I love it, too. It's renewed my love of blogging!</q>
 	<div class="attribution">Kelly Larkin, <span>Kelly in the City</span></div>
 </blockquote>

@@ -265,12 +265,14 @@ figure {
 
 blockquote {
 
+	padding: var(--site-gap);
 	background: var(--color-background-alt);
 
 	.attribution {
 
 		margin-top: 1em;
 		font-weight: 500;
+		text-align: right;
 
 		&:before {
 			content: '\2015'; // Horizontal bar
@@ -284,9 +286,4 @@ blockquote {
 
 	}
 
-}
-
-.endorsement {
-	padding: 2rem;
-	text-align: center;
 }
