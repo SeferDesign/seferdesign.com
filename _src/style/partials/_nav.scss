@@ -4,17 +4,15 @@
 
 nav {
 
-	--nav-height: calc(1rem + var(--site-gap) * 2);
-
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 0.5rem;
-	padding: var(--site-gap);
+	padding: var(--nav-padding);
 	width: var(--nav-width);
 	background: var(--color-background);
-	font-size: 1rem;
+	font-size: var(--nav-logo-height);
 	font-weight: 500;
 
 	@include mixins.mq('desktop') {
@@ -70,7 +68,6 @@ nav {
 		gap: 0.5rem;
 		list-style-type: none;
 		margin: 0px;
-		// padding: calc(var(--site-gap) * 2);
 		padding: calc(var(--site-gap) * 2) var(--site-gap);
 		padding-top: 0px;
 		width: 100%;

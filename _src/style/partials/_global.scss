@@ -17,6 +17,9 @@
 	--site-gap: 1.5rem;
 	--site-min-height: 400px;
 	--nav-width: 100%;
+	--nav-padding: var(--site-gap);
+	--nav-logo-height: 1rem;
+	--nav-height: calc(var(--nav-logo-height) + var(--nav-padding) * 2);
 
 	--color-black: #000;
 	--color-black-off: #121212;
@@ -100,7 +103,7 @@ body {
 
 			flex: 1;
 			margin-left: calc(var(--nav-width) + var(--site-gap));
-			min-height: max(calc(100 * var(--vh)), var(--site-min-height));
+			min-height: max(calc(100 * var(--vh)), var(--site-min-height)) !important;
 
 			article {
 				margin: var(--site-gap);
@@ -115,62 +118,14 @@ body {
 
 .vertically-center main {
 
-	@include mixins.mq('desktop') {
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 0.5rem;
-	}
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: calc(100 * var(--vh) - var(--nav-height));
 
 }
-
-// body.page-philosophy {
-
-// 	background: var(--color-white-off);
-
-// 	@include mixins.mq('desktop') {
-// 		background: transparent;
-// 	}
-
-// 	.site-wrap {
-
-// 		padding-bottom: var(--site-gap);
-// 		background: var(--color-white-off);
-
-// 		@include mixins.mq('desktop') {
-// 			padding-bottom: 0px;
-// 		}
-
-// 	}
-
-// 	article {
-
-// 		padding: var(--site-gap);
-// 		background: var(--color-white);
-// 		box-shadow:
-//     	0 -1px 1px rgba(0,0,0,0.15),
-// 			0 -10px 0 -5px #eee,
-// 			0 -10px 1px -4px rgba(0,0,0,0.15);
-// 		font-family: monospace;
-
-// 		@include mixins.mq(variables.$screen-xs) {
-// 			padding: calc(var(--site-gap) * 2);
-// 		}
-
-// 		p {
-
-// 			font-size: 0.875rem;
-
-// 			@include mixins.mq(variables.$screen-xs) {
-// 				font-size: 1rem;
-// 			}
-
-// 		}
-
-// 	}
-
-// }
 
 .logo {
 
