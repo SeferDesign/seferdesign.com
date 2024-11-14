@@ -17,6 +17,7 @@
 	"dependencies": {
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^5.0.0",
+		"esbuild": "^0.24.0",
 		"normalize.css": "^8.0.1",
 		"sass": "^1.80.6"
 	}
