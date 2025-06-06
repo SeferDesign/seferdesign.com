@@ -1,7 +1,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>{% if page.url != '/' %}{{ title }} | {% endif %}{{ site.title }} | {{ site.description }}</title>
+	<title>{% if page.url != '/' %}{{ title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %}</title>
 	<meta name="description" content="{% if description not empty %}{{ description }}{% else %}{{ site.descriptionLong }}{% endif %}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{% if page.url != '/' %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
