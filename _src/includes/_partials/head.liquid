@@ -2,15 +2,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>{% if page.url != '/' %}{{ title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %}</title>
-	<meta name="description" content="{% if description not empty %}{{ description }}{% else %}{{ site.descriptionLong }}{% endif %}" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{% if page.url != '/' %}{{ title }}{% else %}{{ site.title }}{% endif %}" />
-	<meta property="og:description" content="{% if description not empty %}{{ description }}{% else %}{{ site.descriptionLong }}{% endif %}" />
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-	<meta property="og:image" content="{{ site.url }}{{ site.openGraph.image.path }}" />
-	<meta property="og:image:type" content="{{ site.openGraph.image.type }}" />
-	<meta property="og:image:width" content="{{ site.openGraph.image.width }}" />
-	<meta property="og:image:height" content="{{ site.openGraph.image.height }}" />
+	{% include '_partials/open-graph' %}
 	<meta name="generator" content="{{ eleventy.generator }}">
 	<link rel="shortcut icon" href="/favicon.png" />
 	<style>{{ "./_src/style/style.scss" | sass }}</style>
