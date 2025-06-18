@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="refresh" content="0; URL='{{ redirect_url }}'" />
-		<title>{% if title %}{{ title }}{% else %}Redirecting{% endif %} | {{ site.title }}</title>
+		<title>{% if title != blank %}{{ title }}{% else %}Redirecting{% endif %} | {{ site.title }}</title>
 	</head>
   <body>
 		<p style="text-align: center;">Redirecting to {{ redirect_url }} &hellip;</p>
