@@ -15,7 +15,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies & build
+        env:
+          CAL_USERNAME: ${{ secrets.CAL_USERNAME }}
+          CAL_API_KEY: ${{ secrets.CAL_API_KEY }}
         run: |
+          if [ -z "$CAL_USERNAME" ] || [ -z "$CAL_API_KEY" ]; then
+            echo "Missing required secrets: CAL_USERNAME and/or CAL_API_KEY"
+            exit 1
+          fi
           npm ci
           ELEVENTY_ENV=production npm run build
       - name: Deploy

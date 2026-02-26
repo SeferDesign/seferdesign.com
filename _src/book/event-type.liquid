@@ -1,0 +1,10 @@
+---
+pagination:
+  data: cal-event-types
+  size: 1
+  alias: eventType
+permalink: "book/{{ eventType.slug }}/index.html"
+layout: redirect
+title: "Book"
+redirect_url: "{{ eventType.bookingUrl }}"
+---

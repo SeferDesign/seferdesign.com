@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import Image from '@11ty/eleventy-img';
 import fs from 'fs';
 import * as sass from 'sass';
