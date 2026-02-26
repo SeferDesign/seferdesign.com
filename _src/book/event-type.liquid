@@ -6,5 +6,6 @@ pagination:
 permalink: "book/{{ eventType.slug }}/index.html"
 layout: redirect
 title: "Book"
-redirect_url: "{{ eventType.bookingUrl }}"
+eleventyComputed:
+  redirect_url: "{{ eventType.bookingUrl }}"
 ---
