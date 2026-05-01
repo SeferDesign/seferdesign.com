@@ -15,6 +15,7 @@
 	--transition-speed: 600ms;
 	--font-family-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica', sans-serif;
 	--site-gap: 1.5rem;
+	--site-max-width: 60rem;
 	--site-min-height: 400px;
 	--nav-width: 100%;
 	--nav-padding: var(--site-gap);
@@ -89,7 +90,7 @@ body {
 	@include mixins.mq('desktop') {
 
 		margin: 0px auto;
-		max-width: 60rem;
+		max-width: var(--site-max-width);
 		min-height: var(--site-min-height);
 
 	}
