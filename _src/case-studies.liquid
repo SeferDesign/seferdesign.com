@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 'Case Studies'
-bodyClasses: 'case-studies'
+bodyClasses: 'case-studies vertically-center'
 sitemap:
   priority: '0.8'
 ---
@@ -9,11 +9,9 @@ sitemap:
 <div class="case-studies-list">
 	{% for post in collections.caseStudy %}
 	<a href="{{ post.data.page.url }}" class="case-studies-list__item">
-		{% if post.data.featuredImage not empty %}
-		{% image post.data.featuredImage, post.data.featuredImageAlt, 'case-studies-list__item-image', 'lazy', '200' %}
-		{% endif %}
 		<div class="case-studies-list__item-content">
-			<div class="case-studies-list__item-title">{{ post.data.title }} <span class="arrow">&rarr;</span></div>
+			<div class="case-studies-list__item-title">{{ post.data.title }} <span class="arrow"><svg class="arrow-right-long" role="symbol"><use xlink:href="#arrow-right-long"></use>
+		</svg></span></div>
 			{% if post.data.description not empty %}
 			<div class="case-studies-list__item-description">{{ post.data.description }}</div>
 			{% endif %}

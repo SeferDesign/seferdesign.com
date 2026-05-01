@@ -1,46 +1,23 @@
 @use "variables";
 @use "mixins";
 
-.page-case-studies {
-
-	.site-wrap main article {
-		margin: 0px;
-	}
-
-}
-
 .case-studies-list {
 
-	$caseStudiesGridBreakpoint: variables.$screen-md-px;
-
-	--case-studies-list-gap: 0px;
+	--case-studies-list-gap: 1rem;
 
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-start;
-	align-items: flex-start;
+	align-items: stretch;
 	gap: var(--case-studies-list-gap);
-
-	@include mixins.mq($caseStudiesGridBreakpoint) {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		align-items: stretch;
-		min-height: calc(100 * var(--vh));
-	}
 
 	& > * {
 
 		flex-basis: 100%;
 		text-decoration: none;
 
-		@include mixins.mq($caseStudiesGridBreakpoint) {
-
+		@include mixins.mq('desktop') {
 			flex-basis: calc((100% - var(--case-studies-list-gap)) / 2);
-
-			&:last-child:nth-child(odd) {
-				grid-column: 1 / span 2;
-			}
-
 		}
 
 	}
@@ -49,45 +26,8 @@
 
 		position: relative;
 		color: var(--color-text);
-		border: 0px solid var(--color-text-alt);
-
-		+ * {
-			border-top-width: 1px;
-		}
-
-		@include mixins.mq($caseStudiesGridBreakpoint) {
-
-			&:nth-child(2n) {
-				border-left-width: 1px;
-			}
-
-			&:nth-child(2) {
-				border-top-width: 0px;
-			}
-
-		}
-
-		&:after {
-			content: '';
-			z-index: 2;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
-			background: var(--color-background);
-			opacity: 0.9;
-		}
-
-		&-image {
-			z-index: 1;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
+		background: var(--color-background-alt-2);
+		border-radius: 1rem;;
 
 		&-content {
 
@@ -99,23 +39,8 @@
 			align-content: center;
 			justify-content: flex-start;
 			align-items: center;
-			gap: 1rem;
-			font-size: 1rem;
-			min-height: 200px;
-
-			@media (min-width: #{variables.$screen-sm}) and (max-width: #{$caseStudiesGridBreakpoint - 1}) {
-				min-height: calc((100 * var(--vh) - 3px) / 4);
-			}
-
-			@include mixins.mq($caseStudiesGridBreakpoint) {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				height: 100%;
-				min-height: 0px;
-				align-content: flex-start;
-			}
+			gap: 0.75em;
+			font-size: 0.75rem;
 
 			& > * {
 				flex-basis: 100%;
@@ -128,10 +53,20 @@
 			font-size: 2em;
 
 			.arrow {
+
 				display: inline-block;
 				vertical-align: baseline;
 				font-size: 0.75em;
 				user-select: none;
+
+				svg {
+					display: block;
+					font-size: 0.75em;
+					width: 1em;
+					height: 1em;
+					color: var(--color-text-alt);
+				}
+
 			}
 
 		}

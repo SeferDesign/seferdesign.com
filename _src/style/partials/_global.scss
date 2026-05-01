@@ -29,11 +29,13 @@
 	--color-grey: #777;
 	--color-grey-light: #d4d4d4;
 	--color-grey-lighter: #dbdbdb;
+	--color-grey-lightest: #e0e0e0;
 
 	--color-text: var(--color-black-off);
 	--color-text-alt: var(--color-grey-dark);
 	--color-background: var(--color-white);
 	--color-background-alt: var(--color-grey-lighter);
+	--color-background-alt-2: var(--color-white-off);
 	--color-link: var(--color-grey);
 	--color-ipad-frame-background: var(--color-black-off);
 
@@ -42,17 +44,13 @@
 		--color-text-alt: var(--color-grey);
 		--color-background: var(--color-black-off);
 		--color-background-alt: var(--color-grey);
+		--color-background-alt-2: var(--color-grey-dark);
 		--color-link: var(--color-grey-lighter);
 		--color-ipad-frame-background: var(--color-grey-light);
 	}
 
 	@include mixins.mq('desktop') {
 		--site-gap: 2rem;
-		--nav-width: 250px;
-	}
-
-	@include mixins.mq(variables.$screen-md) {
-		--nav-width: 300px;
 	}
 
 }
@@ -91,26 +89,8 @@ body {
 	@include mixins.mq('desktop') {
 
 		margin: 0px auto;
-		max-width: variables.$wide-breakpoint;
+		max-width: 60rem;
 		min-height: var(--site-min-height);
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		gap: var(--site-gap);
-
-		main {
-
-			flex: 1;
-			margin-left: calc(var(--nav-width) + var(--site-gap));
-			min-height: max(calc(100 * var(--vh)), var(--site-min-height)) !important;
-
-			article {
-				margin: var(--site-gap);
-				margin-left: 0px;
-			}
-
-		}
 
 	}
 
@@ -141,7 +121,7 @@ body {
 }
 
 article {
-	margin: var(--site-gap);
+	margin: 0px var(--site-gap) var(--site-gap);
 }
 
 .seo-only {
