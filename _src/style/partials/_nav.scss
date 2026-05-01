@@ -41,7 +41,7 @@ nav {
 		position: fixed;
 		top: var(--nav-height);
 		right: 0px;
-		height: calc(100 * var(--vh) - var(--nav-height));
+		height: calc(100dvh - var(--nav-height));
 		transform: translate(100%, 0px);
 		flex-basis:	100%;
 		display: flex;
