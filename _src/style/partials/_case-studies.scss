@@ -15,7 +15,6 @@
 
 		flex-basis: 100%;
 		text-decoration: none;
-		font-weight: variables.$font-weight-boldish;
 
 		@include mixins.mq('desktop') {
 			flex-basis: calc((100% - var(--case-studies-list-gap)) / 2);
@@ -74,6 +73,7 @@
 
 		&-description {
 			font-size: 1.5em;
+			font-weight: 400;
 		}
 
 	}
