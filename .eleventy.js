@@ -24,9 +24,15 @@ async function imageShortcode(src, alt, klass = '', loading = 'lazy', sizes = nu
 }
 
 async function imageFigureShortcode(src, alt, klass = '', loading = 'lazy', sizes = null, caption = null) {
+	const classTokens = (klass || '').split(/\s+/).filter(Boolean);
+	const divClassTokens = classTokens.filter((token) => token === 'ipad');
+	const imageClassTokens = classTokens.filter((token) => token !== 'ipad');
+	const divClassAttr = divClassTokens.length ? ` class="${divClassTokens.join(' ')}"` : '';
+	const imageKlass = imageClassTokens.join(' ');
+
 	return `<figure>
-		<div>
-			${await imageShortcode(src, alt, klass, loading, sizes, caption)}
+		<div${divClassAttr}>
+			${await imageShortcode(src, alt, imageKlass, loading, sizes, caption)}
 		</div>
 		<figcaption>${caption}</figcaption>
 	</figure>`;

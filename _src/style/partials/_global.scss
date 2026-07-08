@@ -169,11 +169,17 @@ figure {
 
 	.ipad {
 
+		--ipad-frame-background: var(--color-ipad-frame-background);
+		--ipad-frame-padding: 0.5rem;
 		--ipad-frame-border-radius: 0.75rem;
 		position: relative;
-		padding: calc(var(--ipad-frame-border-radius) * 0.6875);
-		background: var(--color-ipad-frame-background);
+		padding: var(--ipad-frame-padding);
+		background: var(--ipad-frame-background);
 		border-radius: var(--ipad-frame-border-radius);
+
+		@include mixins.mq(variables.$screen-sm) {
+			--ipad-frame-padding: 0.75rem;
+		}
 
 		@include mixins.mq(variables.$screen-md) {
 			--ipad-frame-border-radius: 1rem;
@@ -182,6 +188,8 @@ figure {
 		img {
 			z-index: 2;
 			position: relative;
+			display: block;
+			width: 100%;
 			border-radius: calc(var(--ipad-frame-border-radius) / 2);
 		}
 
