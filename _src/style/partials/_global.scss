@@ -225,7 +225,7 @@ blockquote {
 	.attribution {
 
 		margin-top: 1em;
-		font-weight: 500;
+		font-weight: variables.$font-weight-bold;
 		text-align: right;
 
 		&:before {
