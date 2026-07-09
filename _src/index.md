@@ -8,4 +8,4 @@ sitemap:
 
 ## We're a tech studio located in Chicago.
 
-We design and build web applications, internal tools, and digital infrastructure for small business that want to grow. Whether you need to execute a project or a fractional CTO guiding your digital efforts, we scale with you. Read [our philosophy](/philosophy/), browse [our work](/case-studies/), and [get in touch](/contact/).
+We design and build web applications, internal tools, and digital infrastructure for small businesses that want to grow. Whether you need to execute a project or a fractional CTO guiding your digital efforts, we scale with you. Read [our philosophy](/philosophy/), browse [our work](/case-studies/), and [get in touch](/contact/).
